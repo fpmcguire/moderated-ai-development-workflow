@@ -1,0 +1,359 @@
+# Moderated AI Development
+
+Human-moderated workflow for AI-assisted software development
+
+> **Disclaimer**
+>
+> Moderated AI Development is _not_ an AI agent automation framework. It is a disciplined, human-in-the-loop workflow for AI-assisted software development that optimizes for quality, traceability, and maintainability rather than raw speed.
+>
+> This repository may still use the acronym **MAID** in some places as a shorthand for **Moderated AI Development**, but the project leads with the full name to reduce confusion with other AI projects and methodologies.
+>
+> You can think of Moderated AI Development as: role-based workflow + Spec-Driven Development (SDD) + AI cross-validation + human-in-the-loop (HITL) moderation.
+
+**This is not “vibe coding.” It is a disciplined form of viable coding.**  
+Vibe coding is useful for quick experiments, but it collapses product, design, architecture, and implementation into one blurry chat. Moderated AI Development turns AI-assisted work into viable coding: small, reviewable steps, explicit roles, clear artifacts, and non-negotiable human quality gates.
+
+Moderated AI Development is a spec-driven workflow that improves quality through separated roles, cross-validation, and explicit human oversight.  
+The core roles are **Product Owner**, **Tech Lead**, **Development Team**, and **Moderator**. These roles may be supported by AI tools such as ChatGPT, Claude, Perplexity, Gemini, and Copilot, while the human **Moderator** works in a local **Workbench** (e.g., VS Code + Copilot) to control context, review outputs, run builds and tests, and approve each step through explicit quality gates.
+
+A key aspect of Moderated AI Development is the intentional separation and diversity of roles and AI tooling to ensure role and agent cross-validation, accountability, and quality.
+
+Version 1.0.0 defines a **minimal role set** for most teams. Example projects (such as the “Tessellate Designer” example) show how teams can add **extended roles** like CUSTOMER and PRODUCT DESIGNER for deeper cross-validation when needed.
+
+---
+
+## Why Moderated AI Development?
+
+Most AI coding setups optimize for speed and “let the model code everything.” That often leads to:
+
+- large, opaque AI code dumps
+- missing validation, logging, and edge cases
+- no clear record of why decisions were made
+
+Moderated AI Development optimizes for:
+
+- **Maintainability** – clean architecture, small verified steps, and up‑to‑date docs instead of giant, opaque AI code dumps.
+- **Traceability** – every step has artifacts, reviews, QA notes, and annotated Git tags so you can see what changed, why, and by whom.
+- **Human control** – clear ownership for product, architecture, and quality, with AI tools supporting defined roles rather than acting as autonomous committers.
+- **Multi‑layer validation** – every change is checked by the Workbench, the Moderator, and the Tech Lead (and QA when needed) before it is accepted.
+
+Modern AI development is converging on three ideas:
+
+- **Spec‑Driven Development (SDD)** – specs and plans as the source of truth.
+- **Viable coding (not vibe coding)** – structured, reviewable, production‑safe workflows instead of prompt‑and‑pray coding.
+- **Blue‑red / multi‑agent patterns** – clearly separated “plan/implement” (blue) and “review/verify” (red) duties.
+
+Moderated AI Development sits at the intersection of these trends: it applies spec‑driven discipline to AI‑assisted work, uses explicit roles and model contrast instead of a single all‑knowing agent, and bakes planning and review into every Step.
+
+---
+
+## Core Roles (v1.0.0)
+
+Moderated AI Development v1.0.0 defines a minimal set of core roles:
+
+- **Moderator** – human operator who orchestrates handoffs, works in the Workbench, validates builds/tests/UX, and controls quality gates.
+- **Product Owner** – defines _what_ is built and _why_, maintains `PRODUCT.md`, and sets acceptance intent.
+- **Tech Lead** – defines _how_ the product is built, maintains `ARCHITECTURE.md`, shapes the roadmap, and reviews technical quality.
+- **Development Team** – generates roadmap proposals, code, tests, and docs for each step, always under moderation.
+- **QA / Tester** – validates that accepted output behaves correctly end‑to‑end (may be the Moderator on small teams).
+- **Workbench** – local environment where the Moderator builds, runs, tests, debugs, and fine‑tunes changes before they pass any gate.
+
+See: `docs/roles.md` for full role definitions.
+
+### Extended roles (optional)
+
+Projects can introduce additional cross‑validation roles where useful. Common examples include:
+
+- **Customer** – provides real problems, goals, language, and feedback from the field.
+- **Product Designer** – translates customer insights into flows, UX, and interaction patterns.
+- **Marketing / Go‑to‑Market** – validates positioning, messaging, and surface alignment.
+
+These extended roles are **optional** in Moderated AI Development v1.0.0. The **Tessellate Designer** example project shows how Customer and Product Designer roles can be layered on top of the core Moderated AI Development workflow without changing the base methodology.
+
+---
+
+## Step‑by‑step Workflow (High Level)
+
+Each feature or change is delivered through small, traceable **Steps**:
+
+1. **Product shaping** – Moderator + Product Owner refine the idea into `PRODUCT.md`.
+2. **Architecture decision** – Moderator + Tech Lead capture direction in `ARCHITECTURE.md`.
+3. **Roadmap** – Tech Lead and Development Team create `ROADMAP.md` as an ordered set of Steps.
+4. **Implement a Step** – Development Team implements a single Step guided by `STEP.md`.
+5. **Workbench verification** – Moderator pulls changes locally, builds, runs tests, and checks UX.
+6. **Revision loop** – Issues go back to the Development Team with comments until green.
+7. **Tech Lead review** – Tech Lead reviews the Step for correctness and maintainability. Issues iterate to the Development Team until green.
+8. **QA + tag** – Moderator/QA records results in `QA.md` and creates an annotated Git tag for the Step.
+
+In practice, this implements a **blue‑red pattern**: Tech Lead and Development Team plan and implement (blue), while Tech Lead and Moderator review and verify (red), before any change is accepted.
+
+---
+
+## Using Moderated AI Development with Kiro
+
+Moderated AI Development is a governance and workflow methodology that can sit on top of spec‑driven IDEs like **Kiro**.  
+Kiro provides the spec‑driven editor/runtime, and Moderated AI Development provides the roles, moderation, and cross‑review discipline.
+
+### Responsibility split
+
+- **Kiro owns:**
+  - creating and editing Requirements / Design / Tasks specs
+  - running and tracking spec‑driven tasks inside the IDE
+  - integrating tools, MCPs, and execution controls
+
+- **Moderated AI Development owns:**
+  - Moderator authority and go/no‑go decisions
+  - separation of Product Owner, Tech Lead, and Development Team roles
+  - intentional role/agent/model contrast (e.g., different models per role)
+  - cross‑role / cross‑agent verification before acceptance
+  - step‑based delivery and acceptance criteria aligned with ROADMAP and STEP docs
+
+### Document and phase mapping
+
+When using Moderated AI Development with Kiro, map Moderated AI Development’s docs to Kiro’s spec phases:
+
+- **Requirements (Kiro)** ↔ `PRODUCT.md`  
+  High‑level product problem, users, goals, requirements, and product‑level acceptance criteria.
+
+- **Design (Kiro)** ↔ `ARCHITECTURE.md`  
+  Technical approach, architecture decisions, data model, integration points, constraints.
+
+- **Tasks (Kiro)** ↔ `ROADMAP.md` + `STEP-XX.md`  
+  Roadmap of steps and task‑level specs: context, scope, inputs, expected outputs, and step‑level acceptance criteria.
+
+Other Moderated AI Development docs (e.g., `DOMAIN_LANGUAGE_MATRIX.md`, `AGENTS.md`, workbench guidelines) can be treated as **Steering Docs** and referenced from Kiro specs as part of the context.
+
+### Moderator and approvals
+
+In a Kiro + Moderated AI Development setup:
+
+- The **Moderator** decides when Requirements or Design specs are “approved enough” to move forward.
+- The Moderator also decides when a Task/STEP is complete after review and testing, regardless of what Kiro’s task status says.
+- Teams should treat Kiro’s phase transitions (Requirements → Design → Tasks) as **subject to Moderator approval**, not just IDE actions.
+
+Kiro provides the spec‑driven SDD engine, and Moderated AI Development provides the human‑in‑the‑loop governance and multi‑agent role pattern around it.
+
+---
+
+## Using Moderated AI Development with GitHub Spec Kit
+
+GitHub Spec Kit is an open‑source toolkit for **Spec‑Driven Development (SDD)** that helps you capture constitutions, specs, technical plans, and tasks in your repo, then drive AI‑assisted implementation from those artifacts.  
+Moderated AI Development layers on top of this: Spec Kit provides the SDD scaffolding, and Moderated AI Development provides roles, moderation, and cross‑validation.
+
+### Responsibility split
+
+- **Spec Kit owns:**
+  - initializing SDD scaffolding (constitution, spec, plan, tasks)
+  - generating and refining:
+    - constitution (project principles and constraints)
+    - spec (what to build, user needs, requirements)
+    - plan (technical implementation plan)
+    - tasks (task breakdown for implementation)
+  - integrating with coding agents (e.g., Copilot, Claude Code) to implement those tasks
+
+- **Moderated AI Development owns:**
+  - defining who is Product Owner, Tech Lead, Development Team, and Moderator
+  - deciding who approves constitution, spec, plan, and tasks before they are treated as canonical
+  - introducing intentional role/agent/model contrast (e.g., different models or configs for spec, plan, and implementation)
+  - requiring cross‑review (human and/or cross‑agent) before accepting generated plans, tasks, and code
+  - enforcing step‑based delivery and acceptance criteria aligned with the roadmap and step docs
+
+### Document and phase mapping
+
+When using Moderated AI Development with Spec Kit, map Moderated AI Development’s docs to Spec Kit’s phases:
+
+- **Constitution (Spec Kit)** ↔ Moderated AI Development principles & steering docs  
+  Spec Kit’s constitution maps to project‑wide principles and is complemented by Moderated AI Development steering docs such as `DOMAIN_LANGUAGE_MATRIX.md`, `AGENTS.md`, and any Moderated AI Development‑specific rules the Moderator enforces.
+
+- **Spec (Spec Kit)** ↔ `PRODUCT.md`  
+  Functional problem, users, goals, requirements, and product‑level acceptance criteria.
+
+- **Plan (Spec Kit)** ↔ `ARCHITECTURE.md`  
+  Technical approach, stack, architecture decisions, data model, integration points, constraints.
+
+- **Tasks (Spec Kit)** ↔ `ROADMAP.md` + `STEP-XX.md`  
+  Task breakdown and sequencing correspond to Moderated AI Development’s roadmap and per‑step templates (context, scope, inputs, expected outputs, and step‑level acceptance criteria).
+
+Moderated AI Development’s `REVIEW.md` and `QA.md` sit on top of these phases to structure human and cross‑agent evaluation of each step.
+
+### Moderator and approval flow
+
+With Spec Kit + Moderated AI Development:
+
+- The **Moderator** decides when:
+  - a constitution is strong enough to drive spec work
+  - a spec is clear enough to move into planning
+  - a plan is coherent enough to generate tasks
+  - tasks and resulting implementation satisfy the acceptance criteria in `PRODUCT.md` and `STEP-XX.md`
+
+- Spec Kit’s commands and phases should be treated as **subject to Moderator approval**, not self‑ratifying.
+- Moderated AI Development encourages using different roles/agents/models for spec, plan, and implementation and adding at least one cross‑agent review step before the Moderator accepts a phase.
+
+Spec Kit provides the spec‑driven SDD engine, and Moderated AI Development provides the human‑in‑the‑loop governance and multi‑agent role pattern around that engine.
+
+---
+
+## Repository Layout
+
+- `docs/` – methodology reference (manifesto, roles, lifecycle, artifacts, domain language, etc.)
+- `templates/` – reusable templates for `PRODUCT.md`, `ARCHITECTURE.md`, `ROADMAP.md`, `STEP.md`, `REVIEW.md`, `QA.md`, `DOMAIN_LANGUAGE_MATRIX.md`, `AGENTS.md`
+- `prompts/` – role prompts for Product Owner, Tech Lead, Development Team, Moderator, and Workbench usage  
+  They support per‑request answer depths (`minimal`, `options`, `full`) so Moderators can choose between speed, choice, and depth without changing tools.
+- `examples/` – concrete examples of Moderated AI Development in action (starting with a small frontend “saved views” feature)
+
+### Example project structure
+
+The `examples/` directory shows how Moderated AI Development artifacts and code can live together in a real project.
+
+A typical Moderated AI Development‑enabled project might look like:
+
+```text
+my-saas-app/
+  docs/
+    PRODUCT.md                  # What and why for this product
+    ARCHITECTURE.md             # How the system is structured
+    ROADMAP.md                  # Ordered list of Steps
+    DOMAIN_LANGUAGE_MATRIX.md   # Shared vocabulary for the product’s domain
+  maid/
+    STEP.md                     # Current Step brief
+    REVIEW.md                   # Review notes and decisions for the Step
+    QA.md                       # Verification evidence for the Step
+  src/                          # Application code
+    ...
+  tests/                        # Automated tests
+    ...
+```
+
+---
+
+## Using Moderated AI Development with Cursor
+
+Cursor is a strong **workbench** for Moderated AI Development.
+
+It does not define the workflow for you, but it provides useful building blocks for running a spec-driven, human-moderated process: planning, agent assistance, project rules, shared documentation context, and iterative implementation.
+
+### Where Cursor fits
+
+In Moderated AI Development, Cursor works best as the environment where the **Moderator** and **Development Team**:
+
+- review and refine plans
+- inspect and edit code
+- run builds, tests, and linters
+- enforce project rules and workflow constraints
+- iterate on implementation with explicit human approval
+
+### Recommended way to use Cursor in this workflow
+
+Use Cursor as the implementation and review workbench, not as the methodology itself.
+
+A practical pattern is:
+
+1. Define intent and acceptance criteria outside the coding chat, using your normal product and technical artifacts.
+2. Use Cursor to turn those artifacts into an implementation plan.
+3. Review and edit the plan before any significant code generation.
+4. Implement in small, reviewable steps.
+5. Run tests, linters, and other checks locally.
+6. Require explicit human acceptance before merging or continuing.
+
+### Useful Cursor capabilities for this workflow
+
+- **Plan-first workflow** for turning requirements into a reviewable implementation plan
+- **Agent assistance** for codebase research, implementation, refactoring, and debugging
+- **Rules** for encoding project conventions, constraints, and working agreements
+- **Documentation context** so the agent can work against project docs and technical references
+- **CLI and automation support** for teams that want the same rules and workflow outside the editor
+
+### Recommended setup
+
+For a Moderated AI Development project in Cursor, keep these elements lightweight but explicit:
+
+- a project rules file or rules directory that encodes coding standards and workflow guardrails
+- a small set of source artifacts such as goals, scope, constraints, acceptance criteria, and technical notes
+- a clear review habit: plan first, implement second, validate third
+- human ownership of acceptance decisions
+
+### Suggested operating model
+
+- **Product Owner** defines the goal, scope, and acceptance criteria
+- **Tech Lead** shapes the implementation approach and constraints
+- **Development Team** uses Cursor to research, implement, and refine
+- **Moderator** reviews outputs, preserves context discipline, runs validation, and approves progression through quality gates
+
+### Bottom line
+
+Cursor is not a substitute for Moderated AI Development.  
+It is a capable environment for running it well.
+
+Use Cursor for planning, implementation, and iteration.  
+Use Moderated AI Development for role separation, governance, review, and accountability.
+
+---
+
+## Minimal vs extended docs
+
+To get started with Moderated AI Development, you only need a small subset of the docs:
+
+- **Minimal Moderated AI Development set (recommended first):**
+  - `docs/manifesto.md` – why Moderated AI Development exists and the core beliefs.
+  - `docs/principles.md` – day‑to‑day principles.
+  - `docs/roles.md` – role definitions and responsibilities.
+  - `docs/step-lifecycle.md` – end‑to‑end Step workflow.
+  - `docs/artifacts.md` – what lives in PRODUCT / ARCHITECTURE / ROADMAP / STEP / REVIEW / QA.
+
+- **Extended references (use as needed):**
+  - `docs/quality-gates.md` – detailed quality gate levels.
+  - `docs/ceremonies.md` – Moderated AI Development ceremonies.
+  - `docs/domain-language.md` – domain language and the Domain Language Matrix.
+  - `docs/glossary.md` – terminology.
+  - `docs/faq.md` – common questions.
+
+---
+
+## Core Moderated AI Development docs
+
+- `docs/manifesto.md` – why Moderated AI Development exists and the core principles.
+- `docs/roles.md` – role definitions and responsibilities.
+- `docs/lifecycle.md` – step‑by‑step workflow.
+
+---
+
+## Status
+
+Moderated AI Development started as a personal workflow for building highly maintainable SaaS frontends with AI tools and is now being formalized as an open methodology and template.
+This repository is a work in progress; structure and naming are stabilizing first, then more examples and profiles (e.g., backend, full‑stack, Claude Code) will follow.
+
+---
+
+## How to Use This Repo
+
+1. Read `docs/manifesto.md` and `docs/roles.md`.
+2. Copy the templates from `/templates` into your own project.
+3. Use the role prompts in `/prompts` to create one dedicated thread per Moderated AI Development role
+   (Product Owner, Tech Lead, Development Team, Moderator/Workbench), and adapt them to your ChatGPT / Claude / Perplexity / Gemini setup.
+   When prompting, specify the desired answer depth (`minimal`, `options`, or `full`) so you can trade off speed, optionality, and learning depth per request.
+4. Run one small feature end‑to‑end using the Moderated AI Development Step lifecycle.
+
+Contributions, feedback, and adoption stories are welcome – see `CONTRIBUTING.md`.
+
+---
+
+## License
+
+This project is licensed under the Apache License, Version 2.0 – see the `LICENSE` file for details.
+
+---
+
+## Support and Training
+
+If you are adopting Moderated AI Development in a team or client environment and want help with setup, training, or tailoring the workflow to your stack, consulting is available.
+
+- Moderated AI Development setup and rollout coaching
+- Team training on roles, documents, and review discipline
+- Help customizing templates and prompt packs
+- Review of your first Moderated AI Development‑guided feature
+
+For inquiries, open an issue or contact the maintainer via the repository profile or at fpmcguire@gmail.com.
+
+---
+
+MAID v1.0.0 · Moderated AI Development · https://github.com/fpmcguire/moderated-ai-development
