@@ -1,14 +1,15 @@
 ---
 name: Method Improvement
-about: Suggest an improvement to the Moderated AI Development methodology
+about: Suggest an improvement to the Moderated AI Development Workflow methodology
 title: "[IMPROVEMENT] "
 labels: method-improvement
-assignees: ''
+assignees: ""
 ---
 
 ## Which Part of the Methodology?
 
 <!-- Select the area you want to improve -->
+
 - [ ] Manifesto / Principles
 - [ ] Roles
 - [ ] Ceremonies

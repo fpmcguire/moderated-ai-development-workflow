@@ -17,10 +17,10 @@
 ## Terms
 
 | Term | Definition | Used in code as | Used in UI as | Avoid | Notes |
-|---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| ---- | ---------- | --------------- | ------------- | ----- | ----- |
+|      |            |                 |               |       |       |
+|      |            |                 |               |       |       |
+|      |            |                 |               |       |       |
 
 ---
 
@@ -31,6 +31,6 @@
 - **Reflect the user's language.** Prefer the vocabulary users themselves would use when describing their work.
 - **Keep it current.** A stale matrix produces inconsistent AI output. Review and update after every step.
 
-----
+---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

@@ -1,6 +1,6 @@
-# Moderator Checklist – MAID
+# Moderator Checklist – MOD-W
 
-Use this checklist for every Step in the MAID workflow.
+Use this checklist for every Step in the MOD-W workflow.
 
 ---
 
@@ -116,4 +116,4 @@ This checklist should be lightweight enough to use for every Step but strict eno
 
 ---
 
-> MAID v1.0.0 · Moderated AI Development · https://github.com/fpmcguire/moderated-ai-development
+> MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development

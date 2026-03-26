@@ -167,8 +167,8 @@ A Step is considered **complete** only when:
 - QA.md is updated
 - An annotated Git tag has been created
 
-This lifecycle keeps Moderated AI Development firmly human‑moderated while allowing AI roles to handle most of the drafting, implementation, and iteration work.
+This lifecycle keeps Moderated AI Development Workflow firmly human‑moderated while allowing AI roles to handle most of the drafting, implementation, and iteration work.
 
---- 
+---
 
- MAID v1.0.0 · Moderated AI Development · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development

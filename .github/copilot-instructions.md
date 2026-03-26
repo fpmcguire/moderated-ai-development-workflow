@@ -1,6 +1,6 @@
-# Copilot Instructions for MAID
+# Copilot Instructions for MOD-W
 
-This repository contains the **Moderated AI Development** methodology framework — a structured approach to using AI models (such as ChatGPT and Claude) in software development under human moderation.
+This repository contains the **Moderated AI Development Workflow** methodology framework — a structured approach to using AI models (such as ChatGPT and Claude) in software development under human moderation.
 
 ## Project Context
 

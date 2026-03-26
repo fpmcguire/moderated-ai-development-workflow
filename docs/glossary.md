@@ -1,20 +1,20 @@
 # Glossary
 
-This glossary defines the core terms used in the Moderated AI Development methodology. For product-specific domain terms, see the [Domain Language Matrix](../templates/DOMAIN_LANGUAGE_MATRIX.md) for each project.
+This glossary defines the core terms used in the Moderated AI Development Workflow methodology. For product-specific domain terms, see the [Domain Language Matrix](../templates/DOMAIN_LANGUAGE_MATRIX.md) for each project.
 
 ---
 
 **AI agent**  
-An AI model (such as ChatGPT or Claude) assigned a specific role in the Moderated AI Development process. AI agents generate artifacts that are always moderated by a human before acceptance. See [roles.md](roles.md).
+An AI model (such as ChatGPT or Claude) assigned a specific role in the Moderated AI Development Workflow process. AI agents generate artifacts that are always moderated by a human before acceptance. See [roles.md](roles.md).
 
 **AI work session**  
 A ceremony in which the Tech Lead submits prompts to an AI agent to generate step artifacts. See [ceremonies.md](ceremonies.md).
 
 **Artifact**  
-Any document, file, or record produced during a Moderated AI Development step or project. Artifacts include PRODUCT.md, ARCHITECTURE.md, STEP.md, REVIEW.md, and QA.md. See [artifacts.md](artifacts.md).
+Any document, file, or record produced during a Moderated AI Development Workflow step or project. Artifacts include PRODUCT.md, ARCHITECTURE.md, STEP.md, REVIEW.md, and QA.md. See [artifacts.md](artifacts.md).
 
 **Ceremony**  
-A structured, time-boxed event in the Moderated AI Development process. Ceremonies include Kickoff, Step Planning, AI Work Session, Step Review, QA Verification, and Retrospective. See [ceremonies.md](ceremonies.md).
+A structured, time-boxed event in the Moderated AI Development Workflow process. Ceremonies include Kickoff, Step Planning, AI Work Session, Step Review, QA Verification, and Retrospective. See [ceremonies.md](ceremonies.md).
 
 **Domain language**  
 The agreed vocabulary of a product and its problem space, captured in the Domain Language Matrix and embedded in all AI prompts. See [domain-language.md](domain-language.md).
@@ -38,7 +38,7 @@ An explicit checklist of criteria that AI-generated artifacts must satisfy befor
 A project-level artifact listing all planned steps, their order, and their current status. See [templates/ROADMAP.md](../templates/ROADMAP.md).
 
 **Step**  
-The fundamental unit of work in MAID. A step is a bounded, reviewable slice of AI-assisted development with a defined scope, quality gate, and lifecycle. See [step-lifecycle.md](step-lifecycle.md).
+The fundamental unit of work in MOD-W. A step is a bounded, reviewable slice of AI-assisted development with a defined scope, quality gate, and lifecycle. See [step-lifecycle.md](step-lifecycle.md).
 
 **STEP.md**  
 An artifact that defines a single step: its scope, inputs, expected outputs, acceptance criteria, assigned AI agent, and quality gate level. See [templates/STEP.md](../templates/STEP.md).
@@ -51,4 +51,4 @@ The environment in which AI work sessions are conducted — typically a web-base
 
 ---
 
-MAID v1.0.0 · Moderated AI Development · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development

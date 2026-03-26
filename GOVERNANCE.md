@@ -30,7 +30,7 @@ Significant changes (new roles, revised ceremonies, updated quality gates, new p
 
 ### Breaking Changes
 
-Changes that alter the core Moderated AI Development methodology (e.g., renaming core concepts, restructuring the step lifecycle) require:
+Changes that alter the core Moderated AI Development Workflow methodology (e.g., renaming core concepts, restructuring the step lifecycle) require:
 
 1. A detailed proposal issue with rationale
 2. An extended comment period (minimum 14 days)
@@ -49,6 +49,6 @@ All participants in this project must adhere to the [Code of Conduct](CODE_OF_CO
 
 All contributions to this repository are made under the [MIT License](LICENSE).
 
-----
+---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

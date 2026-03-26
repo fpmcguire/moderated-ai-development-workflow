@@ -39,9 +39,9 @@ All Level 1 and Level 2 quality gate criteria are met. The migration, API handle
 
 ## Findings
 
-| # | Finding | Severity | Resolution |
-|---|---|---|---|
-| 1 | The 422 validation error response includes the full Zod error tree, which may expose internal schema details | Advisory | Tech Lead to review before production; not blocking for this step |
+| #   | Finding                                                                                                      | Severity | Resolution                                                        |
+| --- | ------------------------------------------------------------------------------------------------------------ | -------- | ----------------------------------------------------------------- |
+| 1   | The 422 validation error response includes the full Zod error tree, which may expose internal schema details | Advisory | Tech Lead to review before production; not blocking for this step |
 
 ---
 
@@ -55,10 +55,10 @@ The migration uses `JSONB` for `filters` and `columns` as specified in ARCHITECT
 
 ## Revision History
 
-| Date | Moderator | Decision | Notes |
-|---|---|---|---|
-| 2026-01-17 | Jordan Rivera | Accept | First review — accepted on first attempt |
+| Date       | Moderator     | Decision | Notes                                    |
+| ---------- | ------------- | -------- | ---------------------------------------- |
+| 2026-01-17 | Jordan Rivera | Accept   | First review — accepted on first attempt |
 
-----
+---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

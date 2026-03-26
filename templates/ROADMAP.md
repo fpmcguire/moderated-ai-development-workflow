@@ -52,6 +52,6 @@
 
 <!-- Are any steps blocked by external dependencies? -->
 
-----
+---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

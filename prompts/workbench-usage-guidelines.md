@@ -3,7 +3,7 @@
 The **Workbench** is the human-operated development environment used by the Moderator  
 (e.g., local Git clone in VS Code with GitHub Copilot enabled).
 
-Its job is to **verify and fine‑tune**, not to replace the Moderated AI Development workflow.
+Its job is to **verify and fine‑tune**, not to replace the Moderated AI Development Workflow.
 
 ---
 
@@ -22,7 +22,7 @@ Its job is to **verify and fine‑tune**, not to replace the Moderated AI Develo
 
 ## What the Workbench is NOT for
 
-- Skipping Moderated AI Development Steps (e.g., implementing large features entirely by hand).
+- Skipping Moderated AI Development Workflow Steps (e.g., implementing large features entirely by hand).
 - Making broad architectural changes without going through the Tech Lead.
 - Quietly expanding Step scope without updating STEP.md and ROADMAP.md.
 - Letting Copilot generate large, unreviewed code dumps.
@@ -49,6 +49,6 @@ Its job is to **verify and fine‑tune**, not to replace the Moderated AI Develo
 6. Update QA.md and REVIEW.md.
 7. Proceed to Tech Lead review and tagging.
 
---- 
+---
 
-> MAID v1.0.0 · Moderated AI Development · https://github.com/fpmcguire/moderated-ai-development
+> MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development

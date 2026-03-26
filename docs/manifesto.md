@@ -1,4 +1,4 @@
-# The Moderated AI Development  Manifesto
+# The Moderated AI Development Workflow Manifesto
 
 ## We are discovering better ways of developing software by using AI under human moderation.
 
@@ -21,15 +21,15 @@ AI models can generate code, documentation, and designs at remarkable speed. But
 
 ### The team remains accountable
 
-AI tools do not hold accountability. The team does. Moderated AI Development ensures that every AI-generated artifact passes through a human gate before it becomes part of the product.
+AI tools do not hold accountability. The team does. Moderated AI Development Workflow ensures that every AI-generated artifact passes through a human gate before it becomes part of the product.
 
 ### Moderation is a skill, not a bottleneck
 
-Effective moderation of AI output requires expertise, domain knowledge, and critical thinking. Moderated AI Development treats the moderator role as a first-class, respected responsibility — not a rubber stamp.
+Effective moderation of AI output requires expertise, domain knowledge, and critical thinking. Moderated AI Development Workflow treats the moderator role as a first-class, respected responsibility — not a rubber stamp.
 
 ### Domain language is the foundation of quality AI output
 
-AI models produce better results when they share vocabulary with the team. Investing in a shared domain language — and encoding it into every prompt — is one of the highest-leverage activities a Moderated AI Development team can undertake.
+AI models produce better results when they share vocabulary with the team. Investing in a shared domain language — and encoding it into every prompt — is one of the highest-leverage activities a Moderated AI Development Workflow team can undertake.
 
 ### The step is the unit of trust
 
@@ -43,6 +43,6 @@ Every decision, every AI prompt, every moderation judgement is recorded. This cr
 
 _Moderated AI Development is inspired by the [Agile Manifesto](https://agilemanifesto.org/) and adapted for the age of AI-assisted development._
 
---- 
+---
 
- MAID v1.0.0 · Moderated AI Development · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development

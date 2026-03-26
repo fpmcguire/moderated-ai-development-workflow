@@ -1,4 +1,4 @@
-# Introducing Moderated AI Development into a Legacy Codebase
+# Introducing Moderated AI Development Workflow into a Legacy Codebase
 
 ## Overview
 
@@ -8,13 +8,13 @@ Moderated AI Development (MAID) is a great fit for greenfield projects, but many
 - partial or outdated docs
 - unpredictable coupling and side‑effects
 
-This article shows how to introduce Moderated AI Development into a legacy (brownfield) codebase **incrementally**, without a big‑bang process rewrite.
+This article shows how to introduce Moderated AI Development Workflow into a legacy (brownfield) codebase **incrementally**, without a big‑bang process rewrite.
 
 ---
 
-## Design goal: Moderated AI Development as a thin layer
+## Design goal: Moderated AI Development Workflow as a thin layer
 
-For legacy, treat Moderated AI Development as a **thin governance layer** over your existing process:
+For legacy, treat Moderated AI Development Workflow as a **thin governance layer** over your existing process:
 
 - keep your current deployment, CI, and ticketing flow
 - add **roles**, **artifacts**, and **quality gates** around AI‑assisted work
@@ -198,4 +198,4 @@ You just need to make sure every AI‑assisted change makes it a little safer an
 
 ---
 
-MAID v1.0.0 · Moderated AI Development · [https://github.com/fpmcguire/moderated-ai-development](https://github.com/fpmcguire/moderated-ai-development)
+MAID v1.0.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development](https://github.com/fpmcguire/moderated-ai-development)

@@ -1,9 +1,9 @@
-# Moderated AI Development + Kiro Playbook
+# Moderated AI Development Workflow + Kiro Playbook
 
 ## Overview
 
 **Kiro** is a spec‑driven IDE that turns Requirements, Design, and Tasks into executable work for AI agents.  
-**Moderated AI Development** is a governance and workflow layer that adds roles, artifacts, and human moderation on top of any spec‑driven engine.
+**Moderated AI Development Workflow** is a governance and workflow layer that adds roles, artifacts, and human moderation on top of any spec‑driven engine.
 
 Kiro answers:
 
@@ -15,9 +15,9 @@ Moderated AI Development answers:
 
 This playbook shows how to combine them:
 
-- how to map Kiro’s phases to Moderated AI Development artifacts
+- how to map Kiro’s phases to Moderated AI Development Workflow artifacts
 - how roles (Product Owner, Tech Lead, Development Team, Moderator) work in Kiro
-- a simple checklist to run your **first Moderated AI Development Step inside Kiro**
+- a simple checklist to run your **first Moderated AI Development Workflow Step inside Kiro**
 
 ---
 
@@ -29,7 +29,7 @@ Kiro has three main spec phases:
 - **Design** – architecture, data, integration points
 - **Tasks** – concrete units of work to implement
 
-Moderated AI Development (MAID) has three corresponding core artifacts:
+Moderated AI Development (MOD-W) has three corresponding core artifacts:
 
 - `PRODUCT.md` – product problem, users, goals, requirements
 - `ARCHITECTURE.md` – technical approach, architecture decisions
@@ -37,22 +37,22 @@ Moderated AI Development (MAID) has three corresponding core artifacts:
 
 The mapping is:
 
-| Kiro phase   | MAID artifact(s)            | Purpose                                 |
+| Kiro phase   | MOD-W artifact(s)           | Purpose                                 |
 | ------------ | --------------------------- | --------------------------------------- |
 | Requirements | `PRODUCT.md`                | What we’re building and why             |
 | Design       | `ARCHITECTURE.md`           | How we’re building it                   |
 | Tasks        | `ROADMAP.md` + `STEP-XX.md` | Concrete, bounded units of work (Steps) |
 
-MAID then layers on:
+MOD-W then layers on:
 
 - `REVIEW.md` and `QA.md` for **validation and evidence**
 - `DOMAIN_LANGUAGE_MATRIX.md` and `AGENTS.md` as **steering docs** for humans and agents
 
 ---
 
-## Roles in a MAID + Kiro setup
+## Roles in a MOD-W + Kiro setup
 
-In a Kiro + MAID project, roles look like this:
+In a Kiro + MOD-W project, roles look like this:
 
 - **Product Owner**
   - Collaborates in Kiro’s **Requirements** phase.
@@ -66,7 +66,7 @@ In a Kiro + MAID project, roles look like this:
 
 - **Development Team**
   - Uses Kiro’s Tasks and agent features to implement individual Steps.
-  - Treats each Kiro Task as one MAID Step (or part of one) driven by `STEP-XX.md`.
+  - Treats each Kiro Task as one MOD-W Step (or part of one) driven by `STEP-XX.md`.
 
 - **Moderator**
   - Treats Kiro as one input; the **source of truth is still the repository**.
@@ -74,7 +74,7 @@ In a Kiro + MAID project, roles look like this:
   - Decides if Requirements, Design, and Tasks are “approved enough” to advance.
   - Decides if a Step is actually complete, regardless of Kiro’s task status.
 
-The core rule: **Kiro can move states inside the IDE; only the Moderator moves states in MAID.**
+The core rule: **Kiro can move states inside the IDE; only the Moderator moves states in MOD-W.**
 
 ---
 
@@ -88,7 +88,7 @@ The core rule: **Kiro can move states inside the IDE; only the Moderator moves s
   - Use the Requirements phase to capture problems, users, goals, constraints.
   - Use Kiro’s own AI assistance to draft and refine.
 
-- In MAID:
+- In MOD-W:
   - The Product Owner and Tech Lead sync Kiro’s Requirements into `PRODUCT.md`.
   - The Moderator checks that:
     - Requirements are clear.
@@ -96,7 +96,7 @@ The core rule: **Kiro can move states inside the IDE; only the Moderator moves s
     - Risks and out‑of‑scope items are captured.
 
 **Gate:** The Moderator marks the Requirements phase “approved enough” to move to Design.  
-Kiro may say “Requirements ready”; MAID requires the Moderator’s explicit approval in the repo.
+Kiro may say “Requirements ready”; MOD-W requires the Moderator’s explicit approval in the repo.
 
 ### 2. Design ↔ ARCHITECTURE.md
 
@@ -106,7 +106,7 @@ Kiro may say “Requirements ready”; MAID requires the Moderator’s explicit 
   - Use the Design phase to capture the architecture: components, data models, integrations.
   - Use Kiro’s agents to propose alternatives, then refine.
 
-- In MAID:
+- In MOD-W:
   - The Tech Lead owns `ARCHITECTURE.md` in the repo.
   - Kiro’s Design spec is treated as a **working draft** that must be reconciled with `ARCHITECTURE.md`.
   - The Moderator ensures:
@@ -114,7 +114,7 @@ Kiro may say “Requirements ready”; MAID requires the Moderator’s explicit 
     - There is a clear path to small, independent Steps.
 
 **Gate:** The Moderator and Tech Lead agree the Design is stable enough to generate Tasks/Steps.  
-Only then do they proceed to Kiro’s Tasks phase and MAID’s Step planning.
+Only then do they proceed to Kiro’s Tasks phase and MOD-W’s Step planning.
 
 ### 3. Tasks ↔ ROADMAP + STEP-XX
 
@@ -124,12 +124,12 @@ Only then do they proceed to Kiro’s Tasks phase and MAID’s Step planning.
   - Use Tasks to break work down based on the Design.
   - Optionally use agents to propose a task breakdown.
 
-- In MAID:
+- In MOD-W:
   - The Tech Lead and Development Team maintain:
     - `ROADMAP.md` – ordered list of Steps.
     - `STEP-XX.md` – detailed Step briefs.
   - Each Kiro Task is:
-    - mapped to a MAID Step, or
+    - mapped to a MOD-W Step, or
     - treated as sub‑work inside a larger Step.
 
 **Gates:**
@@ -141,7 +141,7 @@ Only then do they proceed to Kiro’s Tasks phase and MAID’s Step planning.
 
 ---
 
-## Running a MAID Step in Kiro
+## Running a MOD-W Step in Kiro
 
 Here is a concrete workflow for a single Step:
 
@@ -179,7 +179,7 @@ Here is a concrete workflow for a single Step:
    - When everything is green:
      - Moderator marks the Step as complete.
      - Adds an annotated Git tag for the Step.
-   - Kiro’s Task may already be marked done; MAID acceptance is the final word.
+   - Kiro’s Task may already be marked done; MOD-W acceptance is the final word.
 
 ---
 
@@ -195,25 +195,25 @@ Here is a concrete workflow for a single Step:
   Keep `DOMAIN_LANGUAGE_MATRIX.md` up to date and paste relevant sections into Kiro prompts.
 
 - **Keep Steps small.**  
-  If a Kiro Task feels too big to review safely, split it in MAID and reflect that split back into Kiro.
+  If a Kiro Task feels too big to review safely, split it in MOD-W and reflect that split back into Kiro.
 
 - **Record learning in the repo.**  
   If a Kiro session reveals important insights, capture them in `REVIEW.md`, `QA.md`, or the Domain Language Matrix, not just in Kiro’s history.
 
 ---
 
-## When MAID + Kiro is a good fit
+## When MOD-W + Kiro is a good fit
 
 This combined setup is especially strong when:
 
 - you want **spec‑driven execution** with a powerful IDE and agents (Kiro),
-- but you also want **human‑in‑the‑loop governance**, traceability, and multi‑role validation (MAID).
+- but you also want **human‑in‑the‑loop governance**, traceability, and multi‑role validation (MOD-W).
 
 You get the best of both:
 
 - Kiro drives SDD in the IDE.
-- MAID keeps the system understandable, reviewable, and safe to evolve.
+- MOD-W keeps the system understandable, reviewable, and safe to evolve.
 
 ---
 
-MAID v1.0.0 · Moderated AI Development · [https://github.com/fpmcguire/moderated-ai-development](https://github.com/fpmcguire/moderated-ai-development)
+MOD-W v1.0.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development](https://github.com/fpmcguire/moderated-ai-development)

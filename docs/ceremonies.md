@@ -1,6 +1,6 @@
 # Ceremonies in Moderated AI Development
 
-Ceremonies are structured events that create rhythm, transparency, and shared understanding in a Moderated AI Development team.
+Ceremonies are structured events that create rhythm, transparency, and shared understanding in a Moderated AI Development Workflow team.
 
 ---
 
@@ -107,13 +107,13 @@ Ceremonies are structured events that create rhythm, transparency, and shared un
 
 **Activities:**
 
-- What went well with MAID this iteration?
+- What went well with MOD-W this iteration?
 - What friction did we encounter?
 - What should we change about our prompts, quality gates, or ceremonies?
 - Are there adoption stories or method improvements to contribute to the community?
 
 **Output:** Action items; potential community contributions (adoption story, method improvement issue)
 
---- 
+---
 
- MAID v1.0.0 · Moderated AI Development · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development

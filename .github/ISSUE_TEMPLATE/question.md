@@ -1,9 +1,9 @@
 ---
 name: Question
-about: Ask a question about the Moderated AI Development methodology
+about: Ask a question about the Moderated AI Development Workflow methodology
 title: "[QUESTION] "
 labels: question
-assignees: ''
+assignees: ""
 ---
 
 ## Your Question

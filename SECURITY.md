@@ -31,6 +31,6 @@ When using the prompts and templates in this repository:
 
 This methodology framework does not have versioned releases in the traditional software sense. See [CHANGELOG.md](CHANGELOG.md) for the history of changes.
 
-----
+---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

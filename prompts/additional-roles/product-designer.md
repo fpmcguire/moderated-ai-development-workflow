@@ -1,6 +1,6 @@
 # Product Designer – Prompt
 
-> Use this prompt in a dedicated thread for the **Product Designer** role in Moderated AI Development (e.g., Tessellate Designer).  
+> Use this prompt in a dedicated thread for the **Product Designer** role in Moderated AI Development Workflow (e.g., Tessellate Designer).  
 > Keep this thread focused on user experience: flows, states, interactions, and UX constraints – not low-level implementation.
 
 ---
@@ -99,4 +99,4 @@ If I don’t specify a depth, ask me which one to use before answering.
 
 ---
 
-> MAID v1.0.0 · Moderated AI Development · https://github.com/fpmcguire/moderated-ai-development
+> MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development

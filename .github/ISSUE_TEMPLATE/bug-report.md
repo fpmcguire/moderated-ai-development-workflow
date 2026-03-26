@@ -1,9 +1,9 @@
 ---
 name: Bug Report
-about: Report an error, inconsistency, or broken content in Moderated AI Development documentation or templates
+about: Report an error, inconsistency, or broken content in Moderated AI Development Workflow documentation or templates
 title: "[BUG] "
 labels: bug
-assignees: ''
+assignees: ""
 ---
 
 ## Describe the Issue

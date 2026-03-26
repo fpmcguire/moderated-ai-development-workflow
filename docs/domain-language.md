@@ -1,6 +1,6 @@
 # Domain Language
 
-Shared domain language is one of the highest-leverage investments a team using Moderated AI Development can make. When the team, the codebase, and the AI agents all use the same vocabulary, prompts produce more accurate output and reviews are more efficient.
+Shared domain language is one of the highest-leverage investments a team using Moderated AI Development Workflow can make. When the team, the codebase, and the AI agents all use the same vocabulary, prompts produce more accurate output and reviews are more efficient.
 
 ---
 
@@ -56,6 +56,6 @@ The following terms must be used consistently in all output:
 - Changes to existing terms require Tech Lead approval and a CHANGELOG entry.
 - The matrix is a living artifact — keep it up to date as the product evolves.
 
---- 
+---
 
- MAID v1.0.0 · Moderated AI Development · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development

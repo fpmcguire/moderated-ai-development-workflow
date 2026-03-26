@@ -9,7 +9,7 @@
 ## Type of Change
 
 - [ ] Bug fix (error or inconsistency in documentation or templates)
-- [ ] Method improvement (change to the Moderated AI Development methodology)
+- [ ] Method improvement (change to the Moderated AI Development Workflow methodology)
 - [ ] New content (new template, prompt, example, or doc)
 - [ ] Refactor / reorganisation (no methodology change)
 - [ ] Other: <!-- describe -->
@@ -29,4 +29,4 @@
 
 ---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

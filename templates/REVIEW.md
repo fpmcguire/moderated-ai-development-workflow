@@ -12,9 +12,10 @@
 
 <!-- Circle or bold one: **Accept** / **Request Revisions** / **Reject** -->
 
-**Decision:** 
+**Decision:**
 
-**Summary:**  
+**Summary:**
+
 <!-- One or two sentences explaining the decision. -->
 
 ---
@@ -31,7 +32,7 @@
 - [ ] No unresolved placeholders, TODOs, or stubs
 - [ ] No real credentials, personal data, or sensitive information
 
-### Level 2 — Code Quality *(if applicable)*
+### Level 2 — Code Quality _(if applicable)_
 
 - [ ] Code follows established patterns and conventions
 - [ ] All identifiers use domain language
@@ -39,7 +40,7 @@
 - [ ] No obvious security vulnerabilities
 - [ ] Code is testable
 
-### Level 3 — Completeness *(if applicable)*
+### Level 3 — Completeness _(if applicable)_
 
 - [ ] All acceptance criteria from STEP.md are met
 - [ ] Unit tests are present and pass
@@ -52,9 +53,9 @@
 
 <!-- List any issues found during review. Note whether each was blocking or advisory. -->
 
-| # | Finding | Severity | Resolution |
-|---|---|---|---|
-| 1 | | Blocking / Advisory | |
+| #   | Finding | Severity            | Resolution |
+| --- | ------- | ------------------- | ---------- |
+| 1   |         | Blocking / Advisory |            |
 
 ---
 
@@ -67,9 +68,9 @@
 ## Revision History
 
 | Date | Moderator | Decision | Notes |
-|---|---|---|---|
-| | | | |
+| ---- | --------- | -------- | ----- |
+|      |           |          |       |
 
-----
+---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

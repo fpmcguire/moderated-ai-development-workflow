@@ -1,6 +1,6 @@
 # Annotated Git Tags — Frontend Saved Views
 
-This document describes the git tagging convention used in this example project to mark the completion of each Moderated AI Development step.
+This document describes the git tagging convention used in this example project to mark the completion of each Moderated AI Development Workflow step.
 
 ---
 
@@ -65,9 +65,9 @@ All Level 2 quality gate criteria met."
 
 ## Why Tag Steps?
 
-Annotated git tags serve several purposes in a Moderated AI Development project:
+Annotated git tags serve several purposes in a Moderated AI Development Workflow project:
 
-1. **Traceability** — Any commit can be related back to the Moderated AI Development step that produced it.
+1. **Traceability** — Any commit can be related back to the Moderated AI Development Workflow step that produced it.
 2. **Rollback points** — If a later step introduces a regression, the team can quickly identify the last known-good step boundary.
 3. **Audit trail** — The tag annotation records who moderated and accepted the step, providing a permanent record alongside the code.
 4. **Team communication** — Tags make progress visible to anyone browsing the repository, without needing to read every commit message.
@@ -96,6 +96,7 @@ EOF
 
 git push origin step/NN-short-title
 ```
---- 
 
- MAID v1.0.0 · Moderated AI Development · https://github.com/fpmcguire/moderated-ai-development
+---
+
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development

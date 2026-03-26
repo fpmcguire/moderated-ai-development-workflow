@@ -1,4 +1,4 @@
-# Moderated AI Development Principles
+# Moderated AI Development Workflow Principles
 
 These principles elaborate on the values in the [Moderated AI Development Manifesto](manifesto.md) and guide day-to-day practice.
 
@@ -36,7 +36,7 @@ All AI interactions, moderation decisions, and quality gate outcomes are recorde
 
 ## 9. The process improves continuously
 
-Teams are expected to reflect on Moderated AI Development ceremonies and adapt the methodology to their context. Feedback is shared with the community via adoption stories and method improvement proposals.
+Teams are expected to reflect on Moderated AI Development Workflow ceremonies and adapt the methodology to their context. Feedback is shared with the community via adoption stories and method improvement proposals.
 
 ## 10. Security and privacy are first-class concerns
 
@@ -44,4 +44,4 @@ No real credentials, personal data, or sensitive business information is ever in
 
 ---
 
-MAID v1.0.0 · Moderated AI Development · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development

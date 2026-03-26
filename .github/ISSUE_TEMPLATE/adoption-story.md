@@ -1,9 +1,9 @@
 ---
 name: Adoption Story
-about: Share how your team used Moderated AI Development in a real project
+about: Share how your team used Moderated AI Development Workflow in a real project
 title: "[ADOPTION] "
 labels: adoption-story
-assignees: ''
+assignees: ""
 ---
 
 ## Team & Project Context
@@ -19,7 +19,7 @@ assignees: ''
 
 ## What Went Well
 
-<!-- List the aspects of Moderated AI Development that were most helpful -->
+<!-- List the aspects of Moderated AI Development Workflow that were most helpful -->
 
 ## What Was Challenging
 
@@ -31,7 +31,7 @@ assignees: ''
 
 ## Outcomes
 
-<!-- What was the result? Did Moderated AI Development help improve quality, speed, or team confidence in AI-generated code? -->
+<!-- What was the result? Did Moderated AI Development Workflow help improve quality, speed, or team confidence in AI-generated code? -->
 
 ## Suggestions for the Methodology
 

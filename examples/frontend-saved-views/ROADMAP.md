@@ -1,6 +1,6 @@
 # Roadmap: Saved Views (Frontend Example)
 
-This roadmap breaks the Saved Views feature into small Moderated AI Development Steps that can each be implemented, reviewed, and tagged independently.
+This roadmap breaks the Saved Views feature into small Moderated AI Development Workflow Steps that can each be implemented, reviewed, and tagged independently.
 
 ---
 
@@ -149,8 +149,8 @@ Allow users to rename or delete existing Saved Views for the current dashboard.
 - Saved Views are scoped to one dashboard only in this example
 - Persistence remains in memory for this example; a later profile can introduce backend integration as new Steps
 - Explicit “Update current view” / overwrite is intentionally deferred out of scope for this initial roadmap
-- Each Step should follow the Moderated AI Development lifecycle: define STEP.md → Development Team implementation → Workbench verification → revision loop → Tech Lead review → QA → annotated tag
+- Each Step should follow the Moderated AI Development Workflow lifecycle: define STEP.md → Development Team implementation → Workbench verification → revision loop → Tech Lead review → QA → annotated tag
 
-----
+---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

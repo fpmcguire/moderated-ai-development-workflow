@@ -56,6 +56,6 @@
 - **AI provider data policy reviewed:** <!-- Yes / No, and date -->
 - **Organisation AI usage policy reviewed:** <!-- Yes / No, and date -->
 
-----
+---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

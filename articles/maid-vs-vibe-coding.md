@@ -5,13 +5,13 @@
 AI coding tools have made it possible to “just start typing” and let the model fill in the rest.  
 That style — often called **vibe coding** — is fun, fast, and great for exploration, but it breaks down quickly in real products.
 
-**Moderated AI Development** exists to turn that same power into **viable coding**: a disciplined, reviewable workflow where AI is a powerful collaborator, not an ungoverned committer.
+**Moderated AI Development Workflow** exists to turn that same power into **viable coding**: a disciplined, reviewable workflow where AI is a powerful collaborator, not an ungoverned committer.
 
 This article explains:
 
 - what “vibe coding” and “viable coding” mean in practice
 - why vibe coding fails for serious systems
-- how Moderated AI Development makes viable coding concrete through roles, artifacts, and quality gates
+- how Moderated AI Development Workflow makes viable coding concrete through roles, artifacts, and quality gates
 
 ---
 
@@ -65,7 +65,7 @@ Moderated AI Development is one concrete implementation of viable coding.
 
 ---
 
-## How Moderated AI Development turns vibe into viable
+## How Moderated AI Development Workflow turns vibe into viable
 
 Moderated AI Development makes viable coding explicit through three pillars:
 
@@ -84,11 +84,11 @@ Moderated AI Development v1.0.0 defines four core roles:
 
 These roles may be supported by different AI tools (e.g., Perplexity, ChatGPT, Claude, Copilot), but the human Moderator retains final authority.
 
-By splitting responsibilities, Moderated AI Development makes sure no single AI interaction silently covers product, design, architecture, and implementation.
+By splitting responsibilities, Moderated AI Development Workflow makes sure no single AI interaction silently covers product, design, architecture, and implementation.
 
 ### 2. Artifacts
 
-Instead of burying decisions inside chat logs, Moderated AI Development uses a small set of shared artifacts:
+Instead of burying decisions inside chat logs, Moderated AI Development Workflow uses a small set of shared artifacts:
 
 - `PRODUCT.md` – what we are building and why
 - `ARCHITECTURE.md` – how we are structuring it
@@ -104,7 +104,7 @@ Moderated AI Development insists that **intent and design are captured in artifa
 
 ### 3. Quality gates
 
-Each Step in Moderated AI Development has an explicit **quality gate**:
+Each Step in Moderated AI Development Workflow has an explicit **quality gate**:
 
 - defined in `STEP.md`
 - evaluated in `REVIEW.md` and `QA.md`
@@ -148,24 +148,24 @@ Moderated AI Development does not ban vibe coding. It just defines **where it is
 The key difference is what happens **after** the spike:
 
 - For throwaway work, you can stop there.
-- For anything that will live in the main codebase, Moderated AI Development asks you to move into the viable‑coding path:
+- For anything that will live in the main codebase, Moderated AI Development Workflow asks you to move into the viable‑coding path:
   - capture the insight in PRODUCT / ARCHITECTURE / DOMAIN LANGUAGE
   - design a Step
   - implement it under moderation
 
-“Vibe to learn, Moderated AI Development to ship.”
+“Vibe to learn, Moderated AI Development Workflow to ship.”
 
 ---
 
-## Summary: Moderated AI Development as viable coding in practice
+## Summary: Moderated AI Development Workflow as viable coding in practice
 
 If you want one sentence:
 
-> Moderated AI Development is a viable‑coding workflow: it turns AI‑assisted development from ad‑hoc vibe coding into step‑based, artifact‑driven, human‑moderated change.
+> Moderated AI Development Workflow is a viable‑coding workflow: it turns AI‑assisted development from ad‑hoc vibe coding into step‑based, artifact‑driven, human‑moderated change.
 
 Use vibe coding when you are exploring.  
-Use Moderated AI Development when you care about what happens next week, next month, and after your next teammate joins.
+Use Moderated AI Development Workflow when you care about what happens next week, next month, and after your next teammate joins.
 
 ---
 
-MAID v1.0.0 · Moderated AI Development · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development

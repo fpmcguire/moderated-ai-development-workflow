@@ -58,6 +58,6 @@ Quality gates **may not be waived**. If a gate criterion cannot be met, the team
 
 Bypassing a gate — even under time pressure — introduces unverified AI output into the product and violates the [Moderated AI Development Principles](principles.md).
 
---- 
+---
 
- MAID v1.0.0 · Moderated AI Development · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development

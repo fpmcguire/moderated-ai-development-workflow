@@ -258,6 +258,6 @@ Should I write a test for this?
 > **Remember:** The goal is working software with confidence to ship — not coverage metrics.
 > 10 focused integration tests beat 50 trivial unit tests every time.
 
-----
+---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

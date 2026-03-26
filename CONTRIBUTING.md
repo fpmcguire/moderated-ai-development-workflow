@@ -4,7 +4,7 @@ Thank you for your interest in contributing to Moderated AI Development! This do
 
 ## Ways to Contribute
 
-- **Share adoption stories** — Tell us how your team used Moderated AI Development and what you learned.
+- **Share adoption stories** — Tell us how your team used Moderated AI Development Workflow and what you learned.
 - **Propose method improvements** — Suggest enhancements to roles, ceremonies, artifacts, or quality gates.
 - **Report issues** — Flag unclear documentation, broken templates, or methodology gaps.
 - **Ask questions** — Open a discussion if something is confusing or you need clarification.
@@ -13,7 +13,7 @@ Thank you for your interest in contributing to Moderated AI Development! This do
 
 1. Read the [Moderated AI Development Manifesto](docs/manifesto.md) and [Principles](docs/principles.md) to understand the philosophy.
 2. Familiarise yourself with the [Glossary](docs/glossary.md) and [Domain Language](docs/domain-language.md).
-3. Browse the [example](examples/frontend-saved-views/) to see Moderated AI Development in practice.
+3. Browse the [example](examples/frontend-saved-views/) to see Moderated AI Development Workflow in practice.
 
 ## Submitting Changes
 
@@ -28,7 +28,7 @@ Please use the appropriate issue template when opening an issue:
 
 | Template                                                           | When to use                                    |
 | ------------------------------------------------------------------ | ---------------------------------------------- |
-| [Adoption Story](.github/ISSUE_TEMPLATE/adoption-story.md)         | Sharing a real-world MAID experience           |
+| [Adoption Story](.github/ISSUE_TEMPLATE/adoption-story.md)         | Sharing a real-world MOD-W experience          |
 | [Method Improvement](.github/ISSUE_TEMPLATE/method-improvement.md) | Proposing changes to the methodology           |
 | [Bug Report](.github/ISSUE_TEMPLATE/bug-report.md)                 | Reporting errors in documentation or templates |
 | [Question](.github/ISSUE_TEMPLATE/question.md)                     | Asking for clarification                       |
@@ -43,4 +43,4 @@ See [GOVERNANCE.md](GOVERNANCE.md) for how decisions are made in this project.
 
 ---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

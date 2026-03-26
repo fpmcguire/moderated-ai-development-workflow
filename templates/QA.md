@@ -11,28 +11,28 @@
 
 <!-- Overall result: Pass / Fail / Blocked -->
 
-**Result:** 
+**Result:**
 
 ---
 
 ## Test Environment
 
-| Item | Value |
-|---|---|
-| Environment | <!-- e.g. local dev, staging --> |
-| Browser / Runtime | |
-| Database state | <!-- e.g. seeded with test data, empty --> |
-| Dependencies | |
+| Item              | Value                                      |
+| ----------------- | ------------------------------------------ |
+| Environment       | <!-- e.g. local dev, staging -->           |
+| Browser / Runtime |                                            |
+| Database state    | <!-- e.g. seeded with test data, empty --> |
+| Dependencies      |                                            |
 
 ---
 
 ## Test Cases
 
-| # | Description | Steps | Expected Result | Actual Result | Status |
-|---|---|---|---|---|---|
-| TC-01 | | | | | Pass / Fail |
-| TC-02 | | | | | Pass / Fail |
-| TC-03 | | | | | Pass / Fail |
+| #     | Description | Steps | Expected Result | Actual Result | Status      |
+| ----- | ----------- | ----- | --------------- | ------------- | ----------- |
+| TC-01 |             |       |                 |               | Pass / Fail |
+| TC-02 |             |       |                 |               | Pass / Fail |
+| TC-03 |             |       |                 |               | Pass / Fail |
 
 ---
 
@@ -40,9 +40,9 @@
 
 <!-- List any defects found. Link to GitHub issues if raised. -->
 
-| # | Description | Severity | Issue Link | Status |
-|---|---|---|---|---|
-| | | | | |
+| #   | Description | Severity | Issue Link | Status |
+| --- | ----------- | -------- | ---------- | ------ |
+|     |             |          |            |        |
 
 ---
 
@@ -59,6 +59,6 @@
 
 <!-- Any observations, environment issues, or recommendations. -->
 
-----
+---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

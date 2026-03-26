@@ -1,6 +1,7 @@
 # Architecture
 
 <!-- Project name -->
+
 **Project:** {{PROJECT_NAME}}  
 **Date:** {{DATE}}  
 **Tech Lead:** {{TECH_LEAD_NAME}}
@@ -13,13 +14,13 @@
 
 ## Technology Stack
 
-| Layer | Technology | Version | Rationale |
-|---|---|---|---|
-| Frontend | | | |
-| Backend | | | |
-| Database | | | |
-| Infrastructure | | | |
-| AI Models | | | |
+| Layer          | Technology | Version | Rationale |
+| -------------- | ---------- | ------- | --------- |
+| Frontend       |            |         |           |
+| Backend        |            |         |           |
+| Database       |            |         |           |
+| Infrastructure |            |         |           |
+| AI Models      |            |         |           |
 
 ## System Diagram
 
@@ -51,8 +52,8 @@
 <!-- What external systems, APIs, or services does this product integrate with? -->
 
 | Integration | Direction | Protocol | Notes |
-|---|---|---|---|
-| | | | |
+| ----------- | --------- | -------- | ----- |
+|             |           |          |       |
 
 ## Security Considerations
 
@@ -70,6 +71,6 @@
 
 <!-- What patterns, naming conventions, or coding standards apply? -->
 
-----
+---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

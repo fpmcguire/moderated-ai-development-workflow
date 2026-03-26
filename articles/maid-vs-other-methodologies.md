@@ -1,24 +1,24 @@
-# Moderated AI Development vs Other AI-Driven Development Methodologies
+# Moderated AI Development Workflow vs Other AI-Driven Development Methodologies
 
 ## Overview
 
 There are now several serious approaches to AI-assisted development:  
 generic **Spec‑Driven Development (SDD)**, opinionated frameworks like **BMAD**, and workflows that lean heavily on **agentic IDEs** (Cursor, Copilot, Claude Code, etc.) with minimal extra process.
 
-**Moderated AI Development** is one specific way to combine these ideas.  
-This article compares Moderated AI Development to three common patterns:
+**Moderated AI Development Workflow** is one specific way to combine these ideas.  
+This article compares Moderated AI Development Workflow to three common patterns:
 
 - “Pure” SDD as a method
 - BMAD Method
 - “Just use an AI IDE/agent” (Cursor, Copilot, Claude Code only)
 
-The goal is not to crown a winner, but to show where Moderated AI Development is a good fit and how it can layer on top of other approaches.
+The goal is not to crown a winner, but to show where Moderated AI Development Workflow is a good fit and how it can layer on top of other approaches.
 
 ---
 
 ## Quick comparison table
 
-| Dimension                  | Moderated AI Development                                                | SDD (generic)                     | BMAD Method                                | “Just AI IDE / Agent” workflow          |
+| Dimension                  | Moderated AI Development Workflow                                       | SDD (generic)                     | BMAD Method                                | “Just AI IDE / Agent” workflow          |
 | -------------------------- | ----------------------------------------------------------------------- | --------------------------------- | ------------------------------------------ | --------------------------------------- |
 | Primary focus              | Human‑moderated, role‑based SDD                                         | Spec‑as‑source‑of‑truth           | Agentic Agile planning + SDD               | Speed and convenience in coding         |
 | Core idea                  | Roles + artifacts + quality gates                                       | Specify → Plan → Task → Implement | Multi‑agent roles + PRD→Code pipeline      | Let the model read/edit/run your code   |
@@ -31,7 +31,7 @@ The goal is not to crown a winner, but to show where Moderated AI Development is
 
 ---
 
-## Moderated AI Development vs generic SDD
+## Moderated AI Development Workflow vs generic SDD
 
 **What SDD gives you**
 
@@ -44,7 +44,7 @@ Spec‑Driven Development is a set of ideas:
 SDD is intentionally **tool‑agnostic** and **role‑light**.  
 It tells you _what_ phases to have, but not _who_ does them or _how_ AI is moderated.
 
-**What Moderated AI Development adds**
+**What Moderated AI Development Workflow adds**
 
 Moderated AI Development assumes those SDD phases exist and then adds:
 
@@ -53,18 +53,18 @@ Moderated AI Development assumes those SDD phases exist and then adds:
 - **quality gates** enforced by a human Moderator in a local Workbench
 - **model diversity** and cross‑validation as a design principle, not an accident
 
-If SDD is the **shape** of the work, Moderated AI Development is the **governance and collaboration pattern** around that shape.
+If SDD is the **shape** of the work, Moderated AI Development Workflow is the **governance and collaboration pattern** around that shape.
 
 **How to combine them**
 
 You don’t pick one:
 
 - Use SDD concepts to structure the lifecycle.
-- Use Moderated AI Development to define roles, artifacts, and moderation around that lifecycle.
+- Use Moderated AI Development Workflow to define roles, artifacts, and moderation around that lifecycle.
 
 ---
 
-## Moderated AI Development vs BMAD Method
+## Moderated AI Development Workflow vs BMAD Method
 
 **What BMAD does**
 
@@ -77,7 +77,7 @@ BMAD (“Breakthrough Method for Agile AI‑Driven Development”) is a more pre
 
 It’s opinionated, “agent‑first,” and optimized for moving a lot of work through AI lanes.
 
-**How Moderated AI Development differs**
+**How Moderated AI Development Workflow differs**
 
 Moderated AI Development is:
 
@@ -85,13 +85,13 @@ Moderated AI Development is:
 - **more explicit about human moderation** – Moderator is always in the loop with real builds/tests in a Workbench
 - **less tied to one tool surface** – no assumption about a specific IDE or CLI
 
-Where BMAD often assumes many AI roles running inside a compatible IDE, Moderated AI Development assumes you may have:
+Where BMAD often assumes many AI roles running inside a compatible IDE, Moderated AI Development Workflow assumes you may have:
 
 - different tools per role
 - different teams and stacks
 - and a strong desire to keep the Moderator’s work local and accountable
 
-**When to prefer Moderated AI Development**
+**When to prefer Moderated AI Development Workflow**
 
 - You want a **minimal governance layer** that can sit on top of existing practices.
 - You’re not ready to lean fully into “many agent roles” but you do want structure and moderation.
@@ -99,7 +99,7 @@ Where BMAD often assumes many AI roles running inside a compatible IDE, Moderate
 
 ---
 
-## Moderated AI Development vs “just use Cursor/Copilot/Claude Code”
+## Moderated AI Development Workflow vs “just use Cursor/Copilot/Claude Code”
 
 Many teams today adopt a simple pattern:
 
@@ -124,7 +124,7 @@ Many teams today adopt a simple pattern:
 
 This is productive **vibe coding with better tools**.
 
-**What Moderated AI Development brings on top**
+**What Moderated AI Development Workflow brings on top**
 
 Moderated AI Development does not replace these tools; it wraps them with:
 
@@ -136,7 +136,7 @@ Moderated AI Development does not replace these tools; it wraps them with:
 The net effect:
 
 - You still use Cursor / Copilot / Claude Code for implementation.
-- But their output is framed by Moderated AI Development artifacts and constrained by Moderated AI Development quality gates.
+- But their output is framed by Moderated AI Development Workflow artifacts and constrained by Moderated AI Development Workflow quality gates.
 
 ---
 
@@ -147,11 +147,11 @@ A simple heuristic:
 - **You’re experimenting, or solo, and want speed?**
   - AI IDE/agent alone is fine.
 - **You already think in specs and phases but don’t have clear roles?**
-  - Add Moderated AI Development on top of your SDD habits.
+  - Add Moderated AI Development Workflow on top of your SDD habits.
 - **You want a fully agent‑heavy process with many AI roles?**
   - BMAD might be a better fit, possibly alongside Moderated AI Development’s moderation concepts.
 - **You want a small, human‑centered workflow that tames AI in your existing stack?**
-  - Moderated AI Development is the right core, with SDD and AI IDEs underneath.
+  - Moderated AI Development Workflow is the right core, with SDD and AI IDEs underneath.
 
 ---
 
@@ -168,4 +168,4 @@ It assumes AI will only get more powerful — and argues that **moderation, arti
 
 ---
 
-MAID v1.0.0 · Moderated AI Development · [https://github.com/fpmcguire/moderated-ai-development](https://github.com/fpmcguire/moderated-ai-development)
+MOD-W v1.0.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development](https://github.com/fpmcguire/moderated-ai-development)

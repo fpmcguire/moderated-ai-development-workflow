@@ -89,6 +89,6 @@ _(Adjust names to your chosen stack once ARCHITECTURE.md is written.)_
 - Confirm that the Step does not sneak in create/rename/delete logic; those belong to later Steps.
 - Confirm that apply behaviour is visible and testable from the UI, not only through internal state.
 
-----
+---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

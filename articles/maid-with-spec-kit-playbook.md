@@ -1,10 +1,10 @@
-# Moderated AI Development + GitHub Spec Kit Playbook
+# Moderated AI Development Workflow + GitHub Spec Kit Playbook
 
 ## Overview
 
 **GitHub Spec Kit** is an open‑source toolkit for **Spec‑Driven Development (SDD)**. It helps you capture a project constitution, spec, plan, and tasks in your repo, then drive AI‑assisted implementation from those artifacts.
 
-**Moderated AI Development** is a governance and workflow layer that adds roles, artifacts, and human moderation on top of any spec‑driven engine.
+**Moderated AI Development Workflow** is a governance and workflow layer that adds roles, artifacts, and human moderation on top of any spec‑driven engine.
 
 Spec Kit answers:
 
@@ -16,9 +16,9 @@ Moderated AI Development answers:
 
 This playbook shows how to combine them:
 
-- how Spec Kit’s constitution / spec / plan / tasks map to Moderated AI Development artifacts
-- how Moderated AI Development roles sit around Spec Kit’s CLI and commands
-- a practical checklist to run your **first Moderated AI Development Step with Spec Kit**
+- how Spec Kit’s constitution / spec / plan / tasks map to Moderated AI Development Workflow artifacts
+- how Moderated AI Development Workflow roles sit around Spec Kit’s CLI and commands
+- a practical checklist to run your **first Moderated AI Development Workflow Step with Spec Kit**
 
 ---
 
@@ -31,7 +31,7 @@ Spec Kit works with four main phases:
 - **Plan** – how to build it: technical approach and sequencing
 - **Tasks** – concrete units of work for implementation
 
-Moderated AI Development ^(MAID) uses these core artifacts:
+Moderated AI Development ^(MOD-W) uses these core artifacts:
 
 - `PRODUCT.md` – product problem, users, goals, requirements
 - `ARCHITECTURE.md` – technical approach, architecture decisions
@@ -41,23 +41,23 @@ Moderated AI Development ^(MAID) uses these core artifacts:
 
 The mapping is:
 
-| Spec Kit phase | MAID artifact(s)                                                                        | Purpose                                 |
-| -------------- | --------------------------------------------------------------------------------------- | --------------------------------------- |
-| Constitution   | MAID principles & steering docs (`docs/*.md`, `AGENTS.md`, `DOMAIN_LANGUAGE_MATRIX.md`) | Project‑wide rules and constraints      |
-| Spec           | `PRODUCT.md`                                                                            | What we’re building and why             |
-| Plan           | `ARCHITECTURE.md`                                                                       | How we’re building it                   |
-| Tasks          | `ROADMAP.md` + `STEP-XX.md`                                                             | Concrete, bounded units of work (Steps) |
+| Spec Kit phase | MOD-W artifact(s)                                                                        | Purpose                                 |
+| -------------- | ---------------------------------------------------------------------------------------- | --------------------------------------- |
+| Constitution   | MOD-W principles & steering docs (`docs/*.md`, `AGENTS.md`, `DOMAIN_LANGUAGE_MATRIX.md`) | Project‑wide rules and constraints      |
+| Spec           | `PRODUCT.md`                                                                             | What we’re building and why             |
+| Plan           | `ARCHITECTURE.md`                                                                        | How we’re building it                   |
+| Tasks          | `ROADMAP.md` + `STEP-XX.md`                                                              | Concrete, bounded units of work (Steps) |
 
-MAID then layers review and evidence on top of Spec Kit’s flow:
+MOD-W then layers review and evidence on top of Spec Kit’s flow:
 
 - `REVIEW.md` – why a Step was accepted or rejected
 - `QA.md` – how we verified behavior in reality
 
 ---
 
-## Roles in a Moderated AI Development + Spec Kit setup
+## Roles in a Moderated AI Development Workflow + Spec Kit setup
 
-In a Spec Kit + Moderated AI Development project, the roles line up like this:
+In a Spec Kit + Moderated AI Development Workflow project, the roles line up like this:
 
 - **Product Owner**
   - Owns the **Spec** phase.
@@ -72,7 +72,7 @@ In a Spec Kit + Moderated AI Development project, the roles line up like this:
 - **Development Team**
   - Works primarily in the **Tasks** phase.
   - Uses Spec Kit tasks to structure work and drive AI‑assisted implementation (e.g., via Copilot, Claude Code).
-  - Treats each Task as one Moderated AI Development Step or sub‑work within a Step.
+  - Treats each Task as one Moderated AI Development Workflow Step or sub‑work within a Step.
 
 - **Moderator**
   - Treats Spec Kit commands and phase changes as **proposals**, not final truth.
@@ -82,13 +82,13 @@ In a Spec Kit + Moderated AI Development project, the roles line up like this:
     - `REVIEW.md` and `QA.md` are updated for each Step.
   - Has final say on whether a Step is accepted and tagged.
 
-The central rule: **Spec Kit drives structure; Moderated AI Development decides when each phase and task is good enough to move on.**
+The central rule: **Spec Kit drives structure; Moderated AI Development Workflow decides when each phase and task is good enough to move on.**
 
 ---
 
 ## Phase-by-phase playbook
 
-### 1. Constitution ↔ Moderated AI Development steering docs
+### 1. Constitution ↔ Moderated AI Development Workflow steering docs
 
 **Goal:** Make the project’s principles and rules explicit.
 
@@ -102,8 +102,8 @@ The central rule: **Spec Kit drives structure; Moderated AI Development decides 
     - `DOMAIN_LANGUAGE_MATRIX.md` – shared vocabulary.
     - `AGENTS.md` – rules, commands, and limits for AI agents.
 
-**Gate:** The Moderator and Tech Lead decide that the constitution + Moderated AI Development steering docs are strong enough to guide Specs and Plans.  
-Spec Kit’s constitution is **not self‑ratifying**; Moderated AI Development requires explicit human agreement.
+**Gate:** The Moderator and Tech Lead decide that the constitution + Moderated AI Development Workflow steering docs are strong enough to guide Specs and Plans.  
+Spec Kit’s constitution is **not self‑ratifying**; Moderated AI Development Workflow requires explicit human agreement.
 
 ### 2. Spec ↔ PRODUCT.md
 
@@ -169,7 +169,7 @@ Only then do you move to Spec Kit’s Plan phase.
 
 Each Spec Kit Task should:
 
-- map to exactly one Moderated AI Development Step, or
+- map to exactly one Moderated AI Development Workflow Step, or
 - be clearly attached as part of a specific Step in `STEP-XX.md`.
 
 **Gate:** Tech Lead enforces **MVP discipline**:
@@ -228,7 +228,7 @@ Here is a concrete end‑to‑end flow for implementing and accepting a Step:
      - Moderator marks the Step as Done in Moderated AI Development,
      - creates an annotated Git tag for the Step.
 
-Spec Kit may have marked the Task as done earlier. **The Moderated AI Development Step is only “done” when the Moderator accepts it.**
+Spec Kit may have marked the Task as done earlier. **The Moderated AI Development Workflow Step is only “done” when the Moderator accepts it.**
 
 ---
 
@@ -237,21 +237,21 @@ Spec Kit may have marked the Task as done earlier. **The Moderated AI Developmen
 - **Spec Kit phases are proposals, not verdicts.**  
   Treat `/spec`, `/plan`, and `/tasks` outputs as drafts that still need Moderated AI Development’s role‑based review.
 
-- **Keep Moderated AI Development artifacts canonical.**  
+- **Keep Moderated AI Development Workflow artifacts canonical.**  
   Constitution, Spec, Plan, and Tasks may live in multiple places; Moderated AI Development’s `PRODUCT.md`, `ARCHITECTURE.md`, `ROADMAP.md`, and `STEP-XX.md` are the primary artifacts in the repo.
 
 - **Use model contrast consciously.**  
-  You can use one model for Spec Kit spec/plan phases and another for Moderated AI Development Dev Team work, letting them cross‑validate each other before the Moderator decides.
+  You can use one model for Spec Kit spec/plan phases and another for Moderated AI Development Workflow Dev Team work, letting them cross‑validate each other before the Moderator decides.
 
 - **Store prompts alongside artifacts.**  
-  Keep Spec Kit prompts and Moderated AI Development prompts in the repo (e.g., under `prompts/`) to maintain traceability and reproducibility.
+  Keep Spec Kit prompts and Moderated AI Development Workflow prompts in the repo (e.g., under `prompts/`) to maintain traceability and reproducibility.
 
-- **Let Moderated AI Development own acceptance.**  
+- **Let Moderated AI Development Workflow own acceptance.**  
   Spec Kit is allowed to say “ready”; Moderated AI Development’s Moderator decides “accepted.”
 
 ---
 
-## When Moderated AI Development + Spec Kit is a good fit
+## When Moderated AI Development Workflow + Spec Kit is a good fit
 
 The combination shines when:
 
@@ -262,8 +262,8 @@ The combination shines when:
   - and a non‑negotiable, human‑driven moderation layer.
 
 You don’t have to abandon Spec Kit to adopt Moderated AI Development.  
-You give Spec Kit the job of **structuring** your specs and tasks, and you give Moderated AI Development the job of **making them safe to depend on**.
+You give Spec Kit the job of **structuring** your specs and tasks, and you give Moderated AI Development Workflow the job of **making them safe to depend on**.
 
 ---
 
-MAID v1.0.0 · Moderated AI Development · [https://github.com/fpmcguire/moderated-ai-development](https://github.com/fpmcguire/moderated-ai-development)
+MOD-W v1.0.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development](https://github.com/fpmcguire/moderated-ai-development)

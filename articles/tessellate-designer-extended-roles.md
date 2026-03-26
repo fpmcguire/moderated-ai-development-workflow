@@ -16,12 +16,12 @@ This article explains:
 
 ## What is Tessellate Designer?
 
-Tessellate Designer is a Moderated AI Development example project focused on a **UI/UX‑heavy feature** (e.g., designing and managing “tessellated” layouts or views in a SaaS frontend). Its purpose in the repo is to:
+Tessellate Designer is a Moderated AI Development Workflow example project focused on a **UI/UX‑heavy feature** (e.g., designing and managing “tessellated” layouts or views in a SaaS frontend). Its purpose in the repo is to:
 
 - demonstrate Moderated AI Development’s Step‑based workflow, and
 - illustrate how **Customer** and **Product Designer** roles can wrap around the core Product → Architecture → Implementation chain.
 
-Rather than changing Moderated AI Development v1.0.0’s base roles, Tessellate Designer **adds**:
+Rather than changing Moderated AI Development Workflow v1.0.0’s base roles, Tessellate Designer **adds**:
 
 - a Customer lane at the very start (real problems, language, constraints), and
 - a Product Designer lane between Customer and Product Owner (flows, screens, interactions).
@@ -61,7 +61,7 @@ They do _not_ merge code or override technical decisions; they are peers to the 
 
 ---
 
-## How extended roles fit into Moderated AI Development v1.0.0
+## How extended roles fit into Moderated AI Development Workflow v1.0.0
 
 Tessellate Designer keeps Moderated AI Development’s core roles intact:
 
@@ -104,7 +104,7 @@ Tessellate Designer demonstrates how extended roles can be grounded in artifacts
 - `ROADMAP.md`, `STEP-XX.md`, `REVIEW.md`, `QA.md`
   - Same as in base Moderated AI Development: Steps, briefs, review notes, verification evidence.
 
-Extended roles **add context and constraints** to existing artifacts; they don’t require new core file types in Moderated AI Development v1.0.0.
+Extended roles **add context and constraints** to existing artifacts; they don’t require new core file types in Moderated AI Development Workflow v1.0.0.
 
 ---
 
@@ -148,13 +148,13 @@ This shows **how** Customer and Product Designer inform the Step, without requir
 
 ## Why Tessellate Designer is v2‑ish but not v2
 
-Tessellate Designer serves as a **preview of Moderated AI Development v2‑style usage**:
+Tessellate Designer serves as a **preview of Moderated AI Development Workflow v2‑style usage**:
 
 - demonstrates upstream roles (Customer, Product Designer),
 - shows how to anchor them in artifacts and ceremonies,
 - gives a concrete example others can copy or adapt.
 
-But Moderated AI Development itself stays at **v1.0.0**:
+But Moderated AI Development Workflow itself stays at **v1.0.0**:
 
 - core docs and roles remain minimal,
 - extended roles are presented as **optional patterns**,
@@ -164,4 +164,4 @@ This keeps the methodology approachable while still showing a credible path to r
 
 ---
 
-MAID v1.0.0 · Moderated AI Development · [https://github.com/fpmcguire/moderated-ai-development](https://github.com/fpmcguire/moderated-ai-development)
+MOD-W v1.0.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development](https://github.com/fpmcguire/moderated-ai-development)

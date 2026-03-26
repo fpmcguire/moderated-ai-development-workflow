@@ -121,6 +121,6 @@ See: [prompts/development-team-claude.md](../prompts/development-team-claude.md)
 | Tech Lead Agent        | AI (ChatGPT) | ARCHITECTURE.md drafts, technical suggestions     | None — all output is moderated            |
 | Development Team Agent | AI (Claude)  | Code, tests, docs for each step                   | None — all output is moderated            |
 
---- 
+---
 
- MAID v1.0.0 · Moderated AI Development · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development

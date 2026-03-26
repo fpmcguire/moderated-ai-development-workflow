@@ -25,7 +25,7 @@ Let users save, apply, rename, and delete their preferred dashboard configuratio
 - Make “apply Saved View” visible in the UI so behaviour is easy to review and test.
 - Keep the implementation frontend-only and junior-friendly, while leaving a clean path to later backend integration.
 
-## Primary Workflows
+## Primary Workflow s
 
 1. **Create Saved View**
    - User configures filters, sorting, and columns on the dashboard.
@@ -107,7 +107,7 @@ Let users save, apply, rename, and delete their preferred dashboard configuratio
 
 ## Acceptance Intent
 
-For the **Saved Views example**, Moderated AI Development is considered successful if:
+For the **Saved Views example**, Moderated AI Development Workflow is considered successful if:
 
 - A user can create, apply, rename, and delete Saved Views in the UI
 - Saved Views are scoped to one dashboard
@@ -115,7 +115,7 @@ For the **Saved Views example**, Moderated AI Development is considered successf
 - The visible dashboard configuration changes to match the selected Saved View
 - The active selected Saved View is clear in the list
 - Behaviour is covered by basic tests that verify visible outcomes (at least component-level)
-- Steps are delivered via the Moderated AI Development lifecycle with clear artifacts, reviews, and an annotated tag for at least Step 1
+- Steps are delivered via the Moderated AI Development Workflow lifecycle with clear artifacts, reviews, and an annotated tag for at least Step 1
 
 ## Open Questions
 
@@ -124,4 +124,4 @@ For the **Saved Views example**, Moderated AI Development is considered successf
 
 ---
 
-MAID v1.0.0 · Moderated AI Development · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development

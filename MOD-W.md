@@ -29,7 +29,7 @@ The Moderator owns the workflow.
 
 Responsibilities:
 
-- Orchestrate the Moderated AI Development process across all roles.
+- Orchestrate the Moderated AI Development Workflow process across all roles.
 - Decide direction when outputs conflict.
 - Decide what becomes canonical (which doc/version “wins”).
 - Approve whether a step is ready to proceed.
@@ -89,9 +89,9 @@ The Development Team is responsible for execution, not unilateral re‑design.
 
 ## Canonical documents
 
-All Moderated AI Development docs live under `/maid/` in the project.
+All Moderated AI Development Workflow docs live under `//` in the project.
 
-- `MAID.md` – this method overview for the project.
+- `MOD-W.md` – this method overview for the project.
 - `PRODUCT.md` – what is being built, for whom, and why it matters.
 - `ROADMAP.md` – ordered sequence of small, reviewable increments.
 - `STEP-XX.md` – the current implementation slice (goal, scope, acceptance).
@@ -99,7 +99,7 @@ All Moderated AI Development docs live under `/maid/` in the project.
 - `DOMAIN-LANGUAGE.md` – canonical terms and definitions used across docs and code.
 - (Optional) Other supporting docs, only when they earn their existence.
 
-Each Moderated AI Development doc should include the standard MAID footer with name and version.
+Each Moderated AI Development Workflow doc should include the standard MOD-W footer with name and version.
 
 ---
 
@@ -177,7 +177,7 @@ If any of the reviews is unclear, the workflow pauses for clarification rather t
 
 The Moderator is always human (HITL) and has final go/no‑go authority.
 
-For each Moderated AI Development step:
+For each Moderated AI Development Workflow step:
 
 1. Product Owner updates `PRODUCT.md` and `STEP-XX.md` (goal, scope, acceptance).
 
@@ -216,7 +216,7 @@ This double‑loop (Product/Tech/Dev + Moderator + Tech + Dev + AI) is intention
 
 ## Operating rules
 
-To keep Moderated AI Development lean and effective:
+To keep Moderated AI Development Workflow lean and effective:
 
 - **Documents must earn their existence.**  
   If an existing doc can hold the information cleanly, prefer updating it.
@@ -234,7 +234,7 @@ To keep Moderated AI Development lean and effective:
   If any role is unsure, stop and clarify instead of guessing.
 
 - **Lean first, expand later.**  
-  Start with `MAID.md`, `PRODUCT.md`, `ROADMAP.md`, and the current `STEP-XX.md`; add more docs and controls only when they clearly help.
+  Start with `MOD-W.md`, `PRODUCT.md`, `ROADMAP.md`, and the current `STEP-XX.md`; add more docs and controls only when they clearly help.
 
 ---
 
@@ -247,7 +247,7 @@ Moderated AI Development is tool‑agnostic but tool‑aware.
 
 Default recommendation:
 
-- Treat current Moderated AI Development as **Track 1 (guided)**: AI assists with reviews and code suggestions but does not act autonomously without explicit policies and human approval.
+- Treat current Moderated AI Development Workflow as **Track 1 (guided)**: AI assists with reviews and code suggestions but does not act autonomously without explicit policies and human approval.
 
 ---
 
@@ -256,16 +256,16 @@ Default recommendation:
 At the project root:
 
 - `README.md`
-- `/maid/`
-  - `MAID.md`
+- `//`
+  - `MOD-W.md`
   - `PRODUCT.md`
   - `ROADMAP.md`
   - `STEP-XX.md`
   - `ARCHITECTURE.md` (as needed)
   - `DOMAIN-LANGUAGE.md` (as needed)
 
-`README.md` should briefly mention that the project uses Moderated AI Development and point to `/maid/`.
+`README.md` should briefly mention that the project uses Moderated AI Development Workflow and point to `//`.
 
 ---
 
-## MAID · Moderated AI Development · v1.0.0 · github.com/fpmcguire/moderated-ai-development
+## MOD-W · Moderated AI Development Workflow · v1.0.0 · github.com/fpmcguire/moderated-ai-development
