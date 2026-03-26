@@ -43,4 +43,4 @@ See [GOVERNANCE.md](GOVERNANCE.md) for how decisions are made in this project.
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow

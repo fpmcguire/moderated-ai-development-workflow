@@ -116,4 +116,4 @@ Ceremonies are structured events that create rhythm, transparency, and shared un
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

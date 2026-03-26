@@ -116,4 +116,4 @@ This checklist should be lightweight enough to use for every Step but strict eno
 
 ---
 
-> MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development
+> MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

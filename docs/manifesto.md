@@ -45,4 +45,4 @@ _Moderated AI Development is inspired by the [Agile Manifesto](https://agilemani
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

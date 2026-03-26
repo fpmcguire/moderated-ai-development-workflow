@@ -198,4 +198,4 @@ You just need to make sure every AI‑assisted change makes it a little safer an
 
 ---
 
-MAID v1.0.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development](https://github.com/fpmcguire/moderated-ai-development)
+MAID v1.0.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development-workflow](https://github.com/fpmcguire/moderated-ai-development-workflow)

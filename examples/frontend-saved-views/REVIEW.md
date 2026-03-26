@@ -61,4 +61,4 @@ The migration uses `JSONB` for `filters` and `columns` as specified in ARCHITECT
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow

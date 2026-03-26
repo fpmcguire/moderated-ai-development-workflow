@@ -12,4 +12,4 @@ This matrix suggests tools and models for each Moderated AI Development Workflow
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

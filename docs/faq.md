@@ -48,11 +48,11 @@ The workbench is the environment where AI work sessions happen — typically a c
 ## Community
 
 **How do I share my experience with MOD-W?**  
-Open an [Adoption Story](https://github.com/fpmcguire/moderated-ai-development/issues/new?template=adoption-story.md) issue. Your experience helps the community improve the methodology.
+Open an [Adoption Story](https://github.com/fpmcguire/moderated-ai-development-workflow/issues/new?template=adoption-story.md) issue. Your experience helps the community improve the methodology.
 
 **How do I suggest a change to the methodology?**  
-Open a [Method Improvement](https://github.com/fpmcguire/moderated-ai-development/issues/new?template=method-improvement.md) issue. See [CONTRIBUTING.md](../CONTRIBUTING.md) and [GOVERNANCE.md](../GOVERNANCE.md) for how decisions are made.
+Open a [Method Improvement](https://github.com/fpmcguire/moderated-ai-development-workflow/issues/new?template=method-improvement.md) issue. See [CONTRIBUTING.md](../CONTRIBUTING.md) and [GOVERNANCE.md](../GOVERNANCE.md) for how decisions are made.
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

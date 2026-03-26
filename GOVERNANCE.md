@@ -51,4 +51,4 @@ All contributions to this repository are made under the [MIT License](LICENSE).
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow

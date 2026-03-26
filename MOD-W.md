@@ -268,4 +268,4 @@ At the project root:
 
 ---
 
-## MOD-W · Moderated AI Development Workflow · v1.0.0 · github.com/fpmcguire/moderated-ai-development
+## MOD-W · Moderated AI Development Workflow · v1.0.0 · github.com/fpmcguire/moderated-ai-development-workflow

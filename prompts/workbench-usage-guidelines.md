@@ -51,4 +51,4 @@ Its job is to **verify and fine‑tune**, not to replace the Moderated AI Develo
 
 ---
 
-> MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development
+> MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

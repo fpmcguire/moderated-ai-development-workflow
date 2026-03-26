@@ -51,4 +51,4 @@ The environment in which AI work sessions are conducted — typically a web-base
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

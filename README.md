@@ -10,7 +10,12 @@ Human-moderated workflow for AI-assisted software development
 >
 > You can think of Moderated AI Development Workflow as: role-based workflow + Spec-Driven Development (SDD) + AI cross-validation + human-in-the-loop (HITL) moderation.
 
-**This is not “vibe coding.” It is a disciplined form of viable coding.**  
+### A Note on Naming (v1.0.0 Update)
+
+To ensure clarity and avoid confusion with other "MAID" projects in the AI space, this methodology has officially rebranded from MAID to MOD-W (Moderated AI Development Workflow). The new shorthand more accurately reflects our focus on the Moderator role and the disciplined Workflow required for viable coding.
+
+## This is not “vibe coding.” It is a disciplined form of viable coding.
+
 Vibe coding is useful for quick experiments, but it collapses product, design, architecture, and implementation into one blurry chat. Moderated AI Development Workflow turns AI-assisted work into viable coding: small, reviewable steps, explicit roles, clear artifacts, and non-negotiable human quality gates.
 
 Moderated AI Development is a spec-driven workflow that improves quality through separated roles, cross-validation, and explicit human oversight.  
@@ -317,10 +322,13 @@ To get started with Moderated AI Development, you only need a small subset of th
 
 ---
 
-## Status
+## Status: v1.0.0 (Stable)
 
-Moderated AI Development started as a personal workflow for building highly maintainable SaaS frontends with AI tools and is now being formalized as an open methodology and template.
-This repository is a work in progress; structure and naming are stabilizing first, then more examples and profiles (e.g., backend, full‑stack, Claude Code) will follow.
+**MOD-W** has transitioned from a personal workflow into a formalized, open methodology.
+
+- **Current State:** The core methodology, role definitions, and document templates are stabilized.
+- **Examples Included:** A reference implementation for a **Frontend Saved Views** feature is available in `/examples/frontend-saved-views`, demonstrating the full lifecycle from `PRODUCT.md` to annotated Git tags.
+- **Roadmap:** Future updates will introduce specific profiles for backend services, full-stack integration, and advanced AI runners like Claude Code and Aider.
 
 ---
 
@@ -356,4 +364,4 @@ For inquiries, open an issue or contact the maintainer via the repository profil
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development
+MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
