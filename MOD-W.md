@@ -1,5 +1,7 @@
 # Moderated AI Development Workflow
 
+**Github repo:** https://github.com/fpmcguire/moderated-ai-development-workflow.git
+
 ## Purpose
 
 Moderated AI Development Workflow is a role-driven, document-centered workflow for AI‑assisted software development.
@@ -90,13 +92,15 @@ The Development Team is responsible for execution, not unilateral re‑design.
 
 ## Canonical documents
 
-All Moderated AI Development Workflow docs live under `//` in the project.
+All Moderated AI Development Workflow docs live under `//mod-w` in the project.
 
-- `MOD-W.md` – this method overview for the project.
+- `MOD-W.md` – this workflow methodology overview for the project.
 - `PRODUCT.md` – what is being built, for whom, and why it matters.
+- `ARCHITECTURE.md` – technical structure, boundaries, patterns, constraints.
 - `ROADMAP.md` – ordered sequence of small, reviewable increments.
 - `STEP-XX.md` – the current implementation slice (goal, scope, acceptance).
-- `ARCHITECTURE.md` – technical structure, boundaries, patterns, constraints.
+- `REVIEW.md` – review notes and decisions for the current Step.
+- `QA.md` – verification evidence for the Step.
 - `DOMAIN-LANGUAGE.md` – canonical terms and definitions used across docs and code.
 - (Optional) Other supporting docs, only when they earn their existence.
 

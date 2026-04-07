@@ -228,15 +228,17 @@ A typical Moderated AI Development Workflow‑enabled project might look like:
 
 ```text
 my-saas-app/
-  docs/
+  mod-w/
+    MOD-W.md                    # The workflow and process docs
+    AGENTS.md                   # Agent definitions and guidelines
     PRODUCT.md                  # What and why for this product
     ARCHITECTURE.md             # How the system is structured
     ROADMAP.md                  # Ordered list of Steps
+    STEP-XX.md                  # Current Step brief
+    REVIEW.md                   # Review notes and decisions for the current Step
+    QA.md                       # Verification evidence for the current Step
     DOMAIN_LANGUAGE_MATRIX.md   # Shared vocabulary for the product’s domain
-  mod-w/
-    STEP.md                     # Current Step brief
-    REVIEW.md                   # Review notes and decisions for the Step
-    QA.md                       # Verification evidence for the Step
+    (Optional) Other supporting docs, only when they earn their existence.
   src/                          # Application code
     ...
   tests/                        # Automated tests
