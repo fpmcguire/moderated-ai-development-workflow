@@ -2,7 +2,7 @@
 
 ## Overview
 
-Moderated AI Development (MAID) is a great fit for greenfield projects, but many teams actually need it more in **legacy systems**:
+Moderated AI Development Workflow (MOD-W) is a great fit for greenfield projects, but many teams actually need it more in **legacy systems**:
 
 - old frameworks and mixed styles
 - partial or outdated docs

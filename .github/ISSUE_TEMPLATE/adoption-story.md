@@ -13,7 +13,7 @@ assignees: ""
 **AI models used:** <!-- e.g. ChatGPT-4o, Claude 3.5 Sonnet, GitHub Copilot -->
 **Duration:** <!-- e.g. 2-week sprint, 3-month project -->
 
-## How You Used Moderated AI Development
+## How You Used Moderated AI Development Workflow
 
 <!-- Describe which parts of the methodology you applied (roles, ceremonies, artifacts, quality gates, etc.) -->
 

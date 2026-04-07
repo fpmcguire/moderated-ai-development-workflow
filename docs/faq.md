@@ -2,8 +2,8 @@
 
 ## General
 
-**What is Moderated AI Development?**  
-Moderated AI Development is a methodology framework for teams using AI models (such as ChatGPT and Claude) to assist in software development. MOD-W provides roles, ceremonies, artifacts, quality gates, and prompt templates to ensure AI output is always reviewed and accepted by a qualified human before it enters the product. See the [manifesto](manifesto.md).
+**What is Moderated AI Development Workflow?**  
+Moderated AI Development Workflow is a methodology framework for teams using AI models (such as ChatGPT and Claude) to assist in software development. MOD-W provides roles, ceremonies, artifacts, quality gates, and prompt templates to ensure AI output is always reviewed and accepted by a qualified human before it enters the product. See the [manifesto](manifesto.md).
 
 **Is Moderated AI Development Workflow a replacement for Agile or Scrum?**  
 No. Moderated AI Development Workflow is a complementary framework that can be layered on top of Agile, Scrum, Kanban, or any other delivery methodology. MOD-W focuses specifically on the AI-assisted development workflow within a team's existing process.
@@ -55,4 +55,4 @@ Open a [Method Improvement](https://github.com/fpmcguire/moderated-ai-developmen
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

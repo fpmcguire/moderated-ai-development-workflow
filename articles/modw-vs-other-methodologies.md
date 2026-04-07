@@ -46,7 +46,7 @@ It tells you _what_ phases to have, but not _who_ does them or _how_ AI is moder
 
 **What Moderated AI Development Workflow adds**
 
-Moderated AI Development assumes those SDD phases exist and then adds:
+Moderated AI Development Workflow assumes those SDD phases exist and then adds:
 
 - explicit **roles** (Product Owner, Tech Lead, Development Team, Moderator)
 - a small, named set of **artifacts** (`PRODUCT.md`, `ARCHITECTURE.md`, `ROADMAP.md`, `STEP.md`, `REVIEW.md`, `QA.md`, `DOMAIN_LANGUAGE_MATRIX.md`, `AGENTS.md`)
@@ -79,7 +79,7 @@ It’s opinionated, “agent‑first,” and optimized for moving a lot of work 
 
 **How Moderated AI Development Workflow differs**
 
-Moderated AI Development is:
+Moderated AI Development Workflow is:
 
 - **lighter in role count** – a small core of humans and AI‑assisted roles (PO, Tech Lead, Dev Team, Moderator, QA)
 - **more explicit about human moderation** – Moderator is always in the loop with real builds/tests in a Workbench
@@ -126,7 +126,7 @@ This is productive **vibe coding with better tools**.
 
 **What Moderated AI Development Workflow brings on top**
 
-Moderated AI Development does not replace these tools; it wraps them with:
+Moderated AI Development Workflow does not replace these tools; it wraps them with:
 
 - a discipline of **Steps** that are small enough to review
 - documented **intent** and **design** before/alongside code
@@ -149,15 +149,15 @@ A simple heuristic:
 - **You already think in specs and phases but don’t have clear roles?**
   - Add Moderated AI Development Workflow on top of your SDD habits.
 - **You want a fully agent‑heavy process with many AI roles?**
-  - BMAD might be a better fit, possibly alongside Moderated AI Development’s moderation concepts.
+  - BMAD might be a better fit, possibly alongside Moderated AI Development Workflow’s moderation concepts.
 - **You want a small, human‑centered workflow that tames AI in your existing stack?**
   - Moderated AI Development Workflow is the right core, with SDD and AI IDEs underneath.
 
 ---
 
-## Moderated AI Development’s niche
+## Moderated AI Development Workflow’s niche
 
-Moderated AI Development’s sweet spot is:
+Moderated AI Development Workflow’s sweet spot is:
 
 - small to medium teams
 - serious, evolving products
@@ -168,4 +168,4 @@ It assumes AI will only get more powerful — and argues that **moderation, arti
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development-workflow](https://github.com/fpmcguire/moderated-ai-development-workflow)
+MOD-W v1.1.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development-workflow](https://github.com/fpmcguire/moderated-ai-development-workflow)

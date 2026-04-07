@@ -112,8 +112,8 @@ If issues are significant:
 
 ---
 
-This checklist should be lightweight enough to use for every Step but strict enough to preserve Moderated AI Development’s multi-layer validation and traceability.
+This checklist should be lightweight enough to use for every Step but strict enough to preserve Moderated AI Development Workflow’s multi-layer validation and traceability.
 
 ---
 
-> MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+> MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

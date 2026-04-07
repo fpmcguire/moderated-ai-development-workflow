@@ -9,7 +9,7 @@ Kiro answers:
 
 > “How do I run Spec‑Driven Development in an IDE with agents?”
 
-Moderated AI Development answers:
+Moderated AI Development Workflow answers:
 
 > “Who decides what, how do we review, and when is a change actually acceptable?”
 
@@ -29,7 +29,7 @@ Kiro has three main spec phases:
 - **Design** – architecture, data, integration points
 - **Tasks** – concrete units of work to implement
 
-Moderated AI Development (MOD-W) has three corresponding core artifacts:
+Moderated AI Development Workflow (MOD-W) has three corresponding core artifacts:
 
 - `PRODUCT.md` – product problem, users, goals, requirements
 - `ARCHITECTURE.md` – technical approach, architecture decisions
@@ -216,4 +216,4 @@ You get the best of both:
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development-workflow](https://github.com/fpmcguire/moderated-ai-development-workflow)
+MOD-W v1.1.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development-workflow](https://github.com/fpmcguire/moderated-ai-development-workflow)

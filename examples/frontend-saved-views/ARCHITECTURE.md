@@ -11,7 +11,7 @@ Single-page application (SPA) focused on the dashboard and Saved Views feature.
 - Build tool: Vite or Create React App (any simple setup is fine)
 - Testing: Jest + React Testing Library (or equivalent)
 
-Moderated AI Development itself is framework‑agnostic; this profile is just one concrete mapping.
+Moderated AI Development Workflow itself is framework‑agnostic; this profile is just one concrete mapping.
 
 ## Structure
 
@@ -45,4 +45,4 @@ interface SavedView {
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow

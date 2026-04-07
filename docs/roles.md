@@ -1,6 +1,6 @@
-# Roles in Moderated AI Development
+# Roles in Moderated AI Development Workflow
 
-Moderated AI Development defines a small set of core roles with clear boundaries and accountability. Some roles may be supported or implemented by AI tools, but the role names remain the same regardless of tool choice.
+Moderated AI Development Workflow defines a small set of core roles with clear boundaries and accountability. Some roles may be supported or implemented by AI tools, but the role names remain the same regardless of tool choice.
 
 ---
 
@@ -8,7 +8,7 @@ Moderated AI Development defines a small set of core roles with clear boundaries
 
 ### Moderator
 
-The Moderator is the primary human-in-the-loop operator of Moderated AI Development.
+The Moderator is the primary human-in-the-loop operator of Moderated AI Development Workflow.
 
 The Moderator:
 
@@ -40,13 +40,25 @@ The Tech Lead is responsible for _how_ the product is built.
 
 The Tech Lead:
 
+- Iteratively cross-validates the [PRODUCT.md](../templates/PRODUCT.md) artifact with the Product Owner to clarify intent and constraints
 - Authors and maintains the [ARCHITECTURE.md](../templates/ARCHITECTURE.md) artifact
+- Authors and maintains the [ROADMAP.md](../templates/ROADMAP.md) artifact
 - Defines the [Domain Language Matrix](../templates/DOMAIN_LANGUAGE_MATRIX.md)
 - Writes and refines briefs and prompts for AI agents
 - Reviews roadmap quality and implementation for technical correctness and maintainability
 - Reviews completed steps before they are tagged as done
+- Revises output based on Moderator and Product Owner feedback until quality gates are met
 
 In one common setup, the Tech Lead role is supported by ChatGPT for architecture thinking, roadmap shaping, and technical review.
+
+### Development Team
+
+The Development Team is responsible for executing the roadmap steps to build the product.
+
+- Iteratively reviews the [ARCHITECTURE.md](../templates/ARCHITECTURE.md), and [ROADMAP.md](../templates/ROADMAP.md) artifacts with the Tech Lead to understand context and constraints
+- Excutes the implementation of each step, including code, tests, and documentation
+- Revises output based on Moderator and Tech Lead feedback until quality gates are met
+- Does **not** directly merge code or override quality gates
 
 ### QA / Tester
 
@@ -123,4 +135,4 @@ See: [prompts/development-team-claude.md](../prompts/development-team-claude.md)
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

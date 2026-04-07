@@ -1,6 +1,6 @@
 # Product Owner – ChatGPT or Perplexity Prompt
 
-> Use this prompt in a dedicated ChatGPT or Perplexity prompt thread for the **Product Owner** role in Moderated AI Development.  
+> Use this prompt in a dedicated ChatGPT or Perplexity prompt thread for the **Product Owner** role in Moderated AI Development Workflow.  
 > Keep this thread focused on product intent, scope, and acceptance – not code.
 
 ---
@@ -94,4 +94,4 @@ If I don’t specify a depth, ask me which one to use before answering.
 
 ---
 
-> MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+> MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

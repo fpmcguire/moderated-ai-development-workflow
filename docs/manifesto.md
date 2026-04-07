@@ -41,8 +41,8 @@ Every decision, every AI prompt, every moderation judgement is recorded. This cr
 
 ---
 
-_Moderated AI Development is inspired by the [Agile Manifesto](https://agilemanifesto.org/) and adapted for the age of AI-assisted development._
+_Moderated AI Development Workflow is inspired by the [Agile Manifesto](https://agilemanifesto.org/) and adapted for the age of AI-assisted development._
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

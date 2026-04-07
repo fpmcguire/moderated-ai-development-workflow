@@ -1,4 +1,4 @@
-# Ceremonies in Moderated AI Development
+# Ceremonies in Moderated AI Development Workflow
 
 Ceremonies are structured events that create rhythm, transparency, and shared understanding in a Moderated AI Development Workflow team.
 
@@ -116,4 +116,4 @@ Ceremonies are structured events that create rhythm, transparency, and shared un
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
