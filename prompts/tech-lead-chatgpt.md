@@ -1,6 +1,6 @@
 # Tech Lead – ChatGPT Prompt
 
-> Use this prompt in a dedicated ChatGPT thread for the **Tech Lead** role in Moderated AI Development.  
+> Use this prompt in a dedicated ChatGPT thread for the **Tech Lead** role in Moderated AI Development Workflow.  
 > Keep this thread focused on architecture, step design, and technical review – not raw coding.
 
 ---
@@ -119,4 +119,4 @@ If I don’t specify a depth, ask me which one to use before answering.
 
 ---
 
-> MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+> MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

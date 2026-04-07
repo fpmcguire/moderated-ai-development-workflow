@@ -6,7 +6,7 @@ Quality gates are explicit, non-negotiable checkpoints that AI-generated artifac
 
 ## Gate Levels
 
-Moderated AI Development defines three levels of quality gate, applied according to the risk and complexity of the step.
+Moderated AI Development Workflow defines three levels of quality gate, applied according to the risk and complexity of the step.
 
 ### Level 1 — Baseline (all steps)
 
@@ -56,8 +56,8 @@ Quality gates **may not be waived**. If a gate criterion cannot be met, the team
 2. Revise the acceptance criteria in STEP.md (requires Product Owner approval), **or**
 3. Split the step into smaller steps that can each fully meet their gate criteria.
 
-Bypassing a gate — even under time pressure — introduces unverified AI output into the product and violates the [Moderated AI Development Principles](principles.md).
+Bypassing a gate — even under time pressure — introduces unverified AI output into the product and violates the [Moderated AI Development Workflow Principles](principles.md).
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

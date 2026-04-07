@@ -1,6 +1,6 @@
 # Artifacts
 
-Moderated AI Development is artifact‑driven.  
+Moderated AI Development Workflow is artifact‑driven.  
 Each role works against a small set of shared files that keep intent, architecture, implementation, and verification aligned.
 
 ---
@@ -168,4 +168,4 @@ For each new project or example:
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

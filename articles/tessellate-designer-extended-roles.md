@@ -1,14 +1,14 @@
-# Tessellate Designer: Example of Extended Roles in Moderated AI Development
+# Tessellate Designer: Example of Extended Roles in Moderated AI Development Workflow
 
 ## Overview
 
-Moderated AI Development v1.0.0 defines a **minimal role set** (Product Owner, Tech Lead, Development Team, Moderator, QA/Workbench).  
+Moderated AI Development Workflow v1.0.0 defines a **minimal role set** (Product Owner, Tech Lead, Development Team, Moderator, QA/Workbench).  
 Tessellate Designer is an example project that shows how you can **add upstream roles**—specifically **Customer** and **Product Designer**—without changing the core method.
 
 This article explains:
 
 - what Tessellate Designer is (at a high level)
-- how it extends Moderated AI Development’s roles with Customer and Product Designer
+- how it extends Moderated AI Development Workflow’s roles with Customer and Product Designer
 - which artifacts those roles influence
 - how a single Step flows through the extended lane
 
@@ -18,7 +18,7 @@ This article explains:
 
 Tessellate Designer is a Moderated AI Development Workflow example project focused on a **UI/UX‑heavy feature** (e.g., designing and managing “tessellated” layouts or views in a SaaS frontend). Its purpose in the repo is to:
 
-- demonstrate Moderated AI Development’s Step‑based workflow, and
+- demonstrate Moderated AI Development Workflow’s Step‑based workflow, and
 - illustrate how **Customer** and **Product Designer** roles can wrap around the core Product → Architecture → Implementation chain.
 
 Rather than changing Moderated AI Development Workflow v1.0.0’s base roles, Tessellate Designer **adds**:
@@ -63,7 +63,7 @@ They do _not_ merge code or override technical decisions; they are peers to the 
 
 ## How extended roles fit into Moderated AI Development Workflow v1.0.0
 
-Tessellate Designer keeps Moderated AI Development’s core roles intact:
+Tessellate Designer keeps Moderated AI Development Workflow’s core roles intact:
 
 - **Product Owner** – defines what and why in `PRODUCT.md`.
 - **Tech Lead** – defines how in `ARCHITECTURE.md` and designs `ROADMAP.md` + Steps.
@@ -79,7 +79,7 @@ In other words, the **conceptual lane** becomes:
 
 > Customer → Product Designer → Product Owner → Tech Lead → Development Team → Moderator
 
-Moderated AI Development still only _requires_ the core v1.0.0 roles. Tessellate Designer **shows how to extend** them.
+Moderated AI Development Workflow still only _requires_ the core v1.0.0 roles. Tessellate Designer **shows how to extend** them.
 
 ---
 
@@ -102,7 +102,7 @@ Tessellate Designer demonstrates how extended roles can be grounded in artifacts
   - Reflects constraints discovered by Customer and Product Designer (performance, platform, layout limitations).
 
 - `ROADMAP.md`, `STEP-XX.md`, `REVIEW.md`, `QA.md`
-  - Same as in base Moderated AI Development: Steps, briefs, review notes, verification evidence.
+  - Same as in base Moderated AI Development Workflow: Steps, briefs, review notes, verification evidence.
 
 Extended roles **add context and constraints** to existing artifacts; they don’t require new core file types in Moderated AI Development Workflow v1.0.0.
 
@@ -142,7 +142,7 @@ Here’s how a typical Step might flow with extended roles:
      - `STEP-XX.md` acceptance checks.
    - Records outcomes in `REVIEW.md` and `QA.md` and decides whether to accept or request revisions.
 
-This shows **how** Customer and Product Designer inform the Step, without requiring them to be baked into Moderated AI Development’s core v1.0.0 roles.
+This shows **how** Customer and Product Designer inform the Step, without requiring them to be baked into Moderated AI Development Workflow’s core v1.0.0 roles.
 
 ---
 
@@ -158,10 +158,10 @@ But Moderated AI Development Workflow itself stays at **v1.0.0**:
 
 - core docs and roles remain minimal,
 - extended roles are presented as **optional patterns**,
-- no one is forced to adopt Customer / Product Designer roles just to use Moderated AI Development.
+- no one is forced to adopt Customer / Product Designer roles just to use Moderated AI Development Workflow.
 
 This keeps the methodology approachable while still showing a credible path to richer, cross‑validated workflows.
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development-workflow](https://github.com/fpmcguire/moderated-ai-development-workflow)
+MOD-W v1.1.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development-workflow](https://github.com/fpmcguire/moderated-ai-development-workflow)

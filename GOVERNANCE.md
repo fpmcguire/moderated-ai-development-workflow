@@ -2,7 +2,7 @@
 
 ## Overview
 
-Moderated AI Development is an open-source methodology framework currently maintained by its author. This document describes how decisions are made and how the project is maintained.
+Moderated AI Development Workflow is an open-source methodology framework currently maintained by its author. This document describes how decisions are made and how the project is maintained.
 
 ## Maintainers
 
@@ -51,4 +51,4 @@ All contributions to this repository are made under the [MIT License](LICENSE).
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow

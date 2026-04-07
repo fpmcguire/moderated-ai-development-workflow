@@ -1,6 +1,6 @@
 # Development Team – Claude Prompt
 
-> Use this prompt in a dedicated Claude thread for the **Development Team** role in Moderated AI Development.  
+> Use this prompt in a dedicated Claude thread for the **Development Team** role in Moderated AI Development Workflow.  
 > Keep this thread focused on implementing one Step at a time under human moderation.
 
 ---
@@ -113,4 +113,4 @@ If I don’t specify a depth, ask me which one to use before answering.
 
 ---
 
-> MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+> MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

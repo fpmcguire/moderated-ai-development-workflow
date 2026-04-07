@@ -1,6 +1,6 @@
 # Moderated AI Development Workflow Principles
 
-These principles elaborate on the values in the [Moderated AI Development Manifesto](manifesto.md) and guide day-to-day practice.
+These principles elaborate on the values in the [Moderated AI Development Workflow Manifesto](manifesto.md) and guide day-to-day practice.
 
 ## 1. Humans own the outcome
 
@@ -24,7 +24,7 @@ Each step ends with a quality gate. Gates may not be waived. If output does not 
 
 ## 6. Roles are clear and respected
 
-Moderated AI Development defines specific roles for humans and AI agents. Role boundaries are respected — a product owner does not do tech lead work, and an AI agent does not make scope decisions.
+Moderated AI Development Workflow defines specific roles for humans and AI agents. Role boundaries are respected — a product owner does not do tech lead work, and an AI agent does not make scope decisions.
 
 ## 7. The moderator is a skilled practitioner
 
@@ -44,4 +44,4 @@ No real credentials, personal data, or sensitive business information is ever in
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

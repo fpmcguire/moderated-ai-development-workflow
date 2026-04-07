@@ -1,6 +1,6 @@
-# Contributing to Moderated AI Development
+# Contributing to Moderated AI Development Workflow
 
-Thank you for your interest in contributing to Moderated AI Development! This document explains how you can help improve this methodology framework.
+Thank you for your interest in contributing to Moderated AI Development Workflow! This document explains how you can help improve this methodology framework.
 
 ## Ways to Contribute
 
@@ -11,14 +11,14 @@ Thank you for your interest in contributing to Moderated AI Development! This do
 
 ## Getting Started
 
-1. Read the [Moderated AI Development Manifesto](docs/manifesto.md) and [Principles](docs/principles.md) to understand the philosophy.
+1. Read the [Moderated AI Development Workflow Manifesto](docs/manifesto.md) and [Principles](docs/principles.md) to understand the philosophy.
 2. Familiarise yourself with the [Glossary](docs/glossary.md) and [Domain Language](docs/domain-language.md).
 3. Browse the [example](examples/frontend-saved-views/) to see Moderated AI Development Workflow in practice.
 
 ## Submitting Changes
 
 1. Fork the repository and create a branch from `main`.
-2. Make your changes following the [Moderated AI Development Principles](docs/principles.md).
+2. Make your changes following the [Moderated AI Development Workflow Principles](docs/principles.md).
 3. Open a pull request using the [PR template](.github/PULL_REQUEST_TEMPLATE.md).
 4. A maintainer will review your pull request and provide feedback.
 
@@ -43,4 +43,4 @@ See [GOVERNANCE.md](GOVERNANCE.md) for how decisions are made in this project.
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow

@@ -1,6 +1,6 @@
 # Step Lifecycle
 
-In Moderated AI Development, every meaningful change is delivered as a **Step**.  
+In Moderated AI Development Workflow, every meaningful change is delivered as a **Step**.  
 A Step is small enough to understand, implement, review, and verify end‑to‑end without overloading any AI agent or the Moderator.
 
 This lifecycle is tool‑agnostic but assumes your default roles:
@@ -171,4 +171,4 @@ This lifecycle keeps Moderated AI Development Workflow firmly human‑moderated 
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

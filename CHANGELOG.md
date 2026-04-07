@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
-- Rebranded the methodology from **MAID (Moderated AI Development)** to **MOD-W (Moderated AI Development Workflow)** to avoid confusion with other "MAID" projects in the AI/agent ecosystem and to emphasize the Moderator role and workflow focus.
+- Rebranded the methodology from **MAID (Moderated AI Development Workflow)** to **MOD-W (Moderated AI Development Workflow)** to avoid confusion with other "MAID" projects in the AI/agent ecosystem and to emphasize the Moderator role and workflow focus.
 - Updated all references in docs, templates, prompts, and examples from MAID to MOD-W, keeping the underlying roles, artifacts, and step lifecycle semantics compatible.
 - Clarified in the README that MOD-W is a human-in-the-loop workflow for AI-assisted development, not an autonomous agent runner.
 
@@ -29,4 +29,4 @@ _No unreleased changes yet._
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow

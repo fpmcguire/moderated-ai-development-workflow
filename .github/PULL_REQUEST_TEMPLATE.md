@@ -17,7 +17,7 @@
 ## Checklist
 
 - [ ] I have read the [CONTRIBUTING](CONTRIBUTING.md) guide
-- [ ] My changes are consistent with the [Moderated AI Development Principles](docs/principles.md)
+- [ ] My changes are consistent with the [Moderated AI Development Workflow Principles](docs/principles.md)
 - [ ] I have updated the [CHANGELOG](CHANGELOG.md) under `[Unreleased]`
 - [ ] Any new templates follow the established template style
 - [ ] Any new prompts have been tested against their target AI model
@@ -29,4 +29,4 @@
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow

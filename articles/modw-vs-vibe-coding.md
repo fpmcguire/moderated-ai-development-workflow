@@ -1,4 +1,4 @@
-# From Vibe Coding to Viable Coding with Moderated AI Development
+# From Vibe Coding to Viable Coding with Moderated AI Development Workflow
 
 ## Overview
 
@@ -61,13 +61,13 @@ In practical terms, viable coding means:
 
 Instead of “prompt and hope,” viable coding is “prompt, plan, implement, review, verify.”
 
-Moderated AI Development is one concrete implementation of viable coding.
+Moderated AI Development Workflow is one concrete implementation of viable coding.
 
 ---
 
 ## How Moderated AI Development Workflow turns vibe into viable
 
-Moderated AI Development makes viable coding explicit through three pillars:
+Moderated AI Development Workflow makes viable coding explicit through three pillars:
 
 1. **Roles** – who thinks about what
 2. **Artifacts** – where that thinking is recorded
@@ -75,7 +75,7 @@ Moderated AI Development makes viable coding explicit through three pillars:
 
 ### 1. Roles
 
-Moderated AI Development v1.0.0 defines four core roles:
+Moderated AI Development Workflow v1.0.0 defines four core roles:
 
 - **Product Owner** – defines _what_ is built and _why_.
 - **Tech Lead** – defines _how_ it is built and how work is sliced.
@@ -100,7 +100,7 @@ Instead of burying decisions inside chat logs, Moderated AI Development Workflow
 - `AGENTS.md` – rules and conventions for AI agents
 
 Vibe coding tends to generate code first and documentation later (if at all).  
-Moderated AI Development insists that **intent and design are captured in artifacts before and alongside code**.
+Moderated AI Development Workflow insists that **intent and design are captured in artifacts before and alongside code**.
 
 ### 3. Quality gates
 
@@ -117,18 +117,18 @@ A Step is not “done” because the model says so. It is done when:
 - the Moderator accepts the Step and tags it in Git
 
 Vibe coding treats model output as a suggestion you might ship.  
-Moderated AI Development treats it as **raw material** that must survive review and verification.
+Moderated AI Development Workflow treats it as **raw material** that must survive review and verification.
 
 ---
 
-## Blue‑red pattern in Moderated AI Development
+## Blue‑red pattern in Moderated AI Development Workflow
 
 Many viable‑coding discussions talk about a **blue‑red** pattern:
 
 - **Blue** – plans and implements (makes changes).
 - **Red** – reviews and verifies (tries to break them).
 
-Moderated AI Development implements this pattern across roles:
+Moderated AI Development Workflow implements this pattern across roles:
 
 - Tech Lead and Development Team act as the **blue side** (planning and implementation through ROADMAP + STEP).
 - Tech Lead (in review mode) and Moderator form the **red side** (review and verification through REVIEW + QA + Workbench).
@@ -139,7 +139,7 @@ The point is that the same agent that proposed the change does **not** unilatera
 
 ## Where vibe coding still fits
 
-Moderated AI Development does not ban vibe coding. It just defines **where it is safe**:
+Moderated AI Development Workflow does not ban vibe coding. It just defines **where it is safe**:
 
 - early exploration and spike solutions
 - quick experiments in a throwaway branch
@@ -168,4 +168,4 @@ Use Moderated AI Development Workflow when you care about what happens next week
 
 ---
 
-MOD-W v1.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

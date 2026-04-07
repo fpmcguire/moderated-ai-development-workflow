@@ -2,12 +2,12 @@
 
 ## Purpose
 
-Moderated AI Development is a role-driven, document-centered workflow for AI‑assisted software development.
+Moderated AI Development Workflow is a role-driven, document-centered workflow for AI‑assisted software development.
 
 It is designed to:
 
 - Reduce ambiguity by separating product, technical, and implementation decisions.
-- Catch errors and misalignments early through repeated, focused reviews.
+- Catch errors and misalignments early through repeated, focused reviews, and role/AI cross-validation.
 - Keep product intent, architecture, and implementation synchronized over time.
 
 ## Core principles
@@ -35,7 +35,7 @@ Responsibilities:
 - Approve whether a step is ready to proceed.
 - Protect the workflow from scope and process bloat.
 
-The Moderator has final go/no‑go authority within Moderated AI Development.
+The Moderator has final go/no‑go authority within Moderated AI Development Workflow.
 
 ---
 
@@ -62,6 +62,7 @@ The Tech Lead defines how to build it safely and coherently.
 Responsibilities:
 
 - Maintain `ARCHITECTURE.md` and technical guardrails.
+- Maintain `ROADMAP.md` and technical guardrails.
 - Review each step for technical fit, risks, and dependencies.
 - Protect the system from accidental complexity and architecture drift.
 - Recommend patterns, constraints, and naming consistency.
@@ -105,7 +106,7 @@ Each Moderated AI Development Workflow doc should include the standard MOD-W foo
 
 ## Review model
 
-Moderated AI Development deliberately uses multiple reviews before code is merged.
+Moderated AI Development Workflow deliberately uses multiple reviews before code is merged.
 
 ### 1. Product review
 
@@ -181,7 +182,7 @@ For each Moderated AI Development Workflow step:
 
 1. Product Owner updates `PRODUCT.md` and `STEP-XX.md` (goal, scope, acceptance).
 
-2. Tech Lead reviews/updates `ARCHITECTURE.md` as needed and reviews `STEP-XX.md`.
+2. Tech Lead reviews/updates `ARCHITECTURE.md` and `ROADMAP.md` as needed and reviews `STEP-XX.md`.
 
 3. Development Team restates the step (in their own words) and implements only the approved slice.
 
@@ -190,7 +191,7 @@ For each Moderated AI Development Workflow step:
    - Fix obvious mismatches or defects before raising the work for review.
 
 5. Moderator review (HITL)
-   - Moderator checks alignment across `PRODUCT.md`, `STEP-XX.md`, `ARCHITECTURE.md`, and the current implementation.
+   - Moderator checks alignment across `PRODUCT.md`, `ARCHITECTURE.md`, `ROADMAP.md`, `STEP-XX.md`, and the current implementation.
    - Moderator records feedback and a provisional go/no‑go decision.
 
 6. Tech Lead feedback pass
@@ -240,10 +241,10 @@ To keep Moderated AI Development Workflow lean and effective:
 
 ## Tracks and tools (overview only)
 
-Moderated AI Development is tool‑agnostic but tool‑aware.
+Moderated AI Development Workflow is tool‑agnostic but tool‑aware.
 
 - You may use different AI tools or models per role (e.g., one model for Product review, another for Tech review, a coding agent for Workbench review).
-- A more agentic “Track 2” (e.g., using a coding agent that can edit repos) can be defined by policy later, but Moderated AI Development’s core roles and documents do not change.
+- A more agentic “Track 2” (e.g., using a coding agent that can edit repos) can be defined by policy later, but Moderated AI Development Workflow’s core roles and documents do not change.
 
 Default recommendation:
 
@@ -259,13 +260,13 @@ At the project root:
 - `//`
   - `MOD-W.md`
   - `PRODUCT.md`
+  - `ARCHITECTURE.md`
   - `ROADMAP.md`
   - `STEP-XX.md`
-  - `ARCHITECTURE.md` (as needed)
   - `DOMAIN-LANGUAGE.md` (as needed)
 
 `README.md` should briefly mention that the project uses Moderated AI Development Workflow and point to `//`.
 
 ---
 
-## MOD-W · Moderated AI Development Workflow · v1.0.0 · github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
