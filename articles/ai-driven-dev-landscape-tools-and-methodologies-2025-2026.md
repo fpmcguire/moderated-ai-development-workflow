@@ -301,4 +301,4 @@ These three methodologies are related but serve different team profiles and prio
 
 ---
 
-MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

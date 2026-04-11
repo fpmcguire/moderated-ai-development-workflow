@@ -14,7 +14,7 @@ Human-moderated workflow for AI-assisted software development
 
 To ensure clarity and avoid confusion with other "MAID" projects in the AI space, this methodology has officially rebranded from MAID to MOD-W (Moderated AI Development Workflow). The new shorthand more accurately reflects our focus on the Moderator role and the disciplined Workflow required for viable coding.
 
-## This is not “vibe coding.” It is a disciplined form of viable coding.
+## This is not "vibe coding." It is a disciplined form of viable coding.
 
 Vibe coding is useful for quick experiments, but it collapses product, design, architecture, and implementation into one blurry chat. Moderated AI Development Workflow turns AI-assisted work into viable coding: small, reviewable steps, explicit roles, clear artifacts, and non-negotiable human quality gates.
 
@@ -23,13 +23,13 @@ The core roles are **Product Owner**, **Tech Lead**, **Development Team**, and *
 
 A key aspect of Moderated AI Development Workflow is the intentional separation and diversity of roles and AI tooling to ensure role and agent cross-validation, accountability, and quality.
 
-Version 1.0.0 defines a **minimal role set** for most teams. Example projects (such as the “Tessellate Designer” example) show how teams can add **extended roles** like CUSTOMER and PRODUCT DESIGNER for deeper cross-validation when needed.
+Version 2.0.0 defines a **minimal role set** for most teams. Example projects (such as the "Frontend Saved Views" example) show how teams can add **extended roles** like CUSTOMER and PRODUCT DESIGNER for deeper cross-validation when needed.
 
 ---
 
 ## Why Moderated AI Development Workflow?
 
-Most AI coding setups optimize for speed and “let the model code everything.” That often leads to:
+Most AI coding setups optimize for speed and "let the model code everything." That often leads to:
 
 - large, opaque AI code dumps
 - missing validation, logging, and edge cases
@@ -46,7 +46,7 @@ Modern AI development is converging on three ideas:
 
 - **Spec‑Driven Development (SDD)** – specs and plans as the source of truth.
 - **Viable coding (not vibe coding)** – structured, reviewable, production‑safe workflows instead of prompt‑and‑pray coding.
-- **Blue‑red / multi‑agent patterns** – clearly separated “plan/implement” (blue) and “review/verify” (red) duties.
+- **Blue‑red / multi‑agent patterns** – clearly separated "plan/implement" (blue) and "review/verify" (red) duties.
 
 Moderated AI Development Workflow sits at the intersection of these trends: it applies spec‑driven discipline to AI‑assisted work, uses explicit roles and model contrast instead of a single all‑knowing agent, and bakes planning and review into every Step.
 
@@ -59,7 +59,7 @@ Moderated AI Development Workflow v1.0.0 defines a minimal set of core roles:
 - **Moderator** – human operator who orchestrates handoffs, works in the Workbench, validates builds/tests/UX, and controls quality gates.
 - **Product Owner** – defines _what_ is built and _why_, maintains `PRODUCT.md`, and sets acceptance intent.
 - **Tech Lead** – defines _how_ the product is built, maintains `ARCHITECTURE.md`, shapes the roadmap, and reviews technical quality.
-- **Development Team** – generates roadmap proposals, code, tests, and docs for each step, always under moderation.
+- **Development Team** – generates roadmap proposals, code, tests, and docs for each step, always under moderation. Supports two interfaces: the **Claude chatbot** (claude.ai, using `development-team-claude.md`) and **Claude Code** (CLI, using `CLAUDE.md` at the repo root). Both may be used within the same Step.
 - **QA / Tester** – validates that accepted output behaves correctly end‑to‑end (may be the Moderator on small teams).
 - **Workbench** – local environment where the Moderator builds, runs, tests, debugs, and fine‑tunes changes before they pass any gate.
 
@@ -73,7 +73,7 @@ Projects can introduce additional cross‑validation roles where useful. Common 
 - **Product Designer** – translates customer insights into flows, UX, and interaction patterns.
 - **Marketing / Go‑to‑Market** – validates positioning, messaging, and surface alignment.
 
-These extended roles are **optional** in Moderated AI Development Workflow v1.0.0. The **Tessellate Designer** example project shows how Customer and Product Designer roles can be layered on top of the core Moderated AI Development Workflow without changing the base methodology.
+These extended roles are **optional** in Moderated AI Development Workflow v1.0.0. The **Frontend Saved Views** example project shows how Customer and Product Designer roles can be layered on top of the core Moderated AI Development Workflow without changing the base methodology.
 
 ---
 
@@ -108,6 +108,63 @@ Gemini users can leverage **Gems** for role separation and **NotebookLM** as a p
 
 ---
 
+## Using Moderated AI Development Workflow with Claude Code
+
+Claude Code is Anthropic's CLI coding agent. It runs in your terminal with direct
+access to your local repository, eliminating the copy-paste step that the chatbot
+workflow requires. In MOD-W terms, Claude Code is an alternative interface for the
+**Development Team** role — same model, same role rules, direct file writes.
+
+### Where Claude Code fits
+
+Claude Code replaces the copy-paste leg of the Development Team workflow:
+
+- The Moderator no longer needs to manually apply file changes from the chatbot.
+- Claude Code reads the full repo at session start, so context is always current.
+- The Moderator reviews diffs in VS Code before committing — the human gate is preserved.
+
+Claude Code does **not** replace the Tech Lead, Product Owner, or Moderator roles.
+MOD-W's cross-validation and human-in-the-loop discipline apply equally regardless
+of which Development Team interface is used.
+
+### Setup
+
+1. Place `CLAUDE.md` at the repo root. This is the Claude Code equivalent of
+   `development-team-claude.md`. Claude Code reads it automatically at session start.
+2. Generate `CLAUDE.md` using the Tech Lead: provide the project's `ARCHITECTURE.md`,
+   `DOMAIN-LANGUAGE.md`, and the `CLAUDE.md` template. The Tech Lead fills in all
+   placeholders and removes template comments.
+3. Start a Claude Code session in the project root. The Development Team role context
+   is loaded automatically — no paste required.
+
+### Switching between chatbot and Claude Code within a Step
+
+You may switch interfaces mid-Step. The recommended pattern:
+
+| Phase                     | Interface      | Why                               |
+| ------------------------- | -------------- | --------------------------------- |
+| Planning and confirmation | Claude chatbot | Conversational back-and-forth     |
+| Multi-file implementation | Claude Code    | Direct repo writes, no copy-paste |
+| Revision discussion       | Claude chatbot | Easier to discuss findings        |
+
+**Rule:** Commit the repo before switching so Claude Code reads the current file state.
+
+### Responsibility split
+
+- **Claude Code owns:** reading repo files, proposing and writing file changes,
+  running commands the Moderator approves.
+- **MOD-W owns:** Moderator go/no-go authority, Tech Lead review, step-scoped
+  implementation discipline, quality gates.
+
+### Bottom line
+
+Claude Code removes friction from the Development Team workflow.
+It does not change the MOD-W roles, review model, or quality gates.
+Use `CLAUDE.md` for Claude Code. Use `development-team-claude.md` for the chatbot.
+Both encode the same role and may be used on the same project and the same Step.
+
+---
+
 ## Using Moderated AI Development Workflow with Kiro
 
 Moderated AI Development Workflow is a governance and workflow methodology that can sit on top of spec‑driven IDEs like **Kiro**.  
@@ -129,7 +186,7 @@ Kiro provides the spec‑driven editor/runtime, and Moderated AI Development Wor
 
 ### Document and phase mapping
 
-When using Moderated AI Development Workflow with Kiro, map Moderated AI Development Workflow’s docs to Kiro’s spec phases:
+When using Moderated AI Development Workflow with Kiro, map Moderated AI Development Workflow's docs to Kiro's spec phases:
 
 - **Requirements (Kiro)** ↔ `PRODUCT.md`  
   High‑level product problem, users, goals, requirements, and product‑level acceptance criteria.
@@ -146,9 +203,9 @@ Other Moderated AI Development Workflow docs (e.g., `DOMAIN_LANGUAGE_MATRIX.md`,
 
 In a Kiro + Moderated AI Development Workflow setup:
 
-- The **Moderator** decides when Requirements or Design specs are “approved enough” to move forward.
-- The Moderator also decides when a Task/STEP is complete after review and testing, regardless of what Kiro’s task status says.
-- Teams should treat Kiro’s phase transitions (Requirements → Design → Tasks) as **subject to Moderator approval**, not just IDE actions.
+- The **Moderator** decides when Requirements or Design specs are "approved enough" to move forward.
+- The Moderator also decides when a Task/STEP is complete after review and testing, regardless of what Kiro's task status says.
+- Teams should treat Kiro's phase transitions (Requirements → Design → Tasks) as **subject to Moderator approval**, not just IDE actions.
 
 Kiro provides the spec‑driven SDD engine, and Moderated AI Development Workflow provides the human‑in‑the‑loop governance and multi‑agent role pattern around it.
 
@@ -179,10 +236,10 @@ Moderated AI Development Workflow layers on top of this: Spec Kit provides the S
 
 ### Document and phase mapping
 
-When using Moderated AI Development Workflow with Spec Kit, map Moderated AI Development Workflow’s docs to Spec Kit’s phases:
+When using Moderated AI Development Workflow with Spec Kit, map Moderated AI Development Workflow's docs to Spec Kit's phases:
 
 - **Constitution (Spec Kit)** ↔ Moderated AI Development Workflow principles & steering docs  
-  Spec Kit’s constitution maps to project‑wide principles and is complemented by Moderated AI Development Workflow steering docs such as `DOMAIN_LANGUAGE_MATRIX.md`, `AGENTS.md`, and any Moderated AI Development Workflow‑specific rules the Moderator enforces.
+  Spec Kit's constitution maps to project‑wide principles and is complemented by Moderated AI Development Workflow steering docs such as `DOMAIN_LANGUAGE_MATRIX.md`, `AGENTS.md`, and any Moderated AI Development Workflow‑specific rules the Moderator enforces.
 
 - **Spec (Spec Kit)** ↔ `PRODUCT.md`  
   Functional problem, users, goals, requirements, and product‑level acceptance criteria.
@@ -191,9 +248,9 @@ When using Moderated AI Development Workflow with Spec Kit, map Moderated AI Dev
   Technical approach, stack, architecture decisions, data model, integration points, constraints.
 
 - **Tasks (Spec Kit)** ↔ `ROADMAP.md` + `STEP-XX.md`  
-  Task breakdown and sequencing correspond to Moderated AI Development Workflow’s roadmap and per‑step templates (context, scope, inputs, expected outputs, and step‑level acceptance criteria).
+  Task breakdown and sequencing correspond to Moderated AI Development Workflow's roadmap and per‑step templates (context, scope, inputs, expected outputs, and step‑level acceptance criteria).
 
-Moderated AI Development Workflow’s `REVIEW.md` and `QA.md` sit on top of these phases to structure human and cross‑agent evaluation of each step.
+Moderated AI Development Workflow's `REVIEW.md` and `QA.md` sit on top of these phases to structure human and cross‑agent evaluation of each step.
 
 ### Moderator and approval flow
 
@@ -205,45 +262,10 @@ With Spec Kit + Moderated AI Development Workflow:
   - a plan is coherent enough to generate tasks
   - tasks and resulting implementation satisfy the acceptance criteria in `PRODUCT.md` and `STEP-XX.md`
 
-- Spec Kit’s commands and phases should be treated as **subject to Moderator approval**, not self‑ratifying.
+- Spec Kit's commands and phases should be treated as **subject to Moderator approval**, not self‑ratifying.
 - Moderated AI Development Workflow encourages using different roles/agents/models for spec, plan, and implementation and adding at least one cross‑agent review step before the Moderator accepts a phase.
 
 Spec Kit provides the spec‑driven SDD engine, and Moderated AI Development Workflow provides the human‑in‑the‑loop governance and multi‑agent role pattern around that engine.
-
----
-
-## Repository Layout
-
-- `docs/` – methodology reference (manifesto, roles, lifecycle, artifacts, domain language, etc.)
-- `templates/` – reusable templates for `PRODUCT.md`, `ARCHITECTURE.md`, `ROADMAP.md`, `STEP.md`, `REVIEW.md`, `QA.md`, `DOMAIN_LANGUAGE_MATRIX.md`, `AGENTS.md`
-- `prompts/` – role prompts for Product Owner, Tech Lead, Development Team, Moderator, and Workbench usage  
-  They support per‑request answer depths (`minimal`, `options`, `full`) so Moderators can choose between speed, choice, and depth without changing tools.
-- `examples/` – concrete examples of Moderated AI Development Workflow in action (starting with a small frontend “saved views” feature)
-
-### Example project structure
-
-The `examples/` directory shows how Moderated AI Development Workflow artifacts and code can live together in a real project.
-
-A typical Moderated AI Development Workflow‑enabled project might look like:
-
-```text
-my-saas-app/
-  mod-w/
-    MOD-W.md                    # The workflow and process docs
-    AGENTS.md                   # Agent definitions and guidelines
-    PRODUCT.md                  # What and why for this product
-    ARCHITECTURE.md             # How the system is structured
-    ROADMAP.md                  # Ordered list of Steps
-    STEP-XX.md                  # Current Step brief
-    REVIEW.md                   # Review notes and decisions for the current Step
-    QA.md                       # Verification evidence for the current Step
-    DOMAIN_LANGUAGE_MATRIX.md   # Shared vocabulary for the product’s domain
-    (Optional) Other supporting docs, only when they earn their existence.
-  src/                          # Application code
-    ...
-  tests/                        # Automated tests
-    ...
-```
 
 ---
 
@@ -310,6 +332,41 @@ Use Moderated AI Development Workflow for role separation, governance, review, a
 
 ---
 
+## Repository Layout
+
+- `docs/` – methodology reference (manifesto, roles, lifecycle, artifacts, domain language, etc.)
+- `templates/` – reusable templates for `PRODUCT.md`, `ARCHITECTURE.md`, `ROADMAP.md`, `STEP.md`, `REVIEW.md`, `QA.md`, `DOMAIN_LANGUAGE_MATRIX.md`, `AGENTS.md`, and `CLAUDE.md`
+- `prompts/` – role prompts for Product Owner, Tech Lead, Development Team, Moderator, and Workbench usage. They support per‑request answer depths (`minimal`, `options`, `full`) so Moderators can choose between speed, choice, and depth without changing tools. Includes `CLAUDE.md` — the Development Team prompt config for Claude Code, generated by the Tech Lead from the project's `ARCHITECTURE.md`.
+- `examples/` – concrete examples of Moderated AI Development Workflow in action (starting with a small frontend "saved views" feature)
+
+### Example project structure
+
+The `examples/` directory shows how Moderated AI Development Workflow artifacts and code can live together in a real project.
+
+A typical Moderated AI Development Workflow‑enabled project might look like:
+
+```text
+my-saas-app/
+  CLAUDE.md                     # Claude Code config for the Development Team role (auto-read by Claude Code)
+  mod-w/
+    MOD-W.md                    # The workflow and process docs
+    AGENTS.md                   # Agent definitions and guidelines
+    PRODUCT.md                  # What and why for this product
+    ARCHITECTURE.md             # How the system is structured
+    ROADMAP.md                  # Ordered list of Steps
+    STEP-XX.md                  # Current Step brief
+    REVIEW.md                   # Review notes and decisions for the current Step
+    QA.md                       # Verification evidence for the current Step
+    DOMAIN_LANGUAGE_MATRIX.md   # Shared vocabulary for the product's domain
+    (Optional) Other supporting docs, only when they earn their existence.
+  src/                          # Application code
+    ...
+  tests/                        # Automated tests
+    ...
+```
+
+---
+
 ## Minimal vs extended docs
 
 To get started with Moderated AI Development Workflow, you only need a small subset of the docs:
@@ -338,13 +395,18 @@ To get started with Moderated AI Development Workflow, you only need a small sub
 
 ---
 
-## Status: v1.0.0 (Stable)
+## Status: v1.1.0 (Stable)
 
 **MOD-W** has transitioned from a personal workflow into a formalized, open methodology.
 
 - **Current State:** The core methodology, role definitions, and document templates are stabilized.
+- **Claude Code support:** `CLAUDE.md` template and Claude Code integration are included in v1.1.0. The Development Team role now supports both the Claude chatbot and Claude Code as interchangeable interfaces.
+- For both interfaces, the Moderator provides the active `STEP-XX.md`
+  at session start — attached or pasted in the chatbot, or stated as
+  a file path in Claude Code.
 - **Examples Included:** A reference implementation for a **Frontend Saved Views** feature is available in `/examples/frontend-saved-views`, demonstrating the full lifecycle from `PRODUCT.md` to annotated Git tags.
-- **Roadmap:** Future updates will introduce specific profiles for backend services, full-stack integration, and advanced AI runners like Claude Code and Aider.
+
+- **Roadmap:** Future updates will introduce specific profiles for backend services, full-stack integration, and advanced AI runners such as Aider.
 
 ---
 
@@ -354,7 +416,11 @@ To get started with Moderated AI Development Workflow, you only need a small sub
 2. Copy the templates from `/templates` into your own project.
 3. Use the role prompts in `/prompts` to create one dedicated thread per Moderated AI Development Workflow role
    (Product Owner, Tech Lead, Development Team, Moderator/Workbench), and adapt them to your ChatGPT / Claude / Perplexity / Gemini setup.
-   When prompting, specify the desired answer depth (`minimal`, `options`, or `full`) so you can trade off speed, optionality, and learning depth per request.
+   - For the **Development Team** role, choose your interface:
+     - **Claude chatbot** — paste `development-team-claude.md` at the start of a new claude.ai thread.
+     - **Claude Code** — place the generated `CLAUDE.md` at the repo root; it is read automatically at session start.
+     - Both may be used on the same project or the same Step. Commit the repo before switching interfaces.
+   - When prompting, specify the desired answer depth (`minimal`, `options`, or `full`) so you can trade off speed, optionality, and learning depth per request.
 4. Run one small feature end‑to‑end using the Moderated AI Development Workflow Step lifecycle.
 
 Contributions, feedback, and adoption stories are welcome – see `CONTRIBUTING.md`.
@@ -380,4 +446,4 @@ For inquiries, open an issue or contact the maintainer via the repository profil
 
 ---
 
-MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
