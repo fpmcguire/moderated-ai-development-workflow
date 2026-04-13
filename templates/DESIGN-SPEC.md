@@ -117,7 +117,7 @@
 ## 3. Component Library
 
 <!-- One sub-section per component. Copy the template block below for each component.
-     Use names exactly as they appear in the Domain Language Matrix. -->
+     Use names exactly as they appear in the DOMIAN_LANGUAGE.md. -->
 
 ---
 

@@ -25,7 +25,7 @@ Out of scope (for this Step):
 
 - `PRODUCT.md` for feature context and workflows.
 - `ARCHITECTURE.md` (frontend section) for stack and structure.
-- `DOMAIN_LANGUAGE_MATRIX.md` entries for “Dashboard”, “Saved View”, “Filters”, “Sort”, “Columns”, and “Active Saved View”.
+- `DOMAIN_LANGUAGE.md` entries for “Dashboard”, “Saved View”, “Filters”, “Sort”, “Columns”, and “Active Saved View”.
 - This Step brief.
 
 ## Required Changes
@@ -85,7 +85,7 @@ _(Adjust names to your chosen stack once ARCHITECTURE.md is written.)_
 ## Notes for Reviewers
 
 - Focus review on clarity of component boundaries and state handling.
-- Confirm that naming aligns with `DOMAIN_LANGUAGE_MATRIX.md`.
+- Confirm that naming aligns with `DOMAIN_LANGUAGE.md`.
 - Confirm that the Step does not sneak in create/rename/delete logic; those belong to later Steps.
 - Confirm that apply behaviour is visible and testable from the UI, not only through internal state.
 

@@ -16,7 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Initial repository structure with full documentation framework.
 - Core docs: manifesto, principles, roles, ceremonies, artifacts, step lifecycle, quality gates, domain language, glossary, FAQ.
-- Templates: PRODUCT, ARCHITECTURE, ROADMAP, STEP, REVIEW, QA, DOMAIN_LANGUAGE_MATRIX, AGENTS.
+- Templates: PRODUCT, ARCHITECTURE, ROADMAP, STEP, REVIEW, QA, DOMAIN_LANGUAGE, AGENTS.
 - Prompts: product owner (ChatGPT), tech lead (ChatGPT), development team (Claude), moderator checklist, workbench usage guidelines.
 - Example: frontend saved-views feature walkthrough.
 - GitHub issue templates and PR template.

@@ -7,17 +7,20 @@ Each role works against a small set of shared files that keep intent, architectu
 
 ## Overview
 
-| Artifact                  | Owner (primary) | Purpose                                      |
-| ------------------------- | --------------- | -------------------------------------------- |
-| PRODUCT.md                | Product Owner   | What we're building and why                  |
-| ARCHITECTURE.md           | Tech Lead       | How we're building it                        |
-| DOMAIN_LANGUAGE_MATRIX.md | Tech Lead       | Shared domain and agent language             |
-| ROADMAP.md                | Tech Lead       | Ordered list of Steps                        |
-| STEP.md                   | Tech Lead       | Brief for a single Step                      |
-| REVIEW.md                 | Moderator       | Review history and decisions per Step        |
-| QA.md                     | Moderator / QA  | Test and verification record per Step        |
-| AGENTS.md                 | Tech Lead       | Instructions and conventions for AI agents   |
-| CLAUDE.md                 | Tech Lead       | Development Team role config for Claude Code |
+| Artifact                       | Owner (primary) | Purpose                                      |
+| ------------------------------ | --------------- | -------------------------------------------- |
+| PRODUCT.md                     | Product Owner   | What we're building and why                  |
+| ARCHITECTURE.md                | Tech Lead       | How we're building it                        |
+| DOMAIN_LANGUAGE.md             | Tech Lead       | Shared domain and agent language             |
+| ROADMAP.md                     | Tech Lead       | Ordered list of Steps                        |
+| STEP.md                        | Tech Lead       | Brief for a single Step                      |
+| REVIEW.md                      | Moderator       | Review history and decisions per Step        |
+| QA.md                          | Moderator / QA  | Test and verification record per Step        |
+| AGENTS.md                      | Tech Lead       | Instructions and conventions for AI agents   |
+| CLAUDE.md                      | Tech Lead       | Development Team role config for Claude Code |
+| ------------------------------ | --------------- | -------------------------------------------- |
+| Extended (optional) Artifacts  |                 |                                              |
+| DESIGN-SPEC.md                 | Designer        | Visual and interaction design for features   |
 
 Templates for each are in `/templates`.
 
@@ -57,7 +60,7 @@ ARCHITECTURE.md is the main reference for "how" and "where" changes should be ma
 
 ---
 
-## DOMAIN_LANGUAGE_MATRIX.md
+## DOMAIN_LANGUAGE.md
 
 **Owner:** Tech Lead (with Product Owner)  
 **Audience:** All roles and agents
@@ -184,7 +187,7 @@ For each new project or example:
 
 1. Copy templates from `/templates` into the project root.
 2. Fill out PRODUCT.md and ARCHITECTURE.md first.
-3. Create DOMAIN_LANGUAGE_MATRIX.md as soon as core terms appear.
+3. Create DOMAIN_LANGUAGE.md as soon as core terms appear.
 4. Maintain ROADMAP.md and STEP.md as you plan work.
 5. Update REVIEW.md and QA.md for every Step.
 6. Keep AGENTS.md aligned with your actual tools and commands.

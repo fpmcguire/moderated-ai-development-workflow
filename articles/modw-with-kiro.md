@@ -1,4 +1,4 @@
-# Moderated AI Development Workflow + Kiro Playbook
+# Moderated AI Development Workflow (MOD-W) + Kiro IDE
 
 ## Overview
 
@@ -46,7 +46,7 @@ The mapping is:
 MOD-W then layers on:
 
 - `REVIEW.md` and `QA.md` for **validation and evidence**
-- `DOMAIN_LANGUAGE_MATRIX.md` and `AGENTS.md` as **steering docs** for humans and agents
+- `DOMAIN_LANGUAGE.md` and `AGENTS.md` as **steering docs** for humans and agents
 
 ---
 
@@ -157,12 +157,12 @@ Here is a concrete workflow for a single Step:
    - Use Kiro’s agents to implement the Task/Step:
      - generate or edit code
      - run tests in the Kiro environment if available
-   - Keep prompts and outputs aligned with `DOMAIN_LANGUAGE_MATRIX.md` and `AGENTS.md`.
+   - Keep prompts and outputs aligned with `DOMAIN_LANGUAGE.md` and `AGENTS.md`.
 
 4. **Bring the result to the Workbench**
    - Sync or pull the changes to the local repo.
    - The Moderator:
-     - runs builds and tests in the Workbench
+     - runs builds and tests in the Workbench (e.g., VS Code + Copilot)
      - performs manual UX checks if needed
      - compares behavior against `STEP-XX.md` acceptance checks
 
@@ -192,13 +192,13 @@ Here is a concrete workflow for a single Step:
   Treat Kiro specs as drafts until they are reflected in `PRODUCT.md` and `ARCHITECTURE.md`.
 
 - **Use the same domain language everywhere.**  
-  Keep `DOMAIN_LANGUAGE_MATRIX.md` up to date and paste relevant sections into Kiro prompts.
+  Keep `DOMAIN_LANGUAGE.md` up to date and paste relevant sections into Kiro prompts.
 
 - **Keep Steps small.**  
   If a Kiro Task feels too big to review safely, split it in MOD-W and reflect that split back into Kiro.
 
 - **Record learning in the repo.**  
-  If a Kiro session reveals important insights, capture them in `REVIEW.md`, `QA.md`, or the Domain Language Matrix, not just in Kiro’s history.
+  If a Kiro session reveals important insights, capture them in `REVIEW.md`, `QA.md`, or the Domain Language, not just in Kiro’s history.
 
 ---
 
@@ -216,4 +216,4 @@ You get the best of both:
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development-workflow](https://github.com/fpmcguire/moderated-ai-development-workflow)
+MOD-W v2.0.0 · Moderated AI Development Workflow

@@ -29,7 +29,7 @@ Output: A clear, approved `STEP.md`.
 ## 2. Brief the Development Team
 
 **Who:** Moderator → Development Team (Claude)  
-**Artifacts:** PRODUCT.md, ARCHITECTURE.md, STEP.md, DOMAIN_LANGUAGE_MATRIX.md
+**Artifacts:** PRODUCT.md, ARCHITECTURE.md, STEP.md, DOMAIN_LANGUAGE.md
 
 The Moderator chooses the Development Team interface for this Step:
 
@@ -84,7 +84,7 @@ Output: A proposed implementation for the Step in a branch or patch, plus a shor
 **Who:** Moderator using the Workbench  
 **Artifacts:** QA.md (draft), REVIEW.md (draft)
 
-- Moderator pulls the changes into the local Workbench (VS Code).
+- Moderator pulls the changes into the local Workbench (e.g., VS Code + Copilot).
 - Runs build, tests, and linters.
 - Manually exercises the feature or UI for the Step.
 - Uses Copilot for light‑to‑moderate fixes (typos, small refactors, trivial bugs).
@@ -121,7 +121,7 @@ Output: Implementation that passes Workbench verification and addresses review c
 ## 6. Tech Lead Review
 
 **Who:** Tech Lead (ChatGPT) + Moderator  
-**Artifacts:** REVIEW.md, ARCHITECTURE.md, DOMAIN_LANGUAGE_MATRIX.md
+**Artifacts:** REVIEW.md, ARCHITECTURE.md, DOMAIN_LANGUAGE.md
 
 - Moderator prepares a **handoff packet** for the Tech Lead:
   - Current `STEP.md`

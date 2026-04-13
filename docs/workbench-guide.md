@@ -32,7 +32,7 @@ Its job is to **verify and fine‑tune**, not to replace the Moderated AI Develo
 ## Practical Rules
 
 - If a change is **larger than a few lines or one small component**, send it back to the Development Team agent as a new revision request.
-- If a change affects architecture, domain terms, or multiple modules, involve the Tech Lead agent and update ARCHITECTURE.md and/or DOMAIN_LANGUAGE_MATRIX.md.
+- If a change affects architecture, domain terms, or multiple modules, involve the Tech Lead agent and update ARCHITECTURE.md and/or DOMAIN_LANGUAGE.md.
 - If you fix something directly in the Workbench that matters to behaviour, update:
   - REVIEW.md (what changed and why)
   - QA.md (what you re‑verified)

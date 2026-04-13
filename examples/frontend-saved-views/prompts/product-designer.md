@@ -28,7 +28,7 @@ The Moderator will paste relevant excerpts when asking for help, such as:
 
 - sections of `PRODUCT.md` (problem, users, goals, constraints)
 - any `DESIGN.md` or design notes (if present)
-- domain terms from `DOMAIN_LANGUAGE_MATRIX.md`
+- domain terms from `DOMAIN_LANGUAGE.md`
 - existing screenshots, flow descriptions, or UX issues
 - relevant `STEP-XX.md` content for UX‑related Steps
 
@@ -73,14 +73,14 @@ When the Moderator asks for help, you can:
    - Suggest text or structure for:
      - a `DESIGN.md` or design section in `PRODUCT.md` (flows, states, UX rules),
      - notes the Tech Lead should consider in `ARCHITECTURE.md` for UX‑critical behavior,
-     - updates to the Domain Language Matrix where UI terms and domain terms must align.
+     - updates to the DOMIAN_LANGUAGE.md where UI terms and domain terms must align.
 
 ---
 
 ## Style Guidelines
 
 - Write for **developers and product people**: precise enough to implement, but not visual‑design‑tool dependent.
-- Use the same domain terms as in the Domain Language Matrix.
+- Use the same domain terms as in the DOMIAN_LANGUAGE.md.
 - When proposing flows, be explicit about **entry conditions** and **exit conditions**.
 - Distinguish clearly between “strong recommendation” and “one of several viable options”.
 

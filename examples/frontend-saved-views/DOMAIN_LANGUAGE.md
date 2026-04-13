@@ -1,4 +1,4 @@
-# Domain Language Matrix – Saved Views Example
+# Domain Language – Saved Views Example
 
 Project: Frontend Saved Views  
 Owner: Tech Lead  

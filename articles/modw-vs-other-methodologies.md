@@ -49,7 +49,7 @@ It tells you _what_ phases to have, but not _who_ does them or _how_ AI is moder
 Moderated AI Development Workflow assumes those SDD phases exist and then adds:
 
 - explicit **roles** (Product Owner, Tech Lead, Development Team, Moderator)
-- a small, named set of **artifacts** (`PRODUCT.md`, `ARCHITECTURE.md`, `ROADMAP.md`, `STEP.md`, `REVIEW.md`, `QA.md`, `DOMAIN_LANGUAGE_MATRIX.md`, `AGENTS.md`)
+- a small, named set of **artifacts** (`PRODUCT.md`, `ARCHITECTURE.md`, `ROADMAP.md`, `STEP.md`, `REVIEW.md`, `QA.md`, `DOMAIN_LANGUAGE.md`, `AGENTS.md`)
 - **quality gates** enforced by a human Moderator in a local Workbench
 - **model diversity** and cross‑validation as a design principle, not an accident
 
@@ -168,4 +168,4 @@ It assumes AI will only get more powerful — and argues that **moderation, arti
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development-workflow](https://github.com/fpmcguire/moderated-ai-development-workflow)
+MOD-W v2.0.0 · Moderated AI Development Workflow

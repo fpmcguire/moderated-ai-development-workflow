@@ -13,7 +13,7 @@ Moderated AI Development Workflow defines three levels of quality gate, applied 
 Every step must pass these criteria regardless of type:
 
 - [ ] Output matches the scope defined in STEP.md
-- [ ] Output uses domain language terms correctly (per [DOMAIN_LANGUAGE_MATRIX.md](../templates/DOMAIN_LANGUAGE_MATRIX.md))
+- [ ] Output uses domain language terms correctly (per [DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md))
 - [ ] No hallucinated facts, APIs, libraries, or references
 - [ ] No placeholders, TODOs, or stub implementations left unresolved
 - [ ] No real credentials, personal data, or sensitive information included

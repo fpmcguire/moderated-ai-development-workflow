@@ -43,7 +43,7 @@ The Tech Lead:
 - Iteratively cross-validates the [PRODUCT.md](../templates/PRODUCT.md) artifact with the Product Owner to clarify intent and constraints
 - Authors and maintains the [ARCHITECTURE.md](../templates/ARCHITECTURE.md) artifact
 - Authors and maintains the [ROADMAP.md](../templates/ROADMAP.md) artifact
-- Defines the [Domain Language Matrix](../templates/DOMAIN_LANGUAGE_MATRIX.md)
+- Defines the [DOMIAN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md)
 - Writes and refines briefs and prompts for AI agents
 - Reviews roadmap quality and implementation for technical correctness and maintainability
 - Reviews completed steps before they are tagged as done
@@ -58,7 +58,7 @@ The Designer is responsible for the visual and interaction design of the product
 
 The Designer:
 
-- Receives `PRODUCT.md`, `ROADMAP.md`, the Domain Language Matrix, and visual assets (reference images, brand tokens, style descriptions) from the Moderator
+- Receives `PRODUCT.md`, `ROADMAP.md`, the DOMIAN_LANGUAGE.md, and visual assets (reference images, brand tokens, style descriptions) from the Moderator
 - Produces and maintains the `DESIGN-SPEC.md` artifact: colour palette, typography, spacing, component library, screen layouts, interaction patterns, and a Component–Roadmap Map
 - Maps every UI component and design decision to the Roadmap Step in which it is first introduced
 - Reviews and revises `DESIGN-SPEC.md` based on Product Owner and Moderator feedback until the spec is approved
@@ -169,19 +169,21 @@ See: [prompts/CLAUDE.md](../prompts/CLAUDE.md) (Claude Code template)
 
 ## Role Summary Table
 
-| Role                             | Human or AI      | Primary artifacts                                        | Quality gate responsibility               |
-| -------------------------------- | ---------------- | -------------------------------------------------------- | ----------------------------------------- |
-| Moderator                        | Human            | REVIEW.md, QA.md, repo state                             | Accepts/rejects AI output and step status |
-| Product Owner                    | Human            | PRODUCT.md, parts of ROADMAP.md                          | Accepts/rejects step scope and intent     |
-| Tech Lead                        | Human            | ARCHITECTURE.md, ROADMAP.md, STEP.md, CLAUDE.md          | Reviews technical quality and fit         |
-| QA / Tester                      | Human            | QA.md                                                    | Validates end‑to‑end behaviour            |
-| Workbench                        | Human env.       | Local repo, build/test tooling                           | Executes builds/tests, manual checks      |
-| Product Owner Agent              | AI (ChatGPT)     | PRODUCT.md drafts, story and criteria suggestions        | None — all output is moderated            |
-| Tech Lead Agent                  | AI (ChatGPT)     | ARCHITECTURE.md drafts, technical suggestions, CLAUDE.md | None — all output is moderated            |
-| Designer                         | Human            | DESIGN-SPEC.md                                           | Reviews visual quality and fit            |
-| Designer Agent                   | AI (Gemini)      | DESIGN-SPEC.md drafts, component mapping                 | None — all output is moderated            |
-| Development Team Agent (chatbot) | AI (Claude)      | Code, tests, docs for each step                          | None — all output is moderated            |
-| Development Team Agent (CLI)     | AI (Claude Code) | Code, tests, docs for each step                          | None — all output is moderated            |
+| Role                             | Human or AI       | Primary artifacts                                        | Quality gate responsibility               |
+| -------------------------------- | ----------------- | -------------------------------------------------------- | ----------------------------------------- |
+| Moderator                        | Human             | REVIEW.md, QA.md, repo state                             | Accepts/rejects AI output and step status |
+| Product Owner                    | Human             | PRODUCT.md, parts of ROADMAP.md                          | Accepts/rejects step scope and intent     |
+| Tech Lead                        | Human             | ARCHITECTURE.md, ROADMAP.md, STEP.md, CLAUDE.md          | Reviews technical quality and fit         |
+| QA / Tester                      | Human             | QA.md                                                    | Validates end‑to‑end behaviour            |
+| Workbench                        | Human env.        | Local repo, build/test tooling                           | Executes builds/tests, manual checks      |
+| Product Owner Agent              | AI (ChatGPT)      | PRODUCT.md drafts, story and criteria suggestions        | None — all output is moderated            |
+| Tech Lead Agent                  | AI (ChatGPT)      | ARCHITECTURE.md drafts, technical suggestions, CLAUDE.md | None — all output is moderated            |
+| Development Team Agent (chatbot) | AI (Claude)       | Code, tests, docs for each step                          | None — all output is moderated            |
+| Development Team Agent (CLI)     | AI (Claude Code)  | Code, tests, docs for each step                          | None — all output is moderated            |
+| -------------------------------- | ----------------- | -------------------------------------------------------- | ----------------------------------------- |
+| Extended (optional) Roles:       |                   |                                                          |                                           |
+| Designer                         | Human             | DESIGN-SPEC.md                                           | Reviews visual quality and fit            |
+| Designer Agent                   | AI (Gemini)       | DESIGN-SPEC.md drafts, component mapping                 | None — all output is moderated            |
 
 ---
 

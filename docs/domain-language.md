@@ -16,9 +16,9 @@ Domain language is the specific vocabulary of your product and its problem space
 
 ---
 
-## The Domain Language Matrix
+## The DOMAIN_LANGAGE.md
 
-The Domain Language Matrix is a table that captures agreed terms and their usage. See the template at [templates/DOMAIN_LANGUAGE_MATRIX.md](../templates/DOMAIN_LANGUAGE_MATRIX.md).
+The DOMAIN_LANGAGE.md is a table that captures agreed terms and their usage. See the template at [templates/DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md).
 
 Each entry in the matrix records:
 
@@ -35,7 +35,7 @@ Each entry in the matrix records:
 
 ## Embedding Domain Language in Prompts
 
-Every prompt sent to an AI agent should include the relevant portion of the Domain Language Matrix. This ensures AI output uses team-agreed vocabulary consistently.
+Every prompt sent to an AI agent should include the relevant portion of the DOMAIN_LANGAGE.md. This ensures AI output uses team-agreed vocabulary consistently.
 
 Example pattern (from [prompts/development-team-claude.md](../prompts/development-team-claude.md)):
 

@@ -1,4 +1,4 @@
-# Domain Language Matrix
+# DOMIAN_LANGUAGE.md
 
 **Project:** {{PROJECT_NAME}}  
 **Date:** {{DATE}}  

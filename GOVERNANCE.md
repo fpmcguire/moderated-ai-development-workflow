@@ -47,7 +47,7 @@ All participants in this project must adhere to the [Code of Conduct](CODE_OF_CO
 
 ## Licensing
 
-All contributions to this repository are made under the [MIT License](LICENSE).
+All contributions to this repository are made under the [Apache License, Version 2.0](LICENSE).
 
 ---
 

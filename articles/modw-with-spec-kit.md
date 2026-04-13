@@ -1,4 +1,4 @@
-# Moderated AI Development Workflow + GitHub Spec Kit Playbook
+# Moderated AI Development Workflow (MOD-W) + GitHub Spec Kit
 
 ## Overview
 
@@ -37,16 +37,16 @@ Moderated AI Development Workflow ^(MOD-W) uses these core artifacts:
 - `ARCHITECTURE.md` – technical approach, architecture decisions
 - `ROADMAP.md` + `STEP-XX.md` – ordered Steps and per‑Step briefs
 - `REVIEW.md` + `QA.md` – review decisions and verification evidence
-- `DOMAIN_LANGUAGE_MATRIX.md` + `AGENTS.md` – steering docs for humans and agents
+- `DOMAIN_LANGUAGE.md` + `AGENTS.md` – steering docs for humans and agents
 
 The mapping is:
 
-| Spec Kit phase | MOD-W artifact(s)                                                                        | Purpose                                 |
-| -------------- | ---------------------------------------------------------------------------------------- | --------------------------------------- |
-| Constitution   | MOD-W principles & steering docs (`docs/*.md`, `AGENTS.md`, `DOMAIN_LANGUAGE_MATRIX.md`) | Project‑wide rules and constraints      |
-| Spec           | `PRODUCT.md`                                                                             | What we’re building and why             |
-| Plan           | `ARCHITECTURE.md`                                                                        | How we’re building it                   |
-| Tasks          | `ROADMAP.md` + `STEP-XX.md`                                                              | Concrete, bounded units of work (Steps) |
+| Spec Kit phase | MOD-W artifact(s)                                                                 | Purpose                                 |
+| -------------- | --------------------------------------------------------------------------------- | --------------------------------------- |
+| Constitution   | MOD-W principles & steering docs (`docs/*.md`, `AGENTS.md`, `DOMAIN_LANGUAGE.md`) | Project‑wide rules and constraints      |
+| Spec           | `PRODUCT.md`                                                                      | What we’re building and why             |
+| Plan           | `ARCHITECTURE.md`                                                                 | How we’re building it                   |
+| Tasks          | `ROADMAP.md` + `STEP-XX.md`                                                       | Concrete, bounded units of work (Steps) |
 
 MOD-W then layers review and evidence on top of Spec Kit’s flow:
 
@@ -99,7 +99,7 @@ The central rule: **Spec Kit drives structure; Moderated AI Development Workflow
 - In Moderated AI Development Workflow:
   - Complement the constitution with:
     - `docs/manifesto.md` and `docs/principles.md` – Moderated AI Development Workflow’s own beliefs and day‑to‑day rules.
-    - `DOMAIN_LANGUAGE_MATRIX.md` – shared vocabulary.
+    - `DOMAIN_LANGUAGE.md` – shared vocabulary.
     - `AGENTS.md` – rules, commands, and limits for AI agents.
 
 **Gate:** The Moderator and Tech Lead decide that the constitution + Moderated AI Development Workflow steering docs are strong enough to guide Specs and Plans.  
@@ -200,7 +200,7 @@ Here is a concrete end‑to‑end flow for implementing and accepting a Step:
    - Use Spec Kit to drive AI‑assisted implementation (e.g., Copilot, Claude Code, Q Developer).
    - Ensure prompts reference:
      - relevant parts of `PRODUCT.md`, `ARCHITECTURE.md`, `STEP-XX.md`,
-     - the Domain Language Matrix,
+     - the DOMAIN_LANGAGE.md,
      - any agent rules from `AGENTS.md`.
 
 4. **Bring changes to the Workbench**
@@ -266,4 +266,4 @@ You give Spec Kit the job of **structuring** your specs and tasks, and you give 
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development-workflow](https://github.com/fpmcguire/moderated-ai-development-workflow)
+MOD-W v2.0.0 · Moderated AI Development Workflow

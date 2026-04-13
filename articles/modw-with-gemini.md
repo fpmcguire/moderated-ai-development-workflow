@@ -1,4 +1,4 @@
-# MOD-W with Gemini playbook
+# Moderated AI Development Workflow (MOD-W) with Google Gemini
 
 ## Overview
 
@@ -34,7 +34,7 @@ Use these as your source of truth:
 - [templates/STEP.md](../templates/STEP.md)
 - [templates/REVIEW.md](../templates/REVIEW.md)
 - [templates/QA.md](../templates/QA.md)
-- [templates/DOMAIN_LANGUAGE_MATRIX.md](../templates/DOMAIN_LANGUAGE_MATRIX.md)
+- [templates/DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md)
 - [templates/AGENTS.md](../templates/AGENTS.md)
 
 Treat Gemini chats as working notes. Move accepted content into repo artifacts.
@@ -57,7 +57,7 @@ Start from:
 - [prompts/product-owner-chatgpt.md](../prompts/product-owner-chatgpt.md)
 - [prompts/tech-lead-chatgpt.md](../prompts/tech-lead-chatgpt.md)
 - [prompts/development-team-claude.md](../prompts/development-team-claude.md)
-- [prompts/moderator-checklist.md](../prompts/moderator-checklist.md)
+- [docs/moderator-checklist.md](../docs/moderator-checklist.md)
 - [prompts/prompt-guidelines.md](../prompts/prompt-guidelines.md)
 
 Even though some prompt files are named for other models, the role constraints and quality expectations still apply when adapted for Gemini.
@@ -89,7 +89,7 @@ Recommended NotebookLM source set:
 - [templates/PRODUCT.md](../templates/PRODUCT.md)
 - [templates/ARCHITECTURE.md](../templates/ARCHITECTURE.md)
 - [templates/ROADMAP.md](../templates/ROADMAP.md)
-- [templates/DOMAIN_LANGUAGE_MATRIX.md](../templates/DOMAIN_LANGUAGE_MATRIX.md)
+- [templates/DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md)
 - [templates/AGENTS.md](../templates/AGENTS.md)
 - relevant Step files and review artifacts for active work
 
@@ -228,7 +228,6 @@ If evidence is weak, request a revision and keep the step open.
 - [docs/quality-gates.md](quality-gates.md)
 - [docs/step-lifecycle.md](step-lifecycle.md)
 - [docs/artifacts.md](artifacts.md)
-- [docs/using-gemini.md](using-gemini.md)
 
 ---
 

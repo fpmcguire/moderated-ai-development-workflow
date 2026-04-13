@@ -1,6 +1,6 @@
 # Glossary
 
-This glossary defines the core terms used in the Moderated AI Development Workflow methodology. For product-specific domain terms, see the [Domain Language Matrix](../templates/DOMAIN_LANGUAGE_MATRIX.md) for each project.
+This glossary defines the core terms used in the Moderated AI Development Workflow methodology. For product-specific domain terms, see the [DOMAIN_LANGAGE.md](../templates/DOMAIN_LANGUAGE.md) for each project.
 
 ---
 
@@ -17,10 +17,10 @@ Any document, file, or record produced during a Moderated AI Development Workflo
 A structured, time-boxed event in the Moderated AI Development Workflow process. Ceremonies include Kickoff, Step Planning, AI Work Session, Step Review, QA Verification, and Retrospective. See [ceremonies.md](ceremonies.md).
 
 **Domain language**  
-The agreed vocabulary of a product and its problem space, captured in the Domain Language Matrix and embedded in all AI prompts. See [domain-language.md](domain-language.md).
+The agreed vocabulary of a product and its problem space, captured in the DOMAIN_LANGAGE.md and embedded in all AI prompts. See [domain-language.md](domain-language.md).
 
-**Domain Language Matrix**  
-A table that records canonical domain terms, their definitions, their code identifiers, and terms to avoid. See [templates/DOMAIN_LANGUAGE_MATRIX.md](../templates/DOMAIN_LANGUAGE_MATRIX.md).
+**DOMAIN_LANGAGE.md**  
+A table that records canonical domain terms, their definitions, their code identifiers, and terms to avoid. See [templates/DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md).
 
 **Hallucination**  
 AI-generated content that is factually incorrect, references non-existent APIs or libraries, or invents information. A key target of the moderation quality gate.
@@ -47,7 +47,7 @@ An artifact that defines a single step: its scope, inputs, expected outputs, acc
 The human responsible for technical architecture, prompt authoring, and moderation of AI output. See [roles.md](roles.md).
 
 **Workbench**  
-The environment in which AI work sessions are conducted — typically a web-based chat interface (e.g. ChatGPT, Claude.ai) or an IDE with AI integration. See [prompts/workbench-usage-guidelines.md](../prompts/workbench-usage-guidelines.md).
+The Workbench is the human-operated development environment used by the Moderator.
 
 ---
 

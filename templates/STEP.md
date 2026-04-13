@@ -31,12 +31,12 @@
 
 <!-- What does the AI agent need to know to complete this step? -->
 
-| Input                  | Location |
-| ---------------------- | -------- |
-| PRODUCT.md             |          |
-| ARCHITECTURE.md        |          |
-| Domain Language Matrix |          |
-| Previous step output   |          |
+| Input                | Location |
+| -------------------- | -------- |
+| PRODUCT.md           |          |
+| ARCHITECTURE.md      |          |
+| DOMIAN_LANGUAGE.md   |          |
+| Previous step output |          |
 
 ## Expected Outputs
 

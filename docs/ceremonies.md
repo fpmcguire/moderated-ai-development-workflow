@@ -16,11 +16,11 @@ Ceremonies are structured events that create rhythm, transparency, and shared un
 
 - Review and agree on [PRODUCT.md](../templates/PRODUCT.md)
 - Draft or review [ARCHITECTURE.md](../templates/ARCHITECTURE.md)
-- Establish the [Domain Language Matrix](../templates/DOMAIN_LANGUAGE_MATRIX.md)
+- Establish the [DOMAIN_LANGAGE.md](../templates/DOMAIN_LANGUAGE.md)
 - Agree on which AI agents will be used and for which roles
 - Review the [ROADMAP.md](../templates/ROADMAP.md) and identify the first step
 
-**Output:** Completed PRODUCT.md, initial ARCHITECTURE.md, Domain Language Matrix, first STEP.md created
+**Output:** Completed PRODUCT.md, initial ARCHITECTURE.md, DOMAIN_LANGAGE.md, first STEP.md created
 
 ---
 
@@ -46,14 +46,15 @@ Ceremonies are structured events that create rhythm, transparency, and shared un
 ## 3. AI Work Session
 
 **When:** During the step, as needed  
-**Who:** Tech Lead (or Moderator), AI agent  
+**Who:** Moderator + Development Team agent  
 **Duration:** Variable
 
 **Purpose:** Generate the step's artifacts using the AI agent under human guidance.
 
 **Activities:**
 
-- Submit prompts to the AI agent following [workbench usage guidelines](../prompts/workbench-usage-guidelines.md)
+- Submit prompts to the AI agent following [development team guidelines](../prompts/development-team-claude.md)
+- Review response in Workbench following [workbench guideline](../docs/workbench-guide.md)
 - Iteratively refine prompts if output is unsatisfactory
 - Record all prompts and responses
 

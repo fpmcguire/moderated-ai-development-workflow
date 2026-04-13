@@ -8,7 +8,7 @@ Use this checklist for every Step in the MOD-W workflow.
 
 - [ ] ROADMAP.md: next Step chosen and clearly named.
 - [ ] STEP-XX.md: goal, scope, inputs, required changes, acceptance checks, risks filled in.
-- [ ] DOMAIN_LANGUAGE_MATRIX.md: key terms for this Step defined or updated.
+- [ ] DOMAIN_LANGUAGE.md: key terms for this Step defined or updated.
 - [ ] PRODUCT.md / ARCHITECTURE.md: still accurate for this Step.
 
 ---
@@ -26,7 +26,7 @@ Use this checklist for every Step in the MOD-W workflow.
 
 ## 3. With Tech Lead (ChatGPT)
 
-- [ ] Present PRODUCT.md, ARCHITECTURE.md excerpt, DOMAIN_LANGUAGE_MATRIX.md rows, and STEP-XX.md.
+- [ ] Present PRODUCT.md, ARCHITECTURE.md excerpt, DOMAIN_LANGUAGE.md rows, and STEP-XX.md.
 - [ ] Ask Tech Lead to:
   - Confirm Step scope (small, verifiable, technically sane).
   - Suggest likely affected files and data structures.
@@ -41,7 +41,7 @@ Use this checklist for every Step in the MOD-W workflow.
 - [ ] Choose the Development Team interface for this Step:
 
   **Option A — Claude chatbot (claude.ai)**
-  - [ ] Prepare a **context packet**: relevant PRODUCT.md sections, ARCHITECTURE.md sections, DOMAIN_LANGUAGE_MATRIX.md rows, and full STEP-XX.md.
+  - [ ] Prepare a **context packet**: relevant PRODUCT.md sections, ARCHITECTURE.md sections, DOMAIN_LANGUAGE.md rows, and full STEP-XX.md.
   - [ ] Open a new claude.ai thread and paste `development-team-claude.md` as the role prompt.
   - [ ] Attach or paste the active `STEP-XX.md` directly into the thread.
 

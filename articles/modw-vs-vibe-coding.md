@@ -75,7 +75,7 @@ Moderated AI Development Workflow makes viable coding explicit through three pil
 
 ### 1. Roles
 
-Moderated AI Development Workflow v1.0.0 defines four core roles:
+Moderated AI Development Workflow defines four core roles:
 
 - **Product Owner** – defines _what_ is built and _why_.
 - **Tech Lead** – defines _how_ it is built and how work is sliced.
@@ -96,7 +96,7 @@ Instead of burying decisions inside chat logs, Moderated AI Development Workflow
 - `STEP.md` – brief for a single Step
 - `REVIEW.md` – review decisions per Step
 - `QA.md` – verification evidence per Step
-- `DOMAIN_LANGUAGE_MATRIX.md` – shared vocabulary
+- `DOMAIN_LANGUAGE.md` – shared vocabulary
 - `AGENTS.md` – rules and conventions for AI agents
 
 Vibe coding tends to generate code first and documentation later (if at all).  
