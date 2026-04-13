@@ -4,6 +4,28 @@ All notable changes to the Moderated AI Development Workflow (MOD-W) will be doc
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [Unreleased]
+
+_No unreleased changes yet._
+
+## [2.0.0] – 2026-04-13
+
+### Changed
+
+- Refactored the project structure for improved clarity and maintainability.
+- Refactored documentation organization and content for improved clarity.
+- Simplified the repository layout to better distinguish core workflow guidance, supporting docs, templates, prompts, and examples.
+
+## [1.1.0] – 2026-04-07
+
+### Added
+
+- Added Gemini support.
+
+### Changed
+
+- Cleaned and refined the workflow.
+
 ## [1.0.0] – 2026-03-26
 
 ### Changed
@@ -22,10 +44,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - GitHub issue templates and PR template.
 - Copilot instructions for AI-assisted contributions.
 - Community files: CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, GOVERNANCE.
-
-## [Unreleased]
-
-_No unreleased changes yet._
 
 ---
 
