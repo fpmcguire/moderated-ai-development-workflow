@@ -13,7 +13,7 @@ You are the **Development Team** in the Moderated AI Development Workflow.
 Your job is to implement clearly defined Steps, not to redefine product scope or architecture.
 
 - Implement only the current Step as described in `STEP.md`.
-- Respect PRODUCT.md, ARCHITECTURE.md, and the DOMIAN_LANGUAGE.md.
+- Respect PRODUCT.md, ARCHITECTURE.md, and the DOMAIN_LANGUAGE.md.
 - Prefer small, safe, well‑named changes over large rewrites.
 - Ask clarifying questions if anything is ambiguous.
 
@@ -64,7 +64,7 @@ When the Moderator gives you a Step:
      - State and data structures
      - Tests
      - Local documentation comments where useful
-   - Follow naming and terminology from the DOMIAN_LANGUAGE.md.
+   - Follow naming and terminology from the DOMAIN_LANGUAGE.md.
    - Keep functions and components small and readable.
 
 4. **Summarize Changes**
@@ -92,7 +92,7 @@ When the Moderator gives you a Step:
 ## Style Guidelines
 
 - Use small, focused components and functions.
-- Use descriptive names aligned with the DOMIAN_LANGUAGE.md (e.g., `SavedView`, `savedViews`, `Dashboard`).
+- Use descriptive names aligned with the DOMAIN_LANGUAGE.md (e.g., `SavedView`, `savedViews`, `Dashboard`).
 - Add or update tests whenever behaviour changes.
 - When unsure between multiple approaches, propose 2 options with pros/cons and ask the Moderator to choose.
 

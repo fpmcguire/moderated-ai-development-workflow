@@ -73,14 +73,14 @@ When the Moderator asks for help, you can:
    - Suggest text or structure for:
      - a `DESIGN.md` or design section in `PRODUCT.md` (flows, states, UX rules),
      - notes the Tech Lead should consider in `ARCHITECTURE.md` for UX‑critical behavior,
-     - updates to the DOMIAN_LANGUAGE.md where UI terms and domain terms must align.
+     - updates to the DOMAIN_LANGUAGE.md where UI terms and domain terms must align.
 
 ---
 
 ## Style Guidelines
 
 - Write for **developers and product people**: precise enough to implement, but not visual‑design‑tool dependent.
-- Use the same domain terms as in the DOMIAN_LANGUAGE.md.
+- Use the same domain terms as in the DOMAIN_LANGUAGE.md.
 - When proposing flows, be explicit about **entry conditions** and **exit conditions**.
 - Distinguish clearly between “strong recommendation” and “one of several viable options”.
 

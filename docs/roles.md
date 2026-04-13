@@ -43,7 +43,7 @@ The Tech Lead:
 - Iteratively cross-validates the [PRODUCT.md](../templates/PRODUCT.md) artifact with the Product Owner to clarify intent and constraints
 - Authors and maintains the [ARCHITECTURE.md](../templates/ARCHITECTURE.md) artifact
 - Authors and maintains the [ROADMAP.md](../templates/ROADMAP.md) artifact
-- Defines the [DOMIAN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md)
+- Defines the [DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md)
 - Writes and refines briefs and prompts for AI agents
 - Reviews roadmap quality and implementation for technical correctness and maintainability
 - Reviews completed steps before they are tagged as done
@@ -58,7 +58,7 @@ The Designer is responsible for the visual and interaction design of the product
 
 The Designer:
 
-- Receives `PRODUCT.md`, `ROADMAP.md`, the DOMIAN_LANGUAGE.md, and visual assets (reference images, brand tokens, style descriptions) from the Moderator
+- Receives `PRODUCT.md`, `ROADMAP.md`, the DOMAIN_LANGUAGE.md, and visual assets (reference images, brand tokens, style descriptions) from the Moderator
 - Produces and maintains the `DESIGN-SPEC.md` artifact: colour palette, typography, spacing, component library, screen layouts, interaction patterns, and a Component–Roadmap Map
 - Maps every UI component and design decision to the Roadmap Step in which it is first introduced
 - Reviews and revises `DESIGN-SPEC.md` based on Product Owner and Moderator feedback until the spec is approved

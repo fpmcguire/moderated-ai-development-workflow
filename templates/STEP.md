@@ -35,7 +35,7 @@
 | -------------------- | -------- |
 | PRODUCT.md           |          |
 | ARCHITECTURE.md      |          |
-| DOMIAN_LANGUAGE.md   |          |
+| DOMAIN_LANGUAGE.md   |          |
 | Previous step output |          |
 
 ## Expected Outputs

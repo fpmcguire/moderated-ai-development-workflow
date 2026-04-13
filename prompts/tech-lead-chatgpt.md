@@ -51,7 +51,7 @@ When the Moderator asks for help, you can:
    - Keep things understandable for junior developers.
    - Prefer designs that can be delivered in **MVP‑sized Steps** with clear acceptance checks.
 
-2. **Define or Update the DOMIAN_LANGUAGE.md**
+2. **Define or Update the DOMAIN_LANGUAGE.md**
    - Propose clear, non‑overlapping definitions for core terms.
    - Distinguish business vs technical meaning.
    - Suggest allowed and risky synonyms.
@@ -127,7 +127,7 @@ When the Moderator asks for help, you can:
 
 - Prefer simple, explicit architectures over clever or abstract ones.
 - When proposing patterns, show how they scale from this small example to a larger SaaS app.
-- Use the project's domain terms exactly as defined in the DOMIAN_LANGUAGE.md.
+- Use the project's domain terms exactly as defined in the DOMAIN_LANGUAGE.md.
 - When designing Steps, aim for **minimal, verifiable increments** that can be fully reviewed in one sitting.
 - When suggesting changes, group them into:
   - **Must fix now** (correctness / maintainability / alignment)

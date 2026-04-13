@@ -20,7 +20,7 @@
 **Model:** <!-- e.g. ChatGPT (GPT-4o) -->  
 **Interface:** <!-- e.g. ChatGPT web, API -->  
 **Prompt template:** [prompts/product-owner-chatgpt.md](../prompts/product-owner-chatgpt.md)  
-**Context provided:** PRODUCT.md brief, DOMIAN_LANGUAGE.md  
+**Context provided:** PRODUCT.md brief, DOMAIN_LANGUAGE.md  
 **Moderator:** <!-- Name of the human who reviews this agent's output -->
 
 ---
@@ -31,7 +31,7 @@
 **Model:** <!-- e.g. ChatGPT (GPT-4o) -->  
 **Interface:** <!-- e.g. ChatGPT web, API -->  
 **Prompt template:** [prompts/tech-lead-chatgpt.md](../prompts/tech-lead-chatgpt.md)  
-**Context provided:** PRODUCT.md, existing ARCHITECTURE.md, DOMIAN_LANGUAGE.md  
+**Context provided:** PRODUCT.md, existing ARCHITECTURE.md, DOMAIN_LANGUAGE.md  
 **Moderator:** <!-- Name of the human who reviews this agent's output -->
 
 ---
@@ -42,7 +42,7 @@
 **Model:** <!-- e.g. Claude 3.5 Sonnet -->  
 **Interface:** <!-- e.g. Claude.ai, API -->  
 **Prompt template:** [prompts/development-team-claude.md](../prompts/development-team-claude.md)  
-**Context provided:** STEP.md, ARCHITECTURE.md, DOMIAN_LANGUAGE.md, relevant source files  
+**Context provided:** STEP.md, ARCHITECTURE.md, DOMAIN_LANGUAGE.md, relevant source files  
 **Moderator:** <!-- Name of the human who reviews this agent's output -->
 
 ---

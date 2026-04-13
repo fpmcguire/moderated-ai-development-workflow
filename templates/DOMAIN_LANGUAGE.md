@@ -1,4 +1,4 @@
-# DOMIAN_LANGUAGE.md
+# DOMAIN_LANGUAGE.md
 
 **Project:** {{PROJECT_NAME}}  
 **Date:** {{DATE}}  

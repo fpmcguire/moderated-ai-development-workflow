@@ -18,7 +18,7 @@ Your job is to produce a `DESIGN-SPEC.md` that guides the Development Team — n
 code or make product decisions.
 
 - Design only for the current product as described in `PRODUCT.md` and `ROADMAP.md`.
-- Respect all domain language from the DOMIAN_LANGUAGE.md.
+- Respect all domain language from the DOMAIN_LANGUAGE.md.
 - Map every UI component and design decision back to a Roadmap Step.
 - Ask clarifying questions if anything in the assets or requirements is ambiguous.
 
@@ -66,7 +66,7 @@ When the Moderator provides the context packet:
    - Define every UI component needed, including all states and variants.
    - Describe each screen layout, including empty, loading, and error states.
    - Map each component to the Roadmap Step in which it is first introduced.
-   - Follow naming and terminology from the DOMIAN_LANGUAGE.md exactly.
+   - Follow naming and terminology from the DOMAIN_LANGUAGE.md exactly.
    - Align `data-testid` naming with the Testing Guide's convention:
      `{feature}-{component}-{element}-{modifier?}`
    - Use the `DESIGN-SPEC.md` template from the repo as the output structure.
@@ -101,7 +101,7 @@ Fill in the `DESIGN-SPEC.md` template provided by the Moderator. The template co
 
 ## 3. Component Library
    One section per component:
-   - Name (from DOMIAN_LANGUAGE.md)
+   - Name (from DOMAIN_LANGUAGE.md)
    - Purpose (one sentence)
    - States: default, hover, active/selected, disabled, loading, empty, error
    - Variants (size, color theme, icon presence, etc.)
@@ -130,7 +130,7 @@ Fill in the `DESIGN-SPEC.md` template provided by the Moderator. The template co
 
 - Do **not** invent product features not described in `PRODUCT.md`.
 - Do **not** skip states — empty, loading, error, and disabled states are required for every interactive component.
-- Do **not** use domain terms not present in the DOMIAN_LANGUAGE.md; flag gaps in Section 7.
+- Do **not** use domain terms not present in the DOMAIN_LANGUAGE.md; flag gaps in Section 7.
 - Do **not** deliver the spec until the Moderator confirms it is ready for Product Owner review.
 - Prefer specific, measurable values (hex colors, px/rem sizes, named font weights) over vague descriptions.
 - When visual assets are ambiguous or contradictory, document the assumption made and flag it in Section 7.
@@ -140,7 +140,7 @@ Fill in the `DESIGN-SPEC.md` template provided by the Moderator. The template co
 ## Style Guidelines
 
 - Write for a developer audience: be precise and concrete, not aspirational.
-- Use component names consistently — exactly as they appear in the DOMIAN_LANGUAGE.md.
+- Use component names consistently — exactly as they appear in the DOMAIN_LANGUAGE.md.
 - Include ASCII or prose layout diagrams where a visual description is clearer than prose.
 - Keep Section 7 honest — unresolved decisions that reach the Development Team create rework.
 
