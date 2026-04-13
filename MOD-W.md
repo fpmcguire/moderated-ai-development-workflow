@@ -1,297 +1,98 @@
 # Moderated AI Development Workflow (MOD-W)
 
-**Github repo:** https://github.com/fpmcguire/moderated-ai-development-workflow.git
+MOD-W is a role-driven, document-centered workflow for AI‑assisted software development. It separates product, technical, and implementation decisions across distinct roles, enforces cross-validation between multiple AI agents and models, and requires a human Moderator to approve every step before it is accepted. The result is small, reviewable, traceable increments — viable coding, not vibe coding.
 
-## Purpose
-
-Moderated AI Development Workflow is a role-driven, document-centered workflow for AI‑assisted software development.
-
-It is designed to:
-
-- Reduce ambiguity by separating product, technical, and implementation decisions.
-- Catch errors and misalignments early through repeated, focused reviews and deliberate
-  role/AI cross-validation — the key differentiator that sets MOD-W apart from
-  single-agent and spec-driven workflows.
-- Keep product intent, architecture, and implementation synchronized over time.
-
-## Core principles
-
-- Clear documents beat unstated assumptions.
-- Product "what/why" is separate from technical "how."
-- Architecture is separate from day‑to‑day implementation.
-- Each role has a defined responsibility and approval boundary.
-- Small, reviewable steps are preferred over large, fuzzy scopes.
-- Acceptance is written in observable, testable terms wherever possible.
+Full methodology reference: https://github.com/fpmcguire/moderated-ai-development-workflow
 
 ---
 
 ## Roles
 
-### Moderator
+| Role                 | Owns                                                            | AI agent (default)                  |
+| -------------------- | --------------------------------------------------------------- | ----------------------------------- |
+| **Moderator**        | Workflow orchestration, go/no-go authority, HITL gate           | Human only                          |
+| **Product Owner**    | What and why — `PRODUCT.md`, acceptance intent                  | ChatGPT                             |
+| **Tech Lead**        | How — `ARCHITECTURE.md`, `ROADMAP.md`, step design, tech review | ChatGPT                             |
+| **Development Team** | Implementation — code, tests, docs for each step                | Claude (chatbot or Claude Code)     |
+| **QA / Tester**      | End-to-end verification — `QA.md`                               | Human (or Moderator on small teams) |
 
-The Moderator owns the workflow.
-
-Responsibilities:
-
-- Orchestrate the Moderated AI Development Workflow process across all roles.
-- Decide direction when outputs conflict.
-- Decide what becomes canonical (which doc/version "wins").
-- Approve whether a step is ready to proceed.
-- Protect the workflow from scope and process bloat.
-
-The Moderator has final go/no‑go authority within Moderated AI Development Workflow.
+The Development Team has two supported interfaces: the **Claude chatbot** (`development-team-claude.md` pasted at session start) and **Claude Code** (`CLAUDE.md` at repo root, read automatically). Both encode the same role rules. Commit the repo before switching interfaces within a step.
 
 ---
 
-### Product Owner
+## Cross-validation
 
-The Product Owner defines what is being built and why.
+The key differentiator in MOD-W is **intentional role and model diversity**. No single agent both plans and implements. No single agent both implements and reviews.
 
-Responsibilities:
+```
+Product Owner (ChatGPT)   →  defines what and why
+       ↓ cross-checks
+Tech Lead (ChatGPT)       →  defines how; reviews Dev Team output
+       ↓ cross-checks
+Development Team (Claude) →  implements only the approved slice
+       ↓ cross-checks
+Moderator (human)         →  reconciles all three; has final authority
+```
 
-- Clarify user value, intent, scope, and priorities.
-- Maintain `PRODUCT.md` and shape user‑facing workflows.
-- Define acceptance intent for each step in `STEP-XX.md`.
-- Keep in‑scope and out‑of‑scope items explicit.
-- Avoid technical design unless explicitly requested.
-
-The Product Owner focuses on product clarity, not code structure.
-
----
-
-### Tech Lead
-
-The Tech Lead defines how to build it safely and coherently.
-
-Responsibilities:
-
-- Maintain `ARCHITECTURE.md` and technical guardrails.
-- Maintain `ROADMAP.md` and technical guardrails.
-- Review each step for technical fit, risks, and dependencies.
-- Protect the system from accidental complexity and architecture drift.
-- Recommend patterns, constraints, and naming consistency.
-- Avoid redefining product intent without escalation.
-
-The Tech Lead focuses on technical correctness and maintainability.
+Each handoff is a validation surface: the Tech Lead challenges the Product Owner's intent; the Development Team surfaces ambiguities in the Tech Lead's spec; the Moderator detects drift between all three. Using different models for different roles prevents any single model's blind spots from propagating unchecked through the workflow.
 
 ---
 
-### Development Team
+## Workflow — role sequence per step
 
-The Development Team implements the approved slice.
+The Moderator is always the human gate. Phases 2–3 iterate until all acceptance checks are met.
 
-Responsibilities:
+**Phase 1 — Define the step**
 
-- Restate understanding of the current `STEP-XX.md` before coding.
-- Identify ambiguities, mismatches, or blockers early.
-- Implement only the approved scope for the current step.
-- Follow product intent, architectural guidance, and test expectations.
-- Avoid inventing scope or silently making product/architecture decisions.
+1. **Moderator + Product Owner** — refine the goal, scope, and acceptance intent. Update `PRODUCT.md` if needed.
+2. **Moderator + Tech Lead** — validate technical feasibility, update `ARCHITECTURE.md` if needed, write or refine `STEP-XX.md` with scope, inputs, and acceptance checks.
+3. **Moderator decision** — confirm `STEP-XX.md` is clear and complete before briefing the Development Team.
 
-The Development Team is responsible for execution, not unilateral re‑design.
+**Phase 2 — Implement**
 
-**Supported interfaces:**
+4. **Moderator → Development Team** — provide the context packet (relevant `PRODUCT.md`, `ARCHITECTURE.md`, `DOMAIN-LANGUAGE.md` excerpts) and the active `STEP-XX.md`. Development Team restates the step, proposes a plan, and waits for Moderator approval before writing code.
+5. **Development Team** — implements only the approved scope; summarizes changes against the acceptance checks in `STEP-XX.md`.
 
-| Interface                  | Prompt / Config                                      | Best for                                                                    |
-| -------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------- |
-| Claude chatbot (claude.ai) | `development-team-claude.md` pasted at session start | Planning, discussion, iterative revision with conversational back-and-forth |
-| Claude Code (CLI)          | `CLAUDE.md` in repo root, read automatically         | File writing, multi-file changes, direct repo edits without copy-paste      |
+**Phase 3 — Review and iterate** _(repeat until green)_
 
-Both interfaces use the same underlying model and the same role rules. The Moderator may switch between them within a single Step provided the repo is committed before switching so Claude Code reads current state.
+6. **Moderator (Workbench)** — pulls changes locally, builds, runs tests, manually exercises the feature. Records findings in `QA.md` and `REVIEW.md`. Minor issues fixed directly; significant issues return to Development Team with explicit feedback.
+7. **Tech Lead** — reviews for architectural fit, naming consistency, and maintainability. Classifies findings as must-fix or nice-to-have. Moderator records recommendations in `REVIEW.md`.
+8. **Development Team** — addresses each piece of feedback explicitly; adjusts implementation within approved scope.
+9. **→ Return to step 6** until all acceptance checks pass and Tech Lead has approved.
+
+**Phase 4 — Accept and advance**
+
+10. **Moderator final gate (HITL)** — confirms all checks pass, `REVIEW.md` and `QA.md` are complete. Creates annotated Git tag. Advances `ROADMAP.md` to the next step.
 
 ---
 
 ## Canonical documents
 
-All Moderated AI Development Workflow docs live under `//mod-w` in the project.
+| Document             | Purpose                                                      |
+| -------------------- | ------------------------------------------------------------ |
+| `MOD-W.md`           | This file — workflow quick-reference for the project         |
+| `PRODUCT.md`         | What is being built, for whom, and why                       |
+| `ARCHITECTURE.md`    | Technical structure, stack, patterns, constraints            |
+| `ROADMAP.md`         | Ordered sequence of small, reviewable steps                  |
+| `STEP-XX.md`         | Current step — goal, scope, inputs, acceptance checks        |
+| `REVIEW.md`          | Review notes and decisions for the current step              |
+| `QA.md`              | Verification evidence for the current step                   |
+| `DOMAIN-LANGUAGE.md` | Canonical terms used across docs, prompts, and code          |
+| `AGENTS.md`          | Agent registry — models, interfaces, data handling decisions |
+| `CLAUDE.md`          | Development Team config for Claude Code (lives at repo root) |
 
-- `MOD-W.md` – this workflow methodology overview for the project.
-- `PRODUCT.md` – what is being built, for whom, and why it matters.
-- `ARCHITECTURE.md` – technical structure, boundaries, patterns, constraints.
-- `ROADMAP.md` – ordered sequence of small, reviewable increments.
-- `STEP-XX.md` – the current implementation slice (goal, scope, acceptance).
-- `REVIEW.md` – review notes and decisions for the current Step.
-- `QA.md` – verification evidence for the Step.
-- `DOMAIN-LANGUAGE.md` – canonical terms and definitions used across docs and code.
-- `CLAUDE.md` – Development Team role config for Claude Code; lives at the repo root and is read automatically at session start. Generated by the Tech Lead from `ARCHITECTURE.md` and the `CLAUDE.md` template.
-- (Optional) Other supporting docs, only when they earn their existence.
-
-Each Moderated AI Development Workflow doc should include the standard MOD-W footer with name and version.
-
----
-
-## Review model
-
-Moderated AI Development Workflow deliberately uses multiple reviews before code is merged.
-
-### 1. Product review
-
-Question: **Is this the right thing to build now?**
-
-Owner: Product Owner  
-Checks typically include:
-
-- User value and problem clarity.
-- In‑scope vs out‑of‑scope items.
-- Observable acceptance intent in `STEP-XX.md`.
-- Consistency with `PRODUCT.md` and `ROADMAP.md`.
-
----
-
-### 2. Technical review
-
-Question: **Is this a sound and coherent way to build it?**
-
-Owner: Tech Lead  
-Checks typically include:
-
-- Alignment with `ARCHITECTURE.md` and chosen stack.
-- Technical risks, dependencies, and constraints.
-- Naming and domain alignment with `DOMAIN-LANGUAGE.md`.
-- Testability and observability implications.
-
----
-
-### 3. Workbench review (AI‑assisted in editor)
-
-Question: **Does the code we are about to merge actually match the approved step and acceptance?**
-
-Owner: Development Team (execution), Moderator (policy)
-
-Pattern:
-
-- Run an AI‑assisted review in the developer's editor (e.g., VS Code with Copilot or a similar tool).
-- Ask the AI to compare the actual changes against the current `STEP-XX.md` and its acceptance checks.
-
-The Workbench review is focused on:
-
-- Deviations from the approved scope.
-- Missing or misaligned acceptance behavior.
-- Obvious defects or risky changes that contradict the architecture.
-
-AI feedback does **not** replace human code review; it is an extra validation surface before merge.
-
----
-
-### Moderator verification
-
-Question: **Are the outputs aligned enough to proceed?**
-
-Owner: Moderator
-
-The Moderator:
-
-- Reviews Product, Tech, and Development outputs for conflicts.
-- Confirms that `STEP-XX.md` and related docs are consistent.
-- Decides whether the project may proceed with implementation/merge.
-- Sends items back for clarification when ambiguity or conflicts remain.
-
-If any of the reviews is unclear, the workflow pauses for clarification rather than continuing with hidden assumptions.
-
----
-
-## Workflow at a glance
-
-The Moderator is always human (HITL) and has final go/no‑go authority.
-
-For each Moderated AI Development Workflow step:
-
-1. Product Owner updates `PRODUCT.md` and `STEP-XX.md` (goal, scope, acceptance).
-
-2. Tech Lead reviews/updates `ARCHITECTURE.md` and `ROADMAP.md` as needed and reviews `STEP-XX.md`.
-
-3. Development Team restates the step (in their own words) and implements only the approved slice.
-
-4. Workbench review #1 (AI‑assisted in editor)
-   - Run an AI‑assisted review in the editor against `STEP-XX.md` and its acceptance checks.
-   - Fix obvious mismatches or defects before raising the work for review.
-
-5. Moderator review (HITL)
-   - Moderator checks alignment across `PRODUCT.md`, `ARCHITECTURE.md`, `ROADMAP.md`, `STEP-XX.md`, and the current implementation.
-   - Moderator records feedback and a provisional go/no‑go decision.
-
-6. Tech Lead feedback pass
-   - Tech Lead reviews the Development Team's changes and Moderator feedback together.
-   - Tech Lead calls out technical issues, risks, or architecture drift and suggests adjustments.
-
-7. Development Team adjustment pass
-   - Development Team restates the feedback (what they will change and why).
-   - They adjust the implementation, staying within the approved scope.
-
-8. Workbench review #2 (AI‑assisted in editor)
-   - Run a second AI‑assisted review on the updated changes against `STEP-XX.md` and prior feedback.
-   - Confirm that changes now match the step and acceptance criteria.
-
-9. Final Moderator go/no‑go (HITL)
-   - If everything is aligned, the Moderator gives final approval.
-   - The step is merged and `ROADMAP.md` is advanced to the next slice.
-   - If not, the Moderator sends it back with explicit reasons.
-
-This double‑loop (Product/Tech/Dev + Moderator + Tech + Dev + AI) is intentionally slower than "code first, clarify later," but in practice it catches misalignment and defects early and reduces painful rework downstream.
+All MOD-W docs live under `mod-w/` in the project. `CLAUDE.md` lives at the **repo root** so Claude Code reads it automatically.
 
 ---
 
 ## Operating rules
 
-To keep Moderated AI Development Workflow lean and effective:
-
-- **Documents must earn their existence.**  
-  If an existing doc can hold the information cleanly, prefer updating it.
-
-- **No hidden scope.**  
-  Anything not in the current `STEP-XX.md` is out of scope for this step.
-
-- **Explicit out‑of‑scope.**  
-  When something is intentionally deferred, state it.
-
-- **Stable naming.**  
-  Resolve naming conflicts early and keep `DOMAIN-LANGUAGE.md` updated.
-
-- **Pause on ambiguity.**  
-  If any role is unsure, stop and clarify instead of guessing.
-
-- **Lean first, expand later.**  
-  Start with `MOD-W.md`, `PRODUCT.md`, `ROADMAP.md`, and the current `STEP-XX.md`; add more docs and controls only when they clearly help.
-
----
-
-## Tracks and tools (overview only)
-
-Moderated AI Development Workflow is tool-agnostic but tool-aware.
-
-- You may use different AI tools or models per role (e.g., one model for Product review, another for Tech review, a coding agent for Workbench review).
-- A more agentic "Track 2" (e.g., using a coding agent that can edit repos) can be defined by policy later, but Moderated AI Development Workflow's core roles and documents do not change.
-
-Default recommendation:
-
-- Treat current Moderated AI Development Workflow as **Track 1 (guided)**: AI assists with reviews and code suggestions but does not act autonomously without explicit policies and human approval.
-
-**Development Team interface options (Track 1):**
-
-| Interface                  | Config                                               | Notes                                                                 |
-| -------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------- |
-| Claude chatbot (claude.ai) | `development-team-claude.md` pasted at session start | Conversational; good for planning, discussion, and iterative revision |
-| Claude Code (CLI)          | `CLAUDE.md` at repo root, auto-read                  | Direct repo edits; eliminates copy-paste overhead                     |
-
-Both options satisfy Track 1 constraints. The Moderator remains the human-in-the-loop reviewer regardless of which interface is used. Switching between them within a Step is permitted — commit the repo before switching.
-
----
-
-## Folder layout (project level)
-
-At the project root:
-
-- `README.md`
-- `CLAUDE.md` ← Development Team role config for Claude Code (auto-read at session start)
-- `//`
-  - `MOD-W.md`
-  - `PRODUCT.md`
-  - `ARCHITECTURE.md`
-  - `ROADMAP.md`
-  - `STEP-XX.md`
-  - `DOMAIN-LANGUAGE.md` (as needed)
-
-`README.md` should briefly mention that the project uses Moderated AI Development Workflow and point to `//`.
+- **Documents must earn their existence.** Prefer updating an existing doc over creating a new one.
+- **No hidden scope.** Anything not in the current `STEP-XX.md` is out of scope for this step.
+- **Explicit out-of-scope.** When something is deferred, state it.
+- **Stable naming.** Resolve naming conflicts early; keep `DOMAIN-LANGUAGE.md` current.
+- **Pause on ambiguity.** Any role that is unsure stops and clarifies rather than guessing.
+- **Lean first, expand later.** Start with `PRODUCT.md`, `ROADMAP.md`, and `STEP-XX.md`; add further docs only when they clearly help.
 
 ---
 
