@@ -31,12 +31,12 @@
 
 <!-- What does the AI agent need to know to complete this step? -->
 
-| Input                  | Location |
-| ---------------------- | -------- |
-| PRODUCT.md             |          |
-| ARCHITECTURE.md        |          |
-| Domain Language Matrix |          |
-| Previous step output   |          |
+| Input                | Location |
+| -------------------- | -------- |
+| PRODUCT.md           |          |
+| ARCHITECTURE.md      |          |
+| DOMIAN_LANGUAGE.md   |          |
+| Previous step output |          |
 
 ## Expected Outputs
 
@@ -68,4 +68,4 @@
 
 ---
 
-MOD-W v1.1.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow

@@ -13,7 +13,7 @@ Moderated AI Development Workflow defines three levels of quality gate, applied 
 Every step must pass these criteria regardless of type:
 
 - [ ] Output matches the scope defined in STEP.md
-- [ ] Output uses domain language terms correctly (per [DOMAIN_LANGUAGE_MATRIX.md](../templates/DOMAIN_LANGUAGE_MATRIX.md))
+- [ ] Output uses domain language terms correctly (per [DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md))
 - [ ] No hallucinated facts, APIs, libraries, or references
 - [ ] No placeholders, TODOs, or stub implementations left unresolved
 - [ ] No real credentials, personal data, or sensitive information included
@@ -60,4 +60,4 @@ Bypassing a gate — even under time pressure — introduces unverified AI outpu
 
 ---
 
-MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

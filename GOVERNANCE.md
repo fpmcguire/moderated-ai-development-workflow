@@ -47,8 +47,8 @@ All participants in this project must adhere to the [Code of Conduct](CODE_OF_CO
 
 ## Licensing
 
-All contributions to this repository are made under the [MIT License](LICENSE).
+All contributions to this repository are made under the [Apache License, Version 2.0](LICENSE).
 
 ---
 
-MOD-W v1.1.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow

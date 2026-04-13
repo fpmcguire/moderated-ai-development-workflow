@@ -63,4 +63,4 @@ TC-11 was added by the tester as a security-focused case not listed in STEP.md. 
 
 ---
 
-MOD-W v1.1.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow

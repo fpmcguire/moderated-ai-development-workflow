@@ -20,13 +20,13 @@ For legacy, treat Moderated AI Development Workflow as a **thin governance layer
 - add **roles**, **artifacts**, and **quality gates** around AI‑assisted work
 - start with **one lane** (one feature or area), not the whole system
 
-Think “add rails around AI use,” not “replace everything with MAID.”
+Think “add rails around AI use,” not “replace everything with MOD-W.”
 
 ---
 
 ## Step 1: Define roles lightly
 
-You do not need a full reorg to use MAID in a legacy codebase. Map existing people to MAID roles:
+You do not need a full reorg to use MOD-W in a legacy codebase. Map existing people to MOD-W roles:
 
 - **Product Owner** – whoever currently decides “what” and “why” for this area
 - **Tech Lead** – whoever is the go‑to person for architecture and code review
@@ -42,7 +42,7 @@ On very small teams, the same person may hold multiple roles. The important part
 
 ## Step 2: Start with a minimal doc set
 
-For legacy, you can start with a very small set of MAID docs:
+For legacy, you can start with a very small set of MOD-W docs:
 
 - `PRODUCT.md` – for the specific feature/area you’re touching:
   - what problem you’re solving,
@@ -52,7 +52,7 @@ For legacy, you can start with a very small set of MAID docs:
   - modules involved,
   - major dependencies,
   - “do not touch” zones.
-- `STEP.md` – for the **one** piece of work you want to run through MAID.
+- `STEP.md` – for the **one** piece of work you want to run through MOD-W.
 - `REVIEW.md` and `QA.md` – to record what was checked and why it was accepted.
 
 You don’t need to document the entire legacy system up front.  
@@ -79,7 +79,7 @@ Avoid starting with:
 - cross‑cutting behavior changes,
 - multi‑service migrations.
 
-Your goal is to prove that **MAID can improve clarity and safety** on a small change first.
+Your goal is to prove that **MOD-W can improve clarity and safety** on a small change first.
 
 ---
 
@@ -94,7 +94,7 @@ For that first legacy Step:
      - affected files or modules,
      - acceptance criteria (including regression checks).
 
-2. **Use AI under MAID**
+2. **Use AI under MOD-W**
    - Let the Development Team use AI (e.g., Copilot, Claude Code, Cursor) to:
      - propose changes,
      - suggest tests,
@@ -124,27 +124,27 @@ For that first legacy Step:
 
 ---
 
-## Step 5: Make MAID the default for AI work only
+## Step 5: Make MOD-W the default for AI work only
 
-You do **not** have to put every change through MAID on day one.  
+You do **not** have to put every change through MOD-W on day one.  
 A practical pattern for legacy is:
 
-- **MAID required** for:
+- **MOD-W required** for:
   - any change where AI generates or heavily edits code,
   - changes in high‑risk or historically fragile areas,
   - changes that touch core flows or data models.
-- **MAID optional** (at first) for:
+- **MOD-W optional** (at first) for:
   - tiny, manual fixes,
   - pure config changes,
   - documentation‑only edits.
 
-Over time, as the team sees the benefits, you can expand MAID coverage.
+Over time, as the team sees the benefits, you can expand MOD-W coverage.
 
 ---
 
-## Step 6: Use MAID to recover structure
+## Step 6: Use MOD-W to recover structure
 
-A hidden benefit of MAID in legacy projects is **structure recovery**:
+A hidden benefit of MOD-W in legacy projects is **structure recovery**:
 
 - Each Step leaves a documented trail of:
   - what changed and why,
@@ -152,7 +152,7 @@ A hidden benefit of MAID in legacy projects is **structure recovery**:
   - where in the legacy system it lives.
 - Over multiple Steps you naturally accumulate:
   - clarified architecture in `ARCHITECTURE.md`,
-  - updated terminology in `DOMAIN_LANGUAGE_MATRIX.md`,
+  - updated terminology in `DOMAIN_LANGUAGE.md`,
   - known risk areas recorded in REVIEW/QA notes.
 
 You’re effectively turning a messy system into a **gradually better‑documented system**, one Step at a time.
@@ -161,41 +161,41 @@ You’re effectively turning a messy system into a **gradually better‑document
 
 ## Step 7: Watch out for common traps
 
-A few things to avoid when applying MAID to legacy code:
+A few things to avoid when applying MOD-W to legacy code:
 
-- **Too big, too soon** – starting with a huge refactor and blaming MAID when it’s painful. Start small.
+- **Too big, too soon** – starting with a huge refactor and blaming MOD-W when it’s painful. Start small.
 - **Skipping the Moderator** – letting AI and PR reviews stand in for real, local testing.
-- **Letting docs lag behind** – making changes without updating PRODUCT/ARCHITECTURE/STEP, which erodes the value of MAID.
+- **Letting docs lag behind** – making changes without updating PRODUCT/ARCHITECTURE/STEP, which erodes the value of MOD-W.
 - **Expecting AI to understand legacy quirks** – the Moderator must still know (or learn) the system’s sharp edges.
 
 ---
 
-## Where MAID helps most in legacy projects
+## Where MOD-W helps most in legacy projects
 
-MAID is especially valuable when:
+MOD-W is especially valuable when:
 
 - new contributors or juniors need to work safely in a legacy system,
 - you’re introducing AI coding tools for the first time and want guardrails,
 - the system has a history of “safe‑looking changes” causing regressions later,
 - you want a clearer audit trail of AI‑assisted changes.
 
-By scoping MAID to **AI‑touching work** first, you add discipline where risk is highest while keeping the rest of your process familiar.
+By scoping MOD-W to **AI‑touching work** first, you add discipline where risk is highest while keeping the rest of your process familiar.
 
 ---
 
 ## Summary
 
-To introduce MAID into a legacy project:
+To introduce MOD-W into a legacy project:
 
-1. Map existing people to MAID roles, especially the Moderator.
+1. Map existing people to MOD-W roles, especially the Moderator.
 2. Start with a **minimal document set** focused on a single area.
-3. Run one well‑chosen Step end‑to‑end under MAID.
-4. Require MAID for AI‑assisted changes first.
-5. Let MAID slowly **recover structure** in your legacy system over multiple Steps.
+3. Run one well‑chosen Step end‑to‑end under MOD-W.
+4. Require MOD-W for AI‑assisted changes first.
+5. Let MOD-W slowly **recover structure** in your legacy system over multiple Steps.
 
 You don’t have to fix the legacy system all at once.  
 You just need to make sure every AI‑assisted change makes it a little safer and clearer than before.
 
 ---
 
-MAID v1.0.0 · Moderated AI Development Workflow · [https://github.com/fpmcguire/moderated-ai-development-workflow](https://github.com/fpmcguire/moderated-ai-development-workflow)
+MOD-W v2.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow

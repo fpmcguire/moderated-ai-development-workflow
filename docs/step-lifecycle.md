@@ -29,13 +29,35 @@ Output: A clear, approved `STEP.md`.
 ## 2. Brief the Development Team
 
 **Who:** Moderator → Development Team (Claude)  
-**Artifacts:** PRODUCT.md, ARCHITECTURE.md, STEP.md, DOMAIN_LANGUAGE_MATRIX.md
+**Artifacts:** PRODUCT.md, ARCHITECTURE.md, STEP.md, DOMAIN_LANGUAGE.md
 
-- Moderator prepares a **context packet**: focused excerpts from PRODUCT, ARCHITECTURE, and domain language plus the current `STEP.md`.
-- Moderator asks the Development Team to:
-  - Confirm understanding
-  - Ask clarifying questions
-  - Optionally refine the Step description (without expanding scope)
+The Moderator chooses the Development Team interface for this Step:
+
+**Claude chatbot (claude.ai)**
+
+- Prepare a **context packet**: focused excerpts from PRODUCT, ARCHITECTURE, and
+  domain language plus the current `STEP.md`.
+- Paste `development-team-claude.md` as the role prompt at session start.
+- Attach or paste the active `STEP-XX.md` directly into the thread.
+
+**Claude Code (CLI)**
+
+- Confirm `CLAUDE.md` is current in the repo root.
+- Start a Claude Code session in the project root — role context loads automatically.
+- State the active Step at session start, e.g.:
+  `The current Step is apps/my-app/mod-w/STEP-02.md`
+
+**Hybrid (chatbot for planning, Claude Code for implementation)**
+
+- Use the chatbot for the planning and confirmation pass.
+- Commit the repo, then switch to Claude Code for file writing.
+- State the active Step path when opening the Claude Code session.
+
+In all cases, ask the Development Team to:
+
+- Confirm understanding
+- Ask clarifying questions
+- Optionally refine the Step description (without expanding scope)
 
 Output: Shared understanding of the Step and any refinements folded back into `STEP.md`.
 
@@ -62,7 +84,7 @@ Output: A proposed implementation for the Step in a branch or patch, plus a shor
 **Who:** Moderator using the Workbench  
 **Artifacts:** QA.md (draft), REVIEW.md (draft)
 
-- Moderator pulls the changes into the local Workbench (VS Code).
+- Moderator pulls the changes into the local Workbench (e.g., VS Code + Copilot).
 - Runs build, tests, and linters.
 - Manually exercises the feature or UI for the Step.
 - Uses Copilot for light‑to‑moderate fixes (typos, small refactors, trivial bugs).
@@ -99,7 +121,7 @@ Output: Implementation that passes Workbench verification and addresses review c
 ## 6. Tech Lead Review
 
 **Who:** Tech Lead (ChatGPT) + Moderator  
-**Artifacts:** REVIEW.md, ARCHITECTURE.md, DOMAIN_LANGUAGE_MATRIX.md
+**Artifacts:** REVIEW.md, ARCHITECTURE.md, DOMAIN_LANGUAGE.md
 
 - Moderator prepares a **handoff packet** for the Tech Lead:
   - Current `STEP.md`
@@ -171,4 +193,4 @@ This lifecycle keeps Moderated AI Development Workflow firmly human‑moderated 
 
 ---
 
-MOD-W v1.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
