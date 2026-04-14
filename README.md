@@ -132,7 +132,7 @@ of which Development Team interface is used.
 1. Place `CLAUDE.md` at the repo root. This is the Claude Code equivalent of
    `development-team-claude.md`. Claude Code reads it automatically at session start.
 2. Generate `CLAUDE.md` using the Tech Lead: provide the project's `ARCHITECTURE.md`,
-   `DOMAIN-LANGUAGE.md`, and the `CLAUDE.md` template. The Tech Lead fills in all
+   `DOMAIN_LANGUAGE.md`, and the `CLAUDE.md` template. The Tech Lead fills in all
    placeholders and removes template comments.
 3. Start a Claude Code session in the project root. The Development Team role context
    is loaded automatically — no paste required.
@@ -162,6 +162,46 @@ Claude Code removes friction from the Development Team workflow.
 It does not change the MOD-W roles, review model, or quality gates.
 Use `CLAUDE.md` for Claude Code. Use `development-team-claude.md` for the chatbot.
 Both encode the same role and may be used on the same project and the same Step.
+
+---
+
+## Using Moderated AI Development Workflow with Codex
+
+OpenAI Codex is a cloud-based AI coding agent that works directly against your repository. In MOD-W, Codex is the default agent for the **Tech Lead** role — generating roadmaps, writing step briefs, and reviewing Development Team output for architectural fit.
+
+### Where Codex fits
+
+Codex supports the Tech Lead in three ways:
+
+- **Roadmap generation** — reads `PRODUCT.md` and `ARCHITECTURE.md` to produce an ordered `ROADMAP.md`.
+- **Step brief generation** — produces `STEP-XX.md` files with goal, scope, inputs, and acceptance checks for the Development Team.
+- **Tech Lead review** — reviews the Development Team's completed step against `STEP-XX.md`, classifying findings as must-fix or nice-to-have.
+
+Codex does **not** write application code, merge changes, or override Moderator decisions.
+
+### `AGENTS.md`
+
+Codex reads `AGENTS.md` from the repo root at session start — the Tech Lead equivalent of `CLAUDE.md`. Generate it from `templates/AGENTS.md` by filling in the project's stack, conventions, and domain language from `ARCHITECTURE.md`.
+
+### Codex + Claude Code in the same project
+
+Codex (Tech Lead) and Claude Code (Development Team) are designed to work alongside each other in the same repo:
+
+| | Codex | Claude Code |
+| --- | --- | --- |
+| Config file | `AGENTS.md` | `CLAUDE.md` |
+| MOD-W role | Tech Lead | Development Team |
+| Typical task | Roadmap, step briefs, review | Implement a single approved step |
+
+Cross-validation is preserved: Codex never reviews its own plans without a human gate, and Claude Code never implements without a Moderator-approved step brief.
+
+### Bottom line
+
+Codex brings the Tech Lead agent closer to the repository, eliminating copy-paste context for roadmap and review work. It does not change MOD-W's roles, quality gates, or Moderator authority.
+
+Use `AGENTS.md` for Codex. Use `CLAUDE.md` for Claude Code.
+
+**[See the full Codex integration guide](./articles/modw-with-codex.md)**
 
 ---
 

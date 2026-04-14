@@ -6,6 +6,13 @@
 
 ---
 
+> **Note on related files:**
+> - `AI_AGENTS.md` (this file) — project registry of all AI agents, models, interfaces, and data handling decisions. Lives in the `mod-w/` folder.
+> - `AGENTS.md` — role configuration for Codex (Tech Lead agent). Read automatically by Codex at session start. Lives at the **repo root**.
+> - `CLAUDE.md` — role configuration for Claude Code (Development Team agent). Read automatically by Claude Code at session start. Lives at the **repo root**.
+
+---
+
 ## Overview
 
 <!-- Describe the AI agents used in this project, their roles, and the models they run on. -->
@@ -58,4 +65,4 @@
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

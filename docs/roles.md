@@ -142,7 +142,7 @@ Gemini may be used to support the Designer role by:
 
 All output is moderated before acceptance.
 
-See: [prompts/designer-gemini.md](../prompts/designer-gemini.md)
+See: [prompts/additional-roles/designer.md](../prompts/additional-roles/designer.md)
 
 ### Development Team role — Claude (default)
 
@@ -163,7 +163,7 @@ All output is moderated before acceptance.
 Both interfaces may be used on the same project or the same Step. Commit the repo before switching interfaces.
 
 See: [prompts/development-team-claude.md](../prompts/development-team-claude.md)  
-See: [prompts/CLAUDE.md](../prompts/CLAUDE.md) (Claude Code template)
+See: [templates/CLAUDE.md](../templates/CLAUDE.md) (Claude Code template)
 
 ---
 

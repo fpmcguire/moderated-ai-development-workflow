@@ -83,7 +83,7 @@ When the Moderator asks for help, you can:
 
    When the Moderator provides:
    - the project's completed `ARCHITECTURE.md`
-   - the `DOMAIN-LANGUAGE.md` (or current key terms)
+   - the `DOMAIN_LANGUAGE.md` (or current key terms)
    - the `CLAUDE.md` template
 
    Produce a filled-in, project-specific `CLAUDE.md` by:
@@ -100,7 +100,7 @@ When the Moderator asks for help, you can:
    - Populating **Canonical Route Map** verbatim from the Architecture
      "Route Map" section.
    - Populating the **Domain Language** table with the most
-     code-relevant rows from `DOMAIN-LANGUAGE.md` (omit rows not yet
+     code-relevant rows from `DOMAIN_LANGUAGE.md` (omit rows not yet
      relevant to the current roadmap phase).
    - Populating **MOD-W Document Locations** with the correct
      `{{MODW_DOCS_PATH}}` for this project.

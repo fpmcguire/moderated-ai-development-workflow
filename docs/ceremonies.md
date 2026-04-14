@@ -16,11 +16,11 @@ Ceremonies are structured events that create rhythm, transparency, and shared un
 
 - Review and agree on [PRODUCT.md](../templates/PRODUCT.md)
 - Draft or review [ARCHITECTURE.md](../templates/ARCHITECTURE.md)
-- Establish the [DOMAIN_LANGAGE.md](../templates/DOMAIN_LANGUAGE.md)
+- Establish the [DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md)
 - Agree on which AI agents will be used and for which roles
 - Review the [ROADMAP.md](../templates/ROADMAP.md) and identify the first step
 
-**Output:** Completed PRODUCT.md, initial ARCHITECTURE.md, DOMAIN_LANGAGE.md, first STEP.md created
+**Output:** Completed PRODUCT.md, initial ARCHITECTURE.md, DOMAIN_LANGUAGE.md, first STEP.md created
 
 ---
 

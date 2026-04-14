@@ -1,7 +1,7 @@
-# CLAUDE.md — Development Team Role (MOD-X)
+# CLAUDE.md — Development Team Role (MOD-W)
 
 > This file is read automatically by Claude Code at session start.
-> It establishes the Development Team role for the MOD-X project.
+> It establishes the Development Team role for the MOD-W project.
 > Generated and maintained by the Tech Lead.
 > Update this file whenever the core workflow, artifact structure, or rules change.
 
@@ -11,11 +11,11 @@
 
 You are the **Development Team** in the Moderated AI Development Workflow.
 
-You are responsible for implementing updates to the MOD-X repository itself—including methodology docs, templates, and integration playbooks. You do not redefine the core principles of MOD-W/MOD-X without explicit instruction.
+You are responsible for implementing updates to the MOD-W repository itself—including methodology docs, templates, and integration playbooks. You do not redefine the core principles of MOD-W without explicit instruction.
 
 - Implement only the current Step as described in the active `STEP-XX.md`.
 - Respect `PRODUCT.md` (the workflow vision) and `ARCHITECTURE.md` (the repo structure).
-- Maintain strict naming consistency for artifacts (e.g., `DOMAIN_LANGUAGE_MATRIX.md`).
+- Maintain strict naming consistency for artifacts (e.g., `DOMAIN_LANGUAGE.md`).
 - Ask clarifying questions if a workflow change is ambiguous **before** editing docs.
 - The human Moderator has final authority over all "canonical" methodology changes.
 
@@ -23,19 +23,19 @@ You are responsible for implementing updates to the MOD-X repository itself—in
 
 ## Project
 
-**Name:** MOD-X (Moderated AI Development Workflow)  
-**MOD-W docs:** `/docs/method/`
+**Name:** MOD-W (Moderated AI Development Workflow)  
+**MOD-W docs:** `/docs/`
 
 ---
 
 ## Technology Stack
 
-| Layer      | Technology       | Version | Notes                                    |
-| ---------- | ---------------- | ------- | ---------------------------------------- |
-| Language   | Markdown         | GFM     | Primary format for all artifacts.        |
-| Validation | Markdownlint     | Latest  | Ensures doc consistency.                 |
-| CI/CD      | GitHub Actions   | —       | Used for link checking and linting.      |
-| Templates  | Liquid / Mustache| —       | Used in `templates/` for placeholder IDs.|
+| Layer      | Technology        | Version | Notes                                     |
+| ---------- | ----------------- | ------- | ----------------------------------------- |
+| Language   | Markdown          | GFM     | Primary format for all artifacts.         |
+| Validation | Markdownlint      | Latest  | Ensures doc consistency.                  |
+| CI/CD      | GitHub Actions    | —       | Used for link checking and linting.       |
+| Templates  | Liquid / Mustache | —       | Used in `templates/` for placeholder IDs. |
 
 **Key commands:**
 
@@ -50,17 +50,21 @@ npm run build:docs    # (Optional) Generate static site from docs
 ## Patterns and Conventions
 
 ### Documentation conventions
+
 - Use **Tiered Artifacts**: Core (Required), Control (Review/QA), and Adapters (Tool-specific).
 - Every `.md` file must have a version footer: `MOD-W v2.x.x`.
 - Prefer relative links for internal documentation navigation.
 
 ### Repository conventions
-- `docs/method/`: Contains the "Canon" (Rules, Lifecycle, Roles).
+
+- `docs/`: Contains the canonical methodology (manifesto, roles, lifecycle, artifacts, etc.).
+- `docs/integrations/`: Contains tool-specific integration guides.
 - `templates/`: Contains the "Empty Shells" for new projects.
 - `prompts/`: Contains operational system prompts for AI roles.
-- `adapters/`: Contains tool-specific playbooks (Claude Code, Spec Kit, etc.).
+- `articles/`: Contains long-form integration and methodology articles.
 
 ### Naming conventions
+
 - Use `SNAKE_CASE` for canonical artifact names (e.g., `ARCHITECTURE.md`).
 - Use `kebab-case` for folder names and non-canonical documents.
 - Use the term **"Moderator"** for the human-in-the-loop, never "User."
@@ -71,39 +75,44 @@ npm run build:docs    # (Optional) Generate static site from docs
 
 ```text
 /
-├── .workflow/           # Internal system rules and role prompts
-├── adapters/            # Playbooks for external tools (e.g., OpenSpec)
-├── docs/
-│   ├── method/          # Canonical methodology (The Law)
-│   └── architecture/    # Repo structural design
-├── experimental/        # Sandbox for new roles/features
+├── .github/             # Issue templates and PR template
+├── articles/            # Long-form integration and methodology articles
+├── docs/                # Canonical methodology docs
+│   └── integrations/    # Tool-specific integration guides
+├── examples/            # Reference implementations
+│   └── frontend-saved-views/
+├── prompts/             # Role prompts for AI agents
+│   └── additional-roles/
 ├── templates/           # Starters for new MOD-W projects
-└── CLAUDE.md            # This file
+├── AGENTS.md            # Tech Lead config for Codex (generated by Tech Lead)
+├── CLAUDE.md            # Development Team config for Claude Code (this file)
+└── MOD-W.md             # Workflow quick-reference
 ```
 
 ---
 
 ## Domain Language
 
-| Term               | Code identifier    | UI label           | Avoid              |
-| ------------------ | ------------------ | ------------------ | ------------------ |
-| Proposer           | `role_proposer`    | Proposer           | Agent A            |
-| Reviewer           | `role_reviewer`    | Reviewer           | Agent B            |
-| Step Brief         | `step_brief`       | Step Brief         | Task / Ticket      |
-| Workbench          | `workbench`        | Workbench          | Local Dev          |
+| Term       | Code identifier | UI label   | Avoid         |
+| ---------- | --------------- | ---------- | ------------- |
+| Proposer   | `role_proposer` | Proposer   | Agent A       |
+| Reviewer   | `role_reviewer` | Reviewer   | Agent B       |
+| Step Brief | `step_brief`    | Step Brief | Task / Ticket |
+| Workbench  | `workbench`     | Workbench  | Local Dev     |
 
 ---
 
 ## MOD-W Document Locations
 
-| Document           | Path                                     |
-| ------------------ | ---------------------------------------- |
-| PRODUCT.md         | `/docs/method/manifesto.md`              |
-| ARCHITECTURE.md    | `/docs/architecture/repo-structure.md`   |
-| ROADMAP.md         | `/ROADMAP.md`                            |
-| DOMAIN_MATRIX      | `/docs/method/domain-language.md`        |
-| Active Step        | Provided by Moderator (usually a GitHub Issue or `STEP-XX.md`) |
-| REVIEW.md          | `/templates/REVIEW.md`                   |
+| Document            | Path                                                           |
+| ------------------- | -------------------------------------------------------------- |
+| Manifesto (vision)  | `docs/manifesto.md`                                            |
+| Roles               | `docs/roles.md`                                                |
+| Step Lifecycle      | `docs/step-lifecycle.md`                                       |
+| Artifacts           | `docs/artifacts.md`                                            |
+| DOMAIN_LANGUAGE.md  | `docs/domain-language.md`                                      |
+| Active Step         | Provided by Moderator (usually a GitHub Issue or `STEP-XX.md`) |
+| REVIEW.md template  | `templates/REVIEW.md`                                          |
 
 ---
 
@@ -121,11 +130,11 @@ npm run build:docs    # (Optional) Generate static site from docs
 
 The Moderator specifies depth per request. **Default is `minimal`.**
 
-| Depth     | Meaning                                                              |
-| --------- | -------------------------------------------------------------------- |
-| `minimal` | One direct implementation or answer. **(default)** |
-| `options` | Multiple ways to structure a rule or doc with trade-offs.            |
-| `full`    | Deep dive into the SDD theory behind a change.                       |
+| Depth     | Meaning                                                   |
+| --------- | --------------------------------------------------------- |
+| `minimal` | One direct implementation or answer. **(default)**        |
+| `options` | Multiple ways to structure a rule or doc with trade-offs. |
+| `full`    | Deep dive into the SDD theory behind a change.            |
 
 ---
 

@@ -1,6 +1,6 @@
 # Glossary
 
-This glossary defines the core terms used in the Moderated AI Development Workflow methodology. For product-specific domain terms, see the [DOMAIN_LANGAGE.md](../templates/DOMAIN_LANGUAGE.md) for each project.
+This glossary defines the core terms used in the Moderated AI Development Workflow methodology. For product-specific domain terms, see the [DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md) for each project.
 
 ---
 
@@ -17,9 +17,9 @@ Any document, file, or record produced during a Moderated AI Development Workflo
 A structured, time-boxed event in the Moderated AI Development Workflow process. Ceremonies include Kickoff, Step Planning, AI Work Session, Step Review, QA Verification, and Retrospective. See [ceremonies.md](ceremonies.md).
 
 **Domain language**  
-The agreed vocabulary of a product and its problem space, captured in the DOMAIN_LANGAGE.md and embedded in all AI prompts. See [domain-language.md](domain-language.md).
+The agreed vocabulary of a product and its problem space, captured in the DOMAIN_LANGUAGE.md and embedded in all AI prompts. See [domain-language.md](domain-language.md).
 
-**DOMAIN_LANGAGE.md**  
+**DOMAIN_LANGUAGE.md**  
 A table that records canonical domain terms, their definitions, their code identifiers, and terms to avoid. See [templates/DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md).
 
 **Hallucination**  

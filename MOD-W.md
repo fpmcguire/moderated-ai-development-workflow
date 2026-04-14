@@ -77,7 +77,7 @@ The Moderator is always the human gate. Phases 2–3 iterate until all acceptanc
 | `STEP-XX.md`         | Current step — goal, scope, inputs, acceptance checks        |
 | `REVIEW.md`          | Review notes and decisions for the current step              |
 | `QA.md`              | Verification evidence for the current step                   |
-| `DOMAIN-LANGUAGE.md` | Canonical terms used across docs, prompts, and code          |
+| `DOMAIN_LANGUAGE.md` | Canonical terms used across docs, prompts, and code          |
 | `AI_AGENTS.md`       | Agent registry — models, interfaces, data handling decisions |
 | `CLAUDE.md`          | Development Team config for Claude Code (lives at repo root) |
 

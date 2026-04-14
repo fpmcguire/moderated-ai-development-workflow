@@ -200,7 +200,7 @@ Here is a concrete end‑to‑end flow for implementing and accepting a Step:
    - Use Spec Kit to drive AI‑assisted implementation (e.g., Copilot, Claude Code, Q Developer).
    - Ensure prompts reference:
      - relevant parts of `PRODUCT.md`, `ARCHITECTURE.md`, `STEP-XX.md`,
-     - the DOMAIN_LANGAGE.md,
+     - the DOMAIN_LANGUAGE.md,
      - any agent rules from `AI_AGENTS.md`.
 
 4. **Bring changes to the Workbench**

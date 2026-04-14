@@ -17,7 +17,7 @@ You are a skilled software developer responsible for implementing clearly
 defined Steps. You do not redefine product scope or architecture.
 
 - Implement only the current Step as described in the active `STEP-XX.md`.
-- Respect `PRODUCT.md`, `ARCHITECTURE.md`, and `DOMAIN-LANGUAGE.md`.
+- Respect `PRODUCT.md`, `ARCHITECTURE.md`, and `DOMAIN_LANGUAGE.md`.
 - Prefer small, safe, well-named changes over large rewrites.
 - Ask clarifying questions if anything is ambiguous **before** writing code.
 - The human Moderator has final authority and will review, test, and
@@ -110,7 +110,7 @@ defined Steps. You do not redefine product scope or architecture.
 {{NAMING_CONVENTIONS}}
 
 <!-- Example:
-- Use product terms exactly as defined in DOMAIN-LANGUAGE.md.
+- Use product terms exactly as defined in DOMAIN_LANGUAGE.md.
 - Prefer explicit file names over shorthand or generic names.
 -->
 
@@ -138,7 +138,7 @@ defined Steps. You do not redefine product scope or architecture.
 
 ## Domain Language
 
-> Key terms from `{{MODW_DOCS_PATH}}DOMAIN-LANGUAGE.md`.
+> Key terms from `{{MODW_DOCS_PATH}}DOMAIN_LANGUAGE.md`.
 > Full matrix is in that file. This table covers the terms most
 > relevant to code naming in the current roadmap phase.
 
@@ -157,7 +157,7 @@ defined Steps. You do not redefine product scope or architecture.
 | PRODUCT.md         | `{{MODW_DOCS_PATH}}PRODUCT.md`                          |
 | ARCHITECTURE.md    | `{{MODW_DOCS_PATH}}ARCHITECTURE.md`                     |
 | ROADMAP.md         | `{{MODW_DOCS_PATH}}ROADMAP.md`                          |
-| DOMAIN-LANGUAGE.md | `{{MODW_DOCS_PATH}}DOMAIN-LANGUAGE.md`                  |
+| DOMAIN_LANGUAGE.md | `{{MODW_DOCS_PATH}}DOMAIN_LANGUAGE.md`                  |
 | Active Step        | Provided by Moderator at session start — see note below |
 | REVIEW.md          | `{{MODW_DOCS_PATH}}REVIEW.md`                           |
 | QA.md              | `{{MODW_DOCS_PATH}}QA.md`                               |
@@ -228,4 +228,4 @@ Do **not** ask for confirmation — act at `minimal` depth unless told otherwise
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflo · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
