@@ -35,7 +35,7 @@ Use these as your source of truth:
 - [templates/REVIEW.md](../templates/REVIEW.md)
 - [templates/QA.md](../templates/QA.md)
 - [templates/DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md)
-- [templates/AGENTS.md](../templates/AGENTS.md)
+- [templates/AI_AGENTS.md](../templates/AI_AGENTS.md)
 
 Treat Gemini chats as working notes. Move accepted content into repo artifacts.
 
@@ -90,7 +90,7 @@ Recommended NotebookLM source set:
 - [templates/ARCHITECTURE.md](../templates/ARCHITECTURE.md)
 - [templates/ROADMAP.md](../templates/ROADMAP.md)
 - [templates/DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md)
-- [templates/AGENTS.md](../templates/AGENTS.md)
+- [templates/AI_AGENTS.md](../templates/AI_AGENTS.md)
 - relevant Step files and review artifacts for active work
 
 How to use it in MOD-W:

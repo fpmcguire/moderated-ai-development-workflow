@@ -1,61 +1,19 @@
-# AI Agents
+This is placeholder content for the (Codex) AGENTS.md template. 
+Please replace this with the actual content for the (Codex) AGENTS.md template that will be used by Tech Lead to generate 
+the actual (Codex) AGENTS.md file.
 
-**Project:** {{PROJECT_NAME}}  
-**Date:** {{DATE}}  
-**Owner:** {{TECH_LEAD_NAME}}
+Codex will be used as the agent for the Tech Lead role when reviewing the (Claude or Claude Code) Development Team's implementation of each step added to the project's local repository. 
+This template should define the specific prompts, context, and guidelines for how Codex will review and generate code, tests, and documentation based on 
+the PRODUCT.md, ARCHITECTURE.md, DOMAIN_LANGUAGE.md, ROADMAP.md, and STEP.md files.
+The Tech Lead, using ChatGPT, will first generate the ARCHITECTURE.md and DOMAIN_LANGUAGE.md, and then generate the (Codex) AGENTS.md.
+The Moderator will need to manually paste the relevant context from the above files into ARCHITECTURE.md, DOMAIN_LANGUAGE.md, andthe (Codex) AGENTS.md template
+and place the completed AGENTS.md in the root of the repository.
+Only after generating (Codex) AGENTS.md, the Tech Lead agent (Codex) will generate the ROADMAP.md and STEP.md files for each step in the roadmap, which will then be implemented by the Development Team agent (Claude).
 
----
-
-## Overview
-
-<!-- Describe the AI agents used in this project, their roles, and the models they run on. -->
-
----
-
-## Agents
-
-### Product Owner Agent
-
-**Role:** Assists the human Product Owner with planning, user story authoring, and PRODUCT.md drafting  
-**Model:** <!-- e.g. ChatGPT (GPT-4o) -->  
-**Interface:** <!-- e.g. ChatGPT web, API -->  
-**Prompt template:** [prompts/product-owner-chatgpt.md](../prompts/product-owner-chatgpt.md)  
-**Context provided:** PRODUCT.md brief, DOMAIN_LANGUAGE.md  
-**Moderator:** <!-- Name of the human who reviews this agent's output -->
-
----
-
-### Tech Lead Agent
-
-**Role:** Assists the human Tech Lead with architecture drafting and domain language definition  
-**Model:** <!-- e.g. ChatGPT (GPT-4o) -->  
-**Interface:** <!-- e.g. ChatGPT web, API -->  
-**Prompt template:** [prompts/tech-lead-chatgpt.md](../prompts/tech-lead-chatgpt.md)  
-**Context provided:** PRODUCT.md, existing ARCHITECTURE.md, DOMAIN_LANGUAGE.md  
-**Moderator:** <!-- Name of the human who reviews this agent's output -->
-
----
-
-### Development Team Agent
-
-**Role:** Generates implementation artifacts (code, tests, documentation) for each step  
-**Model:** <!-- e.g. Claude 3.5 Sonnet -->  
-**Interface:** <!-- e.g. Claude.ai, API -->  
-**Prompt template:** [prompts/development-team-claude.md](../prompts/development-team-claude.md)  
-**Context provided:** STEP.md, ARCHITECTURE.md, DOMAIN_LANGUAGE.md, relevant source files  
-**Moderator:** <!-- Name of the human who reviews this agent's output -->
-
----
-
-## Data Handling Notes
-
-<!-- Record any decisions about what data is and is not shared with AI models. -->
-
-- **Shared with AI agents:** <!-- e.g. anonymised data models, architecture diagrams, code snippets -->
-- **Not shared with AI agents:** <!-- e.g. production data, credentials, PII, proprietary algorithms -->
-- **AI provider data policy reviewed:** <!-- Yes / No, and date -->
-- **Organisation AI usage policy reviewed:** <!-- Yes / No, and date -->
-
----
-
-MOD-W v2.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow
+This AGENTS.md template will be used to specify the exact instructions for the Codex AGENTS.md file, including:
+   - The Tech Lead role and responsibilities for reviewing the Development Team's implementation of each step
+   - Which files and context to provide as input
+   - The expected files, format, and style of the output (ROADMAP.md, STEP.md, code files, test files, documentation)
+   - Any specific conventions or patterns to follow in the generated code (templates)
+   - How to handle edge cases or uncertainties in the implementation
+   - The level of detail and explanation to include in the output (e.g. comments, rationale)

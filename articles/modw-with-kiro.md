@@ -46,7 +46,7 @@ The mapping is:
 MOD-W then layers on:
 
 - `REVIEW.md` and `QA.md` for **validation and evidence**
-- `DOMAIN_LANGUAGE.md` and `AGENTS.md` as **steering docs** for humans and agents
+- `DOMAIN_LANGUAGE.md` and `AI_AGENTS.md` as **steering docs** for humans and agents
 
 ---
 
@@ -157,7 +157,7 @@ Here is a concrete workflow for a single Step:
    - Use Kiro’s agents to implement the Task/Step:
      - generate or edit code
      - run tests in the Kiro environment if available
-   - Keep prompts and outputs aligned with `DOMAIN_LANGUAGE.md` and `AGENTS.md`.
+   - Keep prompts and outputs aligned with `DOMAIN_LANGUAGE.md` and `AI_AGENTS.md`.
 
 4. **Bring the result to the Workbench**
    - Sync or pull the changes to the local repo.

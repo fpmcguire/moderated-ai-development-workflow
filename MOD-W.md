@@ -78,7 +78,7 @@ The Moderator is always the human gate. Phases 2–3 iterate until all acceptanc
 | `REVIEW.md`          | Review notes and decisions for the current step              |
 | `QA.md`              | Verification evidence for the current step                   |
 | `DOMAIN-LANGUAGE.md` | Canonical terms used across docs, prompts, and code          |
-| `AGENTS.md`          | Agent registry — models, interfaces, data handling decisions |
+| `AI_AGENTS.md`       | Agent registry — models, interfaces, data handling decisions |
 | `CLAUDE.md`          | Development Team config for Claude Code (lives at repo root) |
 
 All MOD-W docs live under `mod-w/` in the project. `CLAUDE.md` lives at the **repo root** so Claude Code reads it automatically.

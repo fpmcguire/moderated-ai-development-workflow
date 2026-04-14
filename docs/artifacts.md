@@ -16,7 +16,7 @@ Each role works against a small set of shared files that keep intent, architectu
 | STEP.md                        | Tech Lead       | Brief for a single Step                      |
 | REVIEW.md                      | Moderator       | Review history and decisions per Step        |
 | QA.md                          | Moderator / QA  | Test and verification record per Step        |
-| AGENTS.md                      | Tech Lead       | Instructions and conventions for AI agents   |
+| AI_AGENTS.md                   | Tech Lead       | Instructions and conventions for AI agents   |
 | CLAUDE.md                      | Tech Lead       | Development Team role config for Claude Code |
 | ------------------------------ | --------------- | -------------------------------------------- |
 | Extended (optional) Artifacts  |                 |                                              |
@@ -142,7 +142,7 @@ QA.md is the ground‑truth view of quality for each Step.
 
 ---
 
-## AGENTS.md
+## AI_AGENTS.md
 
 **Owner:** Tech Lead  
 **Audience:** All agents; Moderator
@@ -155,7 +155,7 @@ Defines how agents should behave in this repo:
 - Review expectations
 - Role descriptions and limits for Product Owner Agent, Tech Lead Agent, and Development Team Agent
 
-AGENTS.md is effectively the "repo constitution" for AI behaviour.
+AI_AGENTS.md is effectively the "repo constitution" for AI behaviour.
 
 ---
 
@@ -190,7 +190,7 @@ For each new project or example:
 3. Create DOMAIN_LANGUAGE.md as soon as core terms appear.
 4. Maintain ROADMAP.md and STEP.md as you plan work.
 5. Update REVIEW.md and QA.md for every Step.
-6. Keep AGENTS.md aligned with your actual tools and commands.
+6. Keep AI_AGENTS.md aligned with your actual tools and commands.
 7. Generate CLAUDE.md from the template using the Tech Lead once ARCHITECTURE.md is stable. Place it at the repo root.
 
 ---

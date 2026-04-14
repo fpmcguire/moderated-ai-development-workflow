@@ -97,7 +97,7 @@ Instead of burying decisions inside chat logs, Moderated AI Development Workflow
 - `REVIEW.md` – review decisions per Step
 - `QA.md` – verification evidence per Step
 - `DOMAIN_LANGUAGE.md` – shared vocabulary
-- `AGENTS.md` – rules and conventions for AI agents
+- `AI_AGENTS.md` – rules and conventions for AI agents
 
 Vibe coding tends to generate code first and documentation later (if at all).  
 Moderated AI Development Workflow insists that **intent and design are captured in artifacts before and alongside code**.
