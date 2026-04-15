@@ -1,64 +1,48 @@
 # QA: Step {{STEP_NUMBER}}
 
-**Project:** {{PROJECT_NAME}}  
-**Step:** {{STEP_NUMBER}} — {{STEP_TITLE}}  
-**Tester:** {{TESTER_NAME}}  
-**Test Date:** {{DATE}}
+**Project:** {{PROJECT_NAME}}
+**Step:** {{STEP_NUMBER}} — {{STEP_TITLE}}
+**Tester:** {{TESTER_NAME}}
 
 ---
 
 ## Summary
 
-<!-- Overall result: Pass / Fail / Blocked -->
-
-**Result:**
+**Result:** Pass / Fail / Blocked
 
 ---
 
-## Test Environment
+## Requirement Coverage
 
-| Item              | Value                                      |
-| ----------------- | ------------------------------------------ |
-| Environment       | <!-- e.g. local dev, staging -->           |
-| Browser / Runtime |                                            |
-| Database state    | <!-- e.g. seeded with test data, empty --> |
-| Dependencies      |                                            |
+| Requirement | Tested | Result |
+| ----------- | ------ | ------ |
+| R1          | Yes    | Pass   |
 
 ---
 
 ## Test Cases
 
-| #     | Description | Steps | Expected Result | Actual Result | Status      |
-| ----- | ----------- | ----- | --------------- | ------------- | ----------- |
-| TC-01 |             |       |                 |               | Pass / Fail |
-| TC-02 |             |       |                 |               | Pass / Fail |
-| TC-03 |             |       |                 |               | Pass / Fail |
+| ID | Description | Expected | Actual | Status |
+| -- | ----------- | -------- | ------ | ------ |
 
 ---
 
 ## Defects
 
-<!-- List any defects found. Link to GitHub issues if raised. -->
-
-| #   | Description | Severity | Issue Link | Status |
-| --- | ----------- | -------- | ---------- | ------ |
-|     |             |          |            |        |
+| ID | Description | Severity | Status |
+| -- | ----------- | -------- | ------ |
 
 ---
 
 ## Regression Check
 
-<!-- Did the changes break any existing functionality? -->
-
-- [ ] Existing tests continue to pass
-- [ ] No unintended side effects observed in adjacent features
+* [ ] No regressions
+* [ ] Existing tests pass
 
 ---
 
 ## Notes
 
-<!-- Any observations, environment issues, or recommendations. -->
-
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.1.0

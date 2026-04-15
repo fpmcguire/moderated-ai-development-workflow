@@ -1,71 +1,99 @@
 # Product Definition
 
-<!-- Project name and one-line description -->
-
-**Project:** {{PROJECT_NAME}}  
-**Description:** {{ONE_LINE_DESCRIPTION}}  
-**Date:** {{DATE}}  
-**Owner:** {{PRODUCT_OWNER_NAME}}
+**Project:** {{PROJECT_NAME}}
+**Date:** {{DATE}}
+**Owner:** {{PRODUCT_OWNER}}
 
 ---
 
 ## Problem Statement
 
-<!-- What problem does this product or feature solve? Who has this problem? -->
+<!-- What problem does this solve? Who has it? -->
+
+---
 
 ## Target Users
-
-<!-- Who are the primary users? Describe their context and goals. -->
 
 | User | Context | Goal |
 | ---- | ------- | ---- |
 |      |         |      |
 
-## Goals
+---
 
-<!-- What must this product or feature achieve? List measurable outcomes. -->
+## Goals
 
 1.
 2.
 3.
 
-## Non-Goals
+---
 
-<!-- What is explicitly out of scope? This is as important as the goals. -->
+## Non-Goals
 
 1.
 2.
 
+---
+
 ## High-Level Requirements
 
-<!-- List the key functional requirements. Use domain language. -->
+> Stable IDs (R-IDs) are required for traceability.
 
-| #   | Requirement | Priority     |
-| --- | ----------- | ------------ |
-| 1   |             | Must have    |
-| 2   |             | Should have  |
-| 3   |             | Nice to have |
-
-## Acceptance Criteria
-
-<!-- How will we know this product or feature is done? -->
-
-- [ ]
-- [ ]
-- [ ]
-
-## Assumptions and Constraints
-
-<!-- What are we assuming to be true? What constraints must we work within? -->
-
-## Open Questions
-
-<!-- What do we not yet know that could affect the scope or approach? -->
-
-| Question | Owner | Due |
-| -------- | ----- | --- |
-|          |       |     |
+| ID | Requirement | Priority     |
+| -- | ----------- | ------------ |
+| R1 |             | Must have    |
+| R2 |             | Must have    |
+| R3 |             | Should have  |
+| R4 |             | Nice to have |
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+## Key User Scenarios
+
+1. User does X → system responds Y → outcome Z
+2.
+
+---
+
+## Acceptance Criteria (Product-Level)
+
+* [ ] All Must-have requirements implemented
+* [ ] No unresolved critical risks
+* [ ] QA.md completed
+* [ ] REVIEW.md approved
+* [ ] Moderator sign-off
+
+---
+
+## Risks
+
+| Risk | Impact | Likelihood | Mitigation |
+| ---- | ------ | ---------- | ---------- |
+
+---
+
+## Assumptions and Constraints
+
+---
+
+## Open Questions
+
+| Question | Owner | Due |
+| -------- | ----- | --- |
+
+---
+
+## Sources / References
+
+*
+
+---
+
+## Change Log
+
+| Date | Change | Affected R-IDs | Source |
+| ---- | ------ | -------------- | ------ |
+
+---
+
+MOD-W v2.1.0

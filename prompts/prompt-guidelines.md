@@ -1,52 +1,142 @@
 # MOD-W Prompting Guide: From "Vibe" to "Viable"
 
-In the Moderated AI Development Workflow, prompting is a tool for **decision support, mentorship, and risk mitigation**. This guide ensures every role provides the transparency needed for high-integrity moderation.
+In the Moderated AI Development Workflow, prompting is a tool for structured thinking, decision support, review quality, and learning.
 
-## 1. The Strategic Prompting Flow
+This guide helps the Moderator get clearer, more trustworthy output from each role.
 
-Every handoff between roles (e.g., Product Owner to Tech Lead) should follow this three-layer request:
+---
 
-### A. Options & Analysis
+## 1. Core Prompting Pattern
 
-Never accept a single solution. Force the AI to act as a consultant:
+For non-trivial work, prefer a three-part request structure.
 
-- **Request:** "Provide three distinct implementation options (e.g., Minimal, Robust, Scalable)."
-- **Why:** This prevents the model from defaulting to the most "frequent" (and often mediocre) training data solution.
+### A. Options and analysis
 
-### B. Impact & Ramifications
+Ask for more than one viable path when the decision is meaningful.
 
-Before approving a plan, the Moderator must understand the cost:
+Example requests:
 
-- **Request:** "For the recommended option, list technical debt, security risks, and side effects on existing modules."
-- **Why:** This flags "silent failures" and architectural drift for the human Moderator.
+- "Give me 3 implementation options: Minimal, Balanced, and Scalable."
+- "Compare 2 roadmap slicing approaches and recommend one."
+- "Show me the trade-offs before recommending a direction."
 
-### C. The Mentorship Loop (The "Why")
+Use this when:
 
-Use the AI to level up the team and maintain high standards:
+- architecture choices matter
+- roadmap slicing is unclear
+- the task has real trade-offs
 
-- **Request:** "Explain the design pattern used here. Why is this superior to [Alternative]? Treat this as a code review for a junior engineer."
-- **Why:** This turns the workflow into a continuous learning engine.
+Do not force multiple options for trivial edits.
+
+### B. Impact and ramifications
+
+Before approving a plan, understand the cost and risk.
+
+Example requests:
+
+- "For the recommended option, list technical debt risks, side effects, and likely future pain points."
+- "What could this break?"
+- "What hidden complexity am I accepting with this choice?"
+
+Use this to surface:
+
+- technical debt
+- architectural drift
+- coupling
+- test gaps
+- UX or workflow regressions
+
+### C. The mentorship loop
+
+Use the model to explain the reasoning behind the recommendation.
+
+Example requests:
+
+- "Explain why this pattern is a better fit than the alternative."
+- "Teach this as if you are reviewing a junior engineer's plan."
+- "What principle is driving this recommendation?"
+
+Use this when:
+
+- you want learning value
+- you want to test whether the recommendation is well-reasoned
+- you need stronger review transparency
 
 ---
 
 ## 2. Standard Answer Depths
 
-MOD-W prompts support three standard depths to balance speed and rigor:
+MOD-W supports three standard answer depths.
 
-| Depth       | Use Case                         | Expected Output                          |
-| :---------- | :------------------------------- | :--------------------------------------- |
-| **Minimal** | Trivial fixes, UI tweaks         | Direct answer, code only, minimal prose. |
-| **Options** | Standard features, refactors     | Multiple approaches + trade-off matrix.  |
-| **Full**    | Critical logic, new architecture | Deep-dive explanations and mentorship.   |
+| Depth       | Best for                                                    | Expected output                                          |
+| ----------- | ----------------------------------------------------------- | -------------------------------------------------------- |
+| **minimal** | small fixes, direct rewrites, straightforward reviews       | concise answer, one direct recommendation                |
+| **options** | roadmap shaping, design choices, standard feature work      | 2–3 viable paths with trade-offs and recommendation      |
+| **full**    | architecture, critical logic, teaching, high-risk decisions | detailed reasoning, explanation, and structured guidance |
+
+### Suggested defaults
+
+Use these defaults unless the Moderator wants something different:
+
+- **Product Owner**: `options`
+- **Tech Lead**: `options`
+- **Development Team**:
+  - `minimal` for implementation
+  - `options` for planning
+- **Review / critique passes**: `minimal`
 
 ---
 
-## 3. The "Red-Team" Quality Gate
+## 3. Red-Team Review Prompt
 
-Used by the **Moderator** before final approval of a Step:
+Use this before approving a Step or implementation when you want a sharper critique.
 
-> "Analyze this implementation as a cynical Senior Architect. Find three reasons why this might fail in production or lead to a regression. Be specific and merciless."
+Example:
+
+> Analyze this implementation as a skeptical senior architect.  
+> Find three reasons it might fail in production, drift from the intended architecture, or cause regressions.  
+> Be specific and concrete.
+
+This is useful for:
+
+- pre-merge review
+- risk discovery
+- checking for blind spots
+- strengthening Moderator confidence
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+## 4. Good Moderator Prompt Habits
+
+- identify the role clearly
+- provide only the relevant artifact excerpts
+- name the active Step explicitly
+- specify the desired answer depth when it matters
+- ask for acceptance-check mapping during reviews
+- ask for scope boundaries explicitly when shaping a Step
+
+Good example:
+
+> You are the Tech Lead.  
+> Here are excerpts from `ARCHITECTURE.md`, `DOMAIN_LANGUAGE.md`, and `STEP-03.md`.  
+> Answer at `options` depth.  
+> Tell me whether this Step is too large, propose a tighter version if needed, and list the likely files affected.
+
+---
+
+## 5. Keep the Workflow Honest
+
+Use prompts to reinforce MOD-W discipline:
+
+- ask whether the Step is too large
+- ask what is out of scope
+- ask what could break
+- ask how acceptance checks will be verified
+- ask whether naming matches `DOMAIN_LANGUAGE.md`
+- ask whether the implementation drifted from `PRODUCT.md` or `ARCHITECTURE.md`
+
+These questions help the Moderator stay in control.
+
+---
+
+MOD-W v2.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

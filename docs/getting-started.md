@@ -31,16 +31,16 @@ Follow the [`docs/step-lifecycle.md`](step-lifecycle.md) end-to-end for your fir
 
 ## 4. Reference docs
 
-| What you need              | Where to find it                                    |
-| -------------------------- | --------------------------------------------------- |
-| Artifact definitions       | [`docs/artifacts.md`](artifacts.md)                 |
-| Quality gates              | [`docs/quality-gates.md`](quality-gates.md)         |
-| Moderator checklist        | [`docs/moderator-checklist.md`](moderator-checklist.md) |
-| Domain language guide      | [`docs/domain-language.md`](domain-language.md)     |
-| Ceremonies                 | [`docs/ceremonies.md`](ceremonies.md)               |
-| Tool integrations          | [`docs/integrations/`](integrations/)               |
-| FAQ                        | [`docs/faq.md`](faq.md)                             |
+| What you need         | Where to find it                                        |
+| --------------------- | ------------------------------------------------------- |
+| Artifact definitions  | [`docs/artifacts.md`](artifacts.md)                     |
+| Quality gates         | [`docs/quality-gates.md`](quality-gates.md)             |
+| Moderator checklist   | [`docs/moderator-checklist.md`](moderator-checklist.md) |
+| Domain language guide | [`docs/domain-language.md`](domain-language.md)         |
+| Ceremonies            | [`docs/ceremonies.md`](ceremonies.md)                   |
+| Tool integrations     | [`docs/integrations/`](integrations/)                   |
+| FAQ                   | [`docs/faq.md`](faq.md)                                 |
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

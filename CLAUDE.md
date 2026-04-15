@@ -104,15 +104,15 @@ npm run build:docs    # (Optional) Generate static site from docs
 
 ## MOD-W Document Locations
 
-| Document            | Path                                                           |
-| ------------------- | -------------------------------------------------------------- |
-| Manifesto (vision)  | `docs/manifesto.md`                                            |
-| Roles               | `docs/roles.md`                                                |
-| Step Lifecycle      | `docs/step-lifecycle.md`                                       |
-| Artifacts           | `docs/artifacts.md`                                            |
-| DOMAIN_LANGUAGE.md  | `docs/domain-language.md`                                      |
-| Active Step         | Provided by Moderator (usually a GitHub Issue or `STEP-XX.md`) |
-| REVIEW.md template  | `templates/REVIEW.md`                                          |
+| Document           | Path                                                           |
+| ------------------ | -------------------------------------------------------------- |
+| Manifesto (vision) | `docs/manifesto.md`                                            |
+| Roles              | `docs/roles.md`                                                |
+| Step Lifecycle     | `docs/step-lifecycle.md`                                       |
+| Artifacts          | `docs/artifacts.md`                                            |
+| DOMAIN_LANGUAGE.md | `docs/domain-language.md`                                      |
+| Active Step        | Provided by Moderator (usually a GitHub Issue or `STEP-XX.md`) |
+| REVIEW.md template | `templates/REVIEW.md`                                          |
 
 ---
 
@@ -138,4 +138,4 @@ The Moderator specifies depth per request. **Default is `minimal`.**
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

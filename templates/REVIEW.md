@@ -1,67 +1,70 @@
 # Review: Step {{STEP_NUMBER}}
 
-**Project:** {{PROJECT_NAME}}  
-**Step:** {{STEP_NUMBER}} — {{STEP_TITLE}}  
-**Moderator:** {{MODERATOR_NAME}}  
-**Review Date:** {{DATE}}  
+**Project:** {{PROJECT_NAME}}
+**Step:** {{STEP_NUMBER}} — {{STEP_TITLE}}
+**Moderator:** {{MODERATOR_NAME}}
+**Review Date:** {{DATE}}
 **AI Agent Used:** {{AI_AGENT_ROLE}} ({{MODEL_NAME}})
 
 ---
 
 ## Decision
 
-<!-- Circle or bold one: **Accept** / **Request Revisions** / **Reject** -->
-
-**Decision:**
+**Decision:** Accept / Request Revisions / Reject
 
 **Summary:**
 
-<!-- One or two sentences explaining the decision. -->
+<!-- One or two sentences -->
+
+---
+
+## Requirement Coverage
+
+> Validate against PRODUCT.md
+
+| Requirement | Status  | Notes |
+| ----------- | ------- | ----- |
+| R1          | ✅ / ❌ |       |
+| R2          |         |       |
 
 ---
 
 ## Quality Gate Evaluation
 
-<!-- Mark each criterion. Add notes for any that failed or need attention. -->
-
 ### Level 1 — Baseline
 
-- [ ] Output matches the scope defined in STEP.md
-- [ ] Output uses domain language terms correctly
-- [ ] No hallucinated facts, APIs, libraries, or references
-- [ ] No unresolved placeholders, TODOs, or stubs
-- [ ] No real credentials, personal data, or sensitive information
+- [ ] Output matches STEP-XX.md scope
+- [ ] Domain language used correctly
+- [ ] No hallucinated APIs or libraries
+- [ ] No unresolved TODOs or placeholders
+- [ ] No sensitive data exposed
 
 ### Level 2 — Code Quality _(if applicable)_
 
-- [ ] Code follows established patterns and conventions
-- [ ] All identifiers use domain language
-- [ ] Error handling is present and appropriate
-- [ ] No obvious security vulnerabilities
+- [ ] Follows architecture (D-IDs)
+- [ ] Naming matches DOMAIN_LANGUAGE.md
+- [ ] Error handling present
+- [ ] No obvious security issues
 - [ ] Code is testable
 
 ### Level 3 — Completeness _(if applicable)_
 
-- [ ] All acceptance criteria from STEP.md are met
-- [ ] Unit tests are present and pass
-- [ ] Integration does not break existing tests
-- [ ] Documentation is updated if public interfaces changed
+- [ ] All acceptance checks met
+- [ ] Tests pass
+- [ ] No regressions
+- [ ] Documentation updated
 
 ---
 
 ## Findings
 
-<!-- List any issues found during review. Note whether each was blocking or advisory. -->
-
-| #   | Finding | Severity            | Resolution |
-| --- | ------- | ------------------- | ---------- |
-| 1   |         | Blocking / Advisory |            |
+| #   | Finding | Severity            | Related R-ID | Resolution |
+| --- | ------- | ------------------- | ------------ | ---------- |
+| 1   |         | Blocking / Advisory | R1           |            |
 
 ---
 
 ## Notes
-
-<!-- Any additional observations, questions for the team, or suggestions for future steps. -->
 
 ---
 
@@ -69,8 +72,7 @@
 
 | Date | Moderator | Decision | Notes |
 | ---- | --------- | -------- | ----- |
-|      |           |          |       |
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.1.0

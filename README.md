@@ -187,10 +187,10 @@ Codex reads `AGENTS.md` from the repo root at session start — the Tech Lead eq
 
 Codex (Tech Lead) and Claude Code (Development Team) are designed to work alongside each other in the same repo:
 
-| | Codex | Claude Code |
-| --- | --- | --- |
-| Config file | `AGENTS.md` | `CLAUDE.md` |
-| MOD-W role | Tech Lead | Development Team |
+|              | Codex                        | Claude Code                      |
+| ------------ | ---------------------------- | -------------------------------- |
+| Config file  | `AGENTS.md`                  | `CLAUDE.md`                      |
+| MOD-W role   | Tech Lead                    | Development Team                 |
 | Typical task | Roadmap, step briefs, review | Implement a single approved step |
 
 Cross-validation is preserved: Codex never reviews its own plans without a human gate, and Claude Code never implements without a Moderator-approved step brief.
@@ -487,4 +487,4 @@ For inquiries, open an issue or contact the maintainer via the repository profil
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

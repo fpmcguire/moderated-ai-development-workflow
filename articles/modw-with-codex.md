@@ -19,13 +19,13 @@ This article explains:
 
 In the default MOD-W setup, ChatGPT supports the **Tech Lead** role. Codex is a direct alternative for teams that want the Tech Lead agent to work closer to the repository — reading project files directly rather than relying on copy-paste context.
 
-| Role                  | Default agent     | Codex alternative |
-| --------------------- | ----------------- | ----------------- |
-| Product Owner         | ChatGPT           | —                 |
-| **Tech Lead**         | **ChatGPT**       | **Codex**         |
-| Development Team      | Claude / Claude Code | —              |
-| QA / Tester           | Human (Moderator) | —                 |
-| Moderator             | Human only        | —                 |
+| Role             | Default agent        | Codex alternative |
+| ---------------- | -------------------- | ----------------- |
+| Product Owner    | ChatGPT              | —                 |
+| **Tech Lead**    | **ChatGPT**          | **Codex**         |
+| Development Team | Claude / Claude Code | —                 |
+| QA / Tester      | Human (Moderator)    | —                 |
+| Moderator        | Human only           | —                 |
 
 Codex does **not** replace the Moderator, Product Owner, or Development Team. It supports the Tech Lead role only: generating roadmaps, writing step briefs, and reviewing Development Team output for architectural fit.
 
@@ -45,11 +45,11 @@ Codex reads `AGENTS.md` from the repo root at session start, the same way Claude
 
 ## Responsibility split
 
-| Codex owns | MOD-W owns |
-| --- | --- |
-| Reading repo files and context docs | Moderator go/no-go authority |
-| Generating `ROADMAP.md` and `STEP-XX.md` | Tech Lead approval of roadmap and step briefs |
-| Reviewing Development Team output | Moderator and Tech Lead quality gates |
+| Codex owns                                             | MOD-W owns                                               |
+| ------------------------------------------------------ | -------------------------------------------------------- |
+| Reading repo files and context docs                    | Moderator go/no-go authority                             |
+| Generating `ROADMAP.md` and `STEP-XX.md`               | Tech Lead approval of roadmap and step briefs            |
+| Reviewing Development Team output                      | Moderator and Tech Lead quality gates                    |
 | Classifying review findings as must-fix / nice-to-have | Moderator decision to accept, reject, or request changes |
 
 Codex does **not** merge code, override quality gates, or make product scope decisions.
@@ -120,12 +120,12 @@ Codex does **not** merge code, override quality gates, or make product scope dec
 
 Codex (Tech Lead) and Claude Code (Development Team) are designed to work alongside each other. Each reads its own config file and operates within its own role boundary.
 
-| | Codex (Tech Lead) | Claude Code (Development Team) |
-| --- | --- | --- |
-| Config file | `AGENTS.md` (repo root) | `CLAUDE.md` (repo root) |
-| Session start | Reads `AGENTS.md` automatically | Reads `CLAUDE.md` automatically |
-| Typical task | Generate roadmap, write step brief, review output | Implement a single approved step |
-| Does not | Write application code, merge changes | Define architecture, generate roadmaps |
+|               | Codex (Tech Lead)                                 | Claude Code (Development Team)         |
+| ------------- | ------------------------------------------------- | -------------------------------------- |
+| Config file   | `AGENTS.md` (repo root)                           | `CLAUDE.md` (repo root)                |
+| Session start | Reads `AGENTS.md` automatically                   | Reads `CLAUDE.md` automatically        |
+| Typical task  | Generate roadmap, write step brief, review output | Implement a single approved step       |
+| Does not      | Write application code, merge changes             | Define architecture, generate roadmaps |
 
 **Cross-validation** is preserved: Codex never reviews its own plans without a human gate, and Claude Code never implements without a Codex- and Moderator-approved step brief.
 
@@ -143,14 +143,14 @@ Codex (Tech Lead) and Claude Code (Development Team) are designed to work alongs
 
 ## Summary
 
-| Phase            | Agent                     | MOD-W outcome                                  |
-| ---------------- | ------------------------- | ---------------------------------------------- |
-| **Roadmap**      | Codex (Tech Lead)         | Approved `ROADMAP.md`                          |
-| **Step brief**   | Codex (Tech Lead)         | Approved `STEP-XX.md`                          |
-| **Implement**    | Claude Code (Dev Team)    | Step implemented and summarised                |
-| **Review**       | Codex (Tech Lead)         | Must-fix / nice-to-have findings in `REVIEW.md`|
-| **Accept**       | Moderator (human)         | Git tag, `ROADMAP.md` advanced                 |
+| Phase          | Agent                  | MOD-W outcome                                   |
+| -------------- | ---------------------- | ----------------------------------------------- |
+| **Roadmap**    | Codex (Tech Lead)      | Approved `ROADMAP.md`                           |
+| **Step brief** | Codex (Tech Lead)      | Approved `STEP-XX.md`                           |
+| **Implement**  | Claude Code (Dev Team) | Step implemented and summarised                 |
+| **Review**     | Codex (Tech Lead)      | Must-fix / nice-to-have findings in `REVIEW.md` |
+| **Accept**     | Moderator (human)      | Git tag, `ROADMAP.md` advanced                  |
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v2.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
