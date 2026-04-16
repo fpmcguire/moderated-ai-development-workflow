@@ -3,177 +3,158 @@
 In Moderated AI Development Workflow, every meaningful change is delivered as a **Step**.  
 A Step is small enough to understand, implement, review, and verify end‑to‑end without overloading any AI agent or the Moderator.
 
-This lifecycle is tool‑agnostic but assumes your default roles:
+This lifecycle assumes your default roles:
 
 - Moderator (human)
-- Product Owner (ChatGPT)
-- Tech Lead (ChatGPT)
-- Development Team (Claude)
-- Workbench (VS Code + Copilot)
+- Product Owner (Claude Code SubAgent)
+- Tech Lead (Claude Code full session)
+- Development Team (Claude Code full session)
+- QA (Claude Code SubAgent)
 
 ---
 
 ## 1. Define the Step
 
-**Who:** Product Owner, Tech Lead, Moderator  
-**Artifacts:** PRODUCT.md, ROADMAP.md, STEP.md
+**Who:** Tech Lead (Claude Code session), Moderator  
+**Artifacts:** ARCHITECTURE.md, ROADMAP.md, STEP-XX.md, CLAUDE.md, AGENTS.md
 
-- Product Owner and Tech Lead agree on the next Step from `ROADMAP.md`.
-- Moderator captures it in `STEP.md` with goal, scope, inputs, acceptance checks, and risks.
+- Moderator triggers a Tech Lead Planning Session.
+- Tech Lead reads `PRODUCT.md` and existing `ARCHITECTURE.md`.
+- Tech Lead writes or updates `ARCHITECTURE.md`, `ROADMAP.md`, and `STEP-XX.md`.
+- Tech Lead generates or updates project-specific `CLAUDE.md` and `AGENTS.md`.
+- Moderator reviews and approves all artifacts before implementation begins.
 - The Step is small enough to implement and verify without exhausting agent context.
 
-Output: A clear, approved `STEP.md`.
+Output: Approved `STEP-XX.md` and updated planning artifacts.
 
 ---
 
 ## 2. Brief the Development Team
 
-**Who:** Moderator → Development Team (Claude)  
-**Artifacts:** PRODUCT.md, ARCHITECTURE.md, STEP.md, DOMAIN_LANGUAGE.md
+**Who:** Moderator → Development Team (Claude Code session)  
+**Artifacts:** CLAUDE.md, STEP-XX.md
 
-The Moderator chooses the Development Team interface for this Step:
-
-**Claude chatbot (claude.ai)**
-
-- Prepare a **context packet**: focused excerpts from PRODUCT, ARCHITECTURE, and
-  domain language plus the current `STEP.md`.
-- Paste `development-team-claude.md` as the role prompt at session start.
-- Attach or paste the active `STEP-XX.md` directly into the thread.
-
-**Claude Code (CLI)**
-
-- Confirm `CLAUDE.md` is current in the repo root.
+- Confirm `CLAUDE.md` and `AGENTS.md` are current in the repo root (Tech Lead maintains these).
 - Start a Claude Code session in the project root — role context loads automatically.
 - State the active Step at session start, e.g.:
-  `The current Step is apps/my-app/mod-w/STEP-02.md`
+  `The current Step is STEP-02.md`
+- Ask the Development Team to confirm understanding and raise any clarifying questions before proceeding.
 
-**Hybrid (chatbot for planning, Claude Code for implementation)**
-
-- Use the chatbot for the planning and confirmation pass.
-- Commit the repo, then switch to Claude Code for file writing.
-- State the active Step path when opening the Claude Code session.
-
-In all cases, ask the Development Team to:
-
-- Confirm understanding
-- Ask clarifying questions
-- Optionally refine the Step description (without expanding scope)
-
-Output: Shared understanding of the Step and any refinements folded back into `STEP.md`.
+Output: Shared understanding of the Step; any refinements folded back into `STEP-XX.md`.
 
 ---
 
-## 3. Implement the Step
+## 3. Implementation Options Gate
 
-**Who:** Development Team (Claude)  
-**Artifacts:** Code, tests, docs; STEP.md
+**Who:** Development Team (Claude Code session) → Moderator  
+**Artifacts:** STEP-XX.md, ARCHITECTURE.md, AGENTS.md
 
-- Development Team implements only the current Step.
-- It updates or adds:
+- Development Team enters Plan Mode: reads relevant files, confirms scope. No files written yet.
+- Development Team proposes an implementation plan and pauses.
+- Moderator may request one or both of:
+  - `options` — 2–3 implementation paths with trade-offs and a recommendation
+  - `ramifications` — technical debt risks, side effects, and likely pain points for the chosen path
+- Moderator approves a plan before any code is written.
+
+See: [`prompts/prompt-guidelines.md`](../prompts/prompt-guidelines.md) for the Options/Ramifications/Mentorship protocol.
+
+Output: Moderator-approved implementation plan.
+
+---
+
+## 4. Implement the Step
+
+**Who:** Development Team (Claude Code SubAgent)  
+**Artifacts:** Code, tests, docs
+
+- Development Team implements only the current Step following the approved plan:
   - Code and configuration
   - Tests (unit/component/integration as appropriate)
   - Any relevant docs (comments, README fragments, etc.)
-- It summarizes changes and open questions for the Moderator.
+- **Build Gate (blocking):** runs `{{BUILD_COMMAND}}` and `{{TEST_COMMAND}}`. Fixes all failures and re-runs until both pass. Does not proceed until clean.
+- Summarizes changes and open questions for the Moderator.
 
-Output: A proposed implementation for the Step in a branch or patch, plus a short summary.
-
----
-
-## 4. Workbench Verification
-
-**Who:** Moderator using the Workbench  
-**Artifacts:** QA.md (draft), REVIEW.md (draft)
-
-- Moderator pulls the changes into the local Workbench (e.g., VS Code + Copilot).
-- Runs build, tests, and linters.
-- Manually exercises the feature or UI for the Step.
-- Uses Copilot for light‑to‑moderate fixes (typos, small refactors, trivial bugs).
-- Records results and any issues in `QA.md` and `REVIEW.md` as needed.
-
-If problems are minor, the Moderator may fix them directly in the Workbench; if they are substantial, they go back to the Development Team.
-
-Output: Verified or partially verified implementation plus initial QA/Review notes.
+Output: Implemented Step with passing build.
 
 ---
 
-## 5. Revision Loop
+## 5. Tech Lead Review + Revision Loop
 
-**Who:** Moderator ↔ Development Team, Tech Lead as needed  
-**Artifacts:** STEP.md, REVIEW.md, QA.md
+**Who:** Tech Lead (Codex Review Session) ↔ Development Team  
+**Artifacts:** REVIEW.md
 
-- Moderator sends focused feedback to the Development Team:
-  - Failing tests
-  - Behaviour mismatches
-  - Architectural or naming issues
-  - UX issues
-- Development Team revises the implementation.
-- Moderator re‑runs Workbench verification.
-- Tech Lead is involved when:
-  - Architecture decisions are affected
-  - Trade‑offs or alternatives need evaluation
-
-The loop continues until the Step satisfies the acceptance checks in `STEP.md`.
-
-Output: Implementation that passes Workbench verification and addresses review comments.
-
----
-
-## 6. Tech Lead Review
-
-**Who:** Tech Lead (ChatGPT) + Moderator  
-**Artifacts:** REVIEW.md, ARCHITECTURE.md, DOMAIN_LANGUAGE.md
-
-- Moderator prepares a **handoff packet** for the Tech Lead:
-  - Current `STEP.md`
-  - Summary of changes
-  - Key diffs or file list
-  - QA/verification notes
+- Moderator triggers a Tech Lead Review Session (Codex).
+- Tech Lead reads `STEP-XX.md`, implementation diff.
 - Tech Lead reviews for:
   - Architectural alignment
   - Maintainability and readability
   - Domain language consistency
   - Potential risks or follow‑ups
-- Moderator records Tech Lead comments and recommendations in `REVIEW.md`.
+- Tech Lead writes `REVIEW.md` with verdict and findings.
+- If rework required: Tech Lead sends findings directly to Dev Team (no Moderator in loop).
+- Dev Team revises, re-runs build gate, reports back to Tech Lead.
+- Loop continues until Tech Lead approves.
+- Moderator may intervene if a revision introduces a scope or product intent conflict.
 
-If Tech Lead requires changes, the Step returns to the Revision Loop.
-
-Output: Tech Lead approval or specific recommendations applied.
-
----
-
-## 7. QA & Documentation
-
-**Who:** Moderator / QA  
-**Artifacts:** QA.md, PRODUCT.md, ARCHITECTURE.md, ROADMAP.md
-
-- QA/Moderator finalizes `QA.md` for the Step:
-  - Tests run and results
-  - Manual checks performed
-  - Known limitations or deferred tests
-- Moderator updates:
-  - PRODUCT.md if behaviour or UX changed meaningfully
-  - ARCHITECTURE.md if design decisions changed
-  - ROADMAP.md to mark the Step as complete and adjust future Steps if needed
-
-Output: Updated documentation and a completed QA record for the Step.
+Output: `REVIEW.md` with Tech Lead approval.
 
 ---
 
-## 8. Tag and Advance
+## 6. QA + Product Owner Validation
+
+**Who:** QA SubAgent, Product Owner SubAgent (both Claude Code)  
+**Artifacts:** QA.md, Product Owner sign-off
+
+Triggered only after Tech Lead approval.
+
+- **QA SubAgent** reads implementation files and `STEP-XX.md` acceptance checks, writes `QA.md`.
+- **Product Owner SubAgent** reads `QA.md` and validates against `PRODUCT.md` intent, writes sign-off.
+
+Output: `QA.md` and Product Owner sign-off.
+
+---
+
+## 7. Moderator Spot Check
+
+**Who:** Moderator  
+**Artifacts:** QA.md, Product Owner sign-off
+
+- Moderator reviews `QA.md` and Product Owner sign-off.
+- Performs manual checks flagged by the QA SubAgent as requiring human or browser verification (UX, visual, edge cases).
+- Does **not** re-run the build or tests — the build gate already ensures a clean pass.
+- If spot check reveals substantial issues, returns them to the Dev Team with focused feedback.
+
+Output: Manual checks completed; step cleared for final gate.
+
+---
+
+## 8. Tag and Advance (Final Gate)
 
 **Who:** Moderator  
 **Artifacts:** Git history, annotated tag, ROADMAP.md
 
 - Moderator creates an **annotated Git tag** for the Step, including:
   - Step identifier and short description
-  - Link or reference to `STEP.md`, `REVIEW.md`, and `QA.md`
+  - Link or reference to `STEP-XX.md`, `REVIEW.md`, and `QA.md`
   - Notable decisions or caveats
-- ROADMAP.md is updated to:
-  - Mark the Step as done
-  - Highlight any follow‑up work spawned by this Step
+- ROADMAP.md is updated to mark the Step as done and highlight follow-up work.
 - Moderator selects the next Step and returns to stage 1.
 
 Output: Traceable milestone for the Step and a clear starting point for the next one.
+
+---
+
+## 10. Documentation Update
+
+**Who:** Moderator  
+**Artifacts:** PRODUCT.md, ARCHITECTURE.md, ROADMAP.md
+
+- Moderator updates planning artifacts to reflect any decisions made during the Step:
+  - `PRODUCT.md` if behaviour or UX changed meaningfully
+  - `ARCHITECTURE.md` if design decisions changed
+  - `ROADMAP.md` to mark the Step as complete and adjust future Steps if needed
+
+Output: Updated documentation reflecting the completed Step.
 
 ---
 
@@ -193,4 +174,4 @@ This lifecycle keeps Moderated AI Development Workflow firmly human‑moderated 
 
 ---
 
-MOD-W v2.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

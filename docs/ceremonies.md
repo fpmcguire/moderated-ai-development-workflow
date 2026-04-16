@@ -6,21 +6,51 @@ Ceremonies are structured events that create rhythm, transparency, and shared un
 
 ## 1. Project Kickoff
 
-**When:** Once, at the start of a project or major initiative  
-**Who:** Product Owner, Tech Lead, (optional) Moderator  
-**Duration:** 1–2 hours
+The kickoff is split into two sequential, Moderator-gated phases. Neither phase ends until the Moderator explicitly approves its output. The second phase does not begin until the first is approved.
 
-**Purpose:** Align the team on scope, methodology, and tooling before AI work begins.
+---
+
+### 1a. Product Definition
+
+**When:** Once at project start; revisited when scope changes materially  
+**Who:** Moderator, with Claude chatbot, Perplexity, and Gemini as research and cross-validation tools  
+
+**Purpose:** Produce a Moderator-approved `PRODUCT.md` before any architecture work begins.
+
+Note: no `CLAUDE.md` or `AGENTS.md` exists yet at this stage. All tools are used as external chatbots or research assistants, not as configured agents.
 
 **Activities:**
 
-- Review and agree on [PRODUCT.md](../templates/PRODUCT.md)
-- Draft or review [ARCHITECTURE.md](../templates/ARCHITECTURE.md)
-- Establish the [DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md)
-- Agree on which AI agents will be used and for which roles
-- Review the [ROADMAP.md](../templates/ROADMAP.md) and identify the first step
+- Moderator uses Claude chatbot to draft and refine `PRODUCT.md`.
+- Moderator uses Perplexity for fact-finding, market context, and requirement research.
+- Moderator uses Gemini for informal cross-validation of scope, goals, and user workflows.
+- Moderator iterates across tools until satisfied — requesting `options`, `ramifications`, or alternative framings as needed.
+- Revisions loop until Moderator is satisfied.
 
-**Output:** Completed PRODUCT.md, initial ARCHITECTURE.md, DOMAIN_LANGUAGE.md, first STEP.md created
+**Gate:** Moderator explicitly approves `PRODUCT.md`. Architecture work does not begin until this gate is passed.
+
+**Output:** Approved `PRODUCT.md`.
+
+---
+
+### 1b. Architecture Definition
+
+**When:** After `PRODUCT.md` is approved; revisited when product scope changes materially  
+**Who:** Tech Lead session, Moderator  
+
+**Purpose:** Produce a Moderator-approved `ARCHITECTURE.md` and `DOMAIN_LANGUAGE.md` before the roadmap and steps are defined.
+
+**Activities:**
+
+- Moderator triggers a Tech Lead Planning Session with the approved `PRODUCT.md`.
+- Tech Lead drafts `ARCHITECTURE.md` and `DOMAIN_LANGUAGE.md`.
+- Moderator reviews and iterates — requesting `options`, `ramifications`, or cross-validation from other agents as needed.
+- Revisions loop until Moderator is satisfied.
+- Once `ARCHITECTURE.md` is approved, Tech Lead generates `ROADMAP.md`, `CLAUDE.md`, and `AGENTS.md`.
+
+**Gate:** Moderator explicitly approves `ARCHITECTURE.md`. Roadmap and step definition do not begin until this gate is passed.
+
+**Output:** Approved `ARCHITECTURE.md`, `DOMAIN_LANGUAGE.md`, `ROADMAP.md`, `CLAUDE.md`, `AGENTS.md`.
 
 ---
 
@@ -117,4 +147,4 @@ Ceremonies are structured events that create rhythm, transparency, and shared un
 
 ---
 
-MOD-W v2.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

@@ -59,8 +59,8 @@ Moderated AI Development Workflow defines a minimal set of core roles:
 - **Moderator** – human operator who orchestrates handoffs, works in the Workbench, validates builds/tests/UX, and controls quality gates.
 - **Product Owner** – defines _what_ is built and _why_, maintains `PRODUCT.md`, and sets acceptance intent.
 - **Tech Lead** – defines _how_ the product is built, maintains `ARCHITECTURE.md`, shapes the roadmap, and reviews technical quality.
-- **Development Team** – generates roadmap proposals, code, tests, and docs for each step, always under moderation. Supports two interfaces: the **Claude chatbot** (claude.ai, using `development-team-claude.md`) and **Claude Code** (CLI, using `CLAUDE.md` at the repo root). Both may be used within the same Step.
-- **QA / Tester** – validates that accepted output behaves correctly end‑to‑end (may be the Moderator on small teams).
+- **Development Team** – implements approved Steps as a Claude Code SubAgent, guided by `CLAUDE.md`. Runs a blocking build gate before handing off.
+- **QA / Tester** – validates that accepted output meets acceptance checks as a Claude Code SubAgent, after Tech Lead approval.
 - **Workbench** – local environment where the Moderator builds, runs, tests, debugs, and fine‑tunes changes before they pass any gate.
 
 See: `docs/roles.md` for full role definitions.
@@ -81,16 +81,19 @@ These extended roles are **optional** in Moderated AI Development Workflow. The 
 
 Each feature or change is delivered through small, traceable **Steps**:
 
-1. **Product shaping** – Moderator + Product Owner refine the idea into `PRODUCT.md`.
-2. **Architecture decision** – Moderator + Tech Lead capture direction in `ARCHITECTURE.md`.
-3. **Roadmap** – Tech Lead and Development Team create `ROADMAP.md` as an ordered set of Steps.
-4. **Implement a Step** – Development Team implements a single Step guided by `STEP.md`.
-5. **Workbench verification** – Moderator pulls changes locally, builds, runs tests, and checks UX.
-6. **Revision loop** – Issues go back to the Development Team with comments until green.
-7. **Tech Lead review** – Tech Lead reviews the Step for correctness and maintainability. Issues iterate to the Development Team until green.
-8. **QA + tag** – Moderator/QA records results in `QA.md` and creates an annotated Git tag for the Step.
+**Project Kickoff (once):**
+1. **Product Definition** – Moderator iterates with Claude chatbot, Perplexity, and Gemini to produce an approved `PRODUCT.md`.
+2. **Architecture Definition** – Moderator iterates with Tech Lead (Codex) to produce approved `ARCHITECTURE.md`, `ROADMAP.md`, `CLAUDE.md`, and `AGENTS.md`.
 
-In practice, this implements a **blue‑red pattern**: Tech Lead and Development Team plan and implement (blue), while Tech Lead and Moderator review and verify (red), before any change is accepted.
+**Per-Step Lifecycle:**
+3. **Define the Step** – Tech Lead (Codex) writes `STEP-XX.md`. Moderator approves.
+4. **Options Gate** – Dev Team (Claude Code) enters Plan Mode, proposes implementation plan. Moderator may request options or ramifications. Approves before any code is written.
+5. **Implement** – Dev Team implements and runs a blocking build gate. Hands off with clean build.
+6. **Tech Lead Review** – Tech Lead (Codex) reviews the diff and writes `REVIEW.md`. Sends rework directly to Dev Team if needed — no Moderator in the loop.
+7. **QA + Product Owner Validation** – QA SubAgent writes `QA.md`; Product Owner SubAgent writes sign-off. Both run after Tech Lead approves.
+8. **Moderator Final Gate** – Moderator reviews `QA.md`, performs manual checks, creates annotated Git tag, advances `ROADMAP.md`.
+
+In practice, this implements a **blue‑red pattern**: Codex (Tech Lead) plans and reviews; Claude Code (Dev Team) implements — intentional model contrast at every gate.
 
 ---
 
@@ -110,58 +113,35 @@ Gemini users can leverage **Gems** for role separation and **NotebookLM** as a p
 
 ## Using Moderated AI Development Workflow with Claude Code
 
-Claude Code is Anthropic's CLI coding agent. It runs in your terminal with direct
-access to your local repository, eliminating the copy-paste step that the chatbot
-workflow requires. In MOD-W terms, Claude Code is an alternative interface for the
-**Development Team** role — same model, same role rules, direct file writes.
+Claude Code is Anthropic's CLI coding agent. In MOD-W v3, it is the default interface for the **Development Team** and **QA** roles, operating as SubAgents within a Claude Code session.
 
 ### Where Claude Code fits
 
-Claude Code replaces the copy-paste leg of the Development Team workflow:
+| Role | Interface | Config |
+| ---- | --------- | ------ |
+| Development Team | Claude Code SubAgent | `CLAUDE.md` at repo root |
+| QA | Claude Code SubAgent | `CLAUDE.md` at repo root |
+| Product Owner (validation) | Claude Code SubAgent | `CLAUDE.md` at repo root |
 
-- The Moderator no longer needs to manually apply file changes from the chatbot.
-- Claude Code reads the full repo at session start, so context is always current.
-- The Moderator reviews diffs in VS Code before committing — the human gate is preserved.
-
-Claude Code does **not** replace the Tech Lead, Product Owner, or Moderator roles.
-MOD-W's cross-validation and human-in-the-loop discipline apply equally regardless
-of which Development Team interface is used.
+Claude Code does **not** replace the Tech Lead (Codex), Product Owner (Definition phase), or Moderator roles.
 
 ### Setup
 
-1. Place `CLAUDE.md` at the repo root. This is the Claude Code equivalent of
-   `development-team-claude.md`. Claude Code reads it automatically at session start.
-2. Generate `CLAUDE.md` using the Tech Lead: provide the project's `ARCHITECTURE.md`,
-   `DOMAIN_LANGUAGE.md`, and the `CLAUDE.md` template. The Tech Lead fills in all
-   placeholders and removes template comments.
-3. Start a Claude Code session in the project root. The Development Team role context
-   is loaded automatically — no paste required.
-
-### Switching between chatbot and Claude Code within a Step
-
-You may switch interfaces mid-Step. The recommended pattern:
-
-| Phase                     | Interface      | Why                               |
-| ------------------------- | -------------- | --------------------------------- |
-| Planning and confirmation | Claude chatbot | Conversational back-and-forth     |
-| Multi-file implementation | Claude Code    | Direct repo writes, no copy-paste |
-| Revision discussion       | Claude chatbot | Easier to discuss findings        |
-
-**Rule:** Commit the repo before switching so Claude Code reads the current file state.
+1. Complete the Project Kickoff ceremonies to produce `PRODUCT.md` and `ARCHITECTURE.md`.
+2. Run a Tech Lead (Codex) Planning Session — Codex generates `CLAUDE.md` and `AGENTS.md` from `ARCHITECTURE.md`. Place both at the repo root.
+3. Start a Claude Code session in the project root. `CLAUDE.md` loads automatically — no paste required.
+4. Dev Team SubAgent enters Plan Mode, proposes a plan, and waits for Moderator approval before writing any files.
+5. After implementation, Dev Team runs the blocking build gate (`{{BUILD_COMMAND}}` + `{{TEST_COMMAND}}`).
+6. After Tech Lead (Codex) approval, QA and Product Owner SubAgents run automatically.
 
 ### Responsibility split
 
-- **Claude Code owns:** reading repo files, proposing and writing file changes,
-  running commands the Moderator approves.
-- **MOD-W owns:** Moderator go/no-go authority, Tech Lead review, step-scoped
-  implementation discipline, quality gates.
+- **Claude Code owns:** reading repo files, implementing approved Steps, running build/test commands, SubAgent validation.
+- **MOD-W owns:** Moderator go/no-go authority at every gate, Codex Tech Lead review, step-scoped discipline, quality gates.
 
 ### Bottom line
 
-Claude Code removes friction from the Development Team workflow.
-It does not change the MOD-W roles, review model, or quality gates.
-Use `CLAUDE.md` for Claude Code. Use `development-team-claude.md` for the chatbot.
-Both encode the same role and may be used on the same project and the same Step.
+Claude Code is the implementation and validation engine. Codex is the planning and review engine. Model contrast between the two is intentional — it is MOD-W's primary cross-validation mechanism.
 
 ---
 
@@ -454,15 +434,16 @@ To get started with Moderated AI Development Workflow, you only need a small sub
 ## How to Use This Repo
 
 1. Read `docs/manifesto.md` and `docs/roles.md`.
-2. Copy the templates from `/templates` into your own project.
-3. Use the role prompts in `/prompts` to create one dedicated thread per Moderated AI Development Workflow role
-   (Product Owner, Tech Lead, Development Team, Moderator/Workbench), and adapt them to your ChatGPT / Claude / Perplexity / Gemini setup.
-   - For the **Development Team** role, choose your interface:
-     - **Claude chatbot** — paste `development-team-claude.md` at the start of a new claude.ai thread.
-     - **Claude Code** — place the generated `CLAUDE.md` at the repo root; it is read automatically at session start.
-     - Both may be used on the same project or the same Step. Commit the repo before switching interfaces.
-   - When prompting, specify the desired answer depth (`minimal`, `options`, or `full`) so you can trade off speed, optionality, and learning depth per request.
-4. Run one small feature end‑to‑end using the Moderated AI Development Workflow Step lifecycle.
+2. Copy the templates from `/templates` into your own project's `mod-w/` folder.
+3. Run the **Project Kickoff** ceremonies (`docs/ceremonies.md`):
+   - **Product Definition** — iterate with Claude chatbot, Perplexity, and Gemini to produce an approved `PRODUCT.md`.
+   - **Architecture Definition** — iterate with a Codex Tech Lead session to produce an approved `ARCHITECTURE.md`. Codex generates `CLAUDE.md` and `AGENTS.md` — place both at the repo root.
+4. For each Step, follow `docs/step-lifecycle.md`:
+   - Tech Lead (Codex) defines `STEP-XX.md` → Moderator approves
+   - Dev Team (Claude Code SubAgent) proposes plan → Moderator approves → implements → build gate
+   - Tech Lead (Codex) reviews → Dev Team revises if needed
+   - QA + Product Owner SubAgents validate → Moderator final gate
+5. When prompting, specify the desired answer depth (`minimal`, `options`, or `full`) — see `prompts/prompt-guidelines.md`.
 
 Contributions, feedback, and adoption stories are welcome – see `CONTRIBUTING.md`.
 
@@ -487,4 +468,4 @@ For inquiries, open an issue or contact the maintainer via the repository profil
 
 ---
 
-MOD-W v2.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

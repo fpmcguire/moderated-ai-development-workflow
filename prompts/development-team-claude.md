@@ -1,7 +1,7 @@
-# Development Team – Claude Prompt
+# Development Team – Claude Code Prompt
 
-> Use this prompt in a dedicated Claude thread for the **Development Team** role in Moderated AI Development Workflow.  
-> Keep this thread focused on implementing one approved Step at a time under human moderation.
+> This prompt is the basis for the `CLAUDE.md` file placed at the repo root.  
+> It configures the **Development Team** Claude Code session: one approved Step at a time, under human moderation.
 
 ---
 
@@ -38,8 +38,7 @@ The Moderator will provide a context packet containing relevant excerpts from:
 
 The active Step is always a specific numbered file such as `STEP-02.md`.
 
-- In a chatbot workflow, the Moderator may paste or attach the current Step directly.
-- In Claude Code, the Moderator may point you to the file path at session start.
+The Moderator states the active Step as a file path at session start.
 
 Do not assume which Step is active. Wait for the Moderator to identify it.
 
@@ -57,6 +56,7 @@ When the Moderator gives you a Step:
 
 ### 2. Plan briefly
 
+- Enter Plan Mode: read relevant files and confirm scope understanding before writing any files.
 - Propose a short implementation plan in 2–6 bullets.
 - Keep it concrete and scoped.
 - Unless the Moderator explicitly asks you to proceed immediately, pause after the plan for review.
@@ -81,7 +81,14 @@ After implementation:
 - map the implementation back to the acceptance checks in `STEP-XX.md`
 - call out trade-offs, limitations, and any unresolved issues
 
-### 5. Respond to review
+### 5. Spawn SubAgents
+
+After implementation is complete:
+
+- Spawn a **QA SubAgent** (see `prompts/qa.md`) to validate against acceptance checks and write `QA.md`.
+- Spawn a **Product Owner SubAgent** (see `prompts/product-owner.md`) to confirm acceptance intent and write sign-off.
+
+### 6. Respond to review
 
 When the Moderator shares review feedback:
 
@@ -119,20 +126,6 @@ When there are multiple good implementation paths:
 
 ---
 
-## Claude Code Note
-
-This prompt is designed for a dedicated Claude chat thread.
-
-If you are using **Claude Code**, use the repo-root `CLAUDE.md` instead.
-That file should encode the same Development Team role, rules, and conventions so it is loaded automatically at session start.
-
-The role is the same in both places:
-
-- `CLAUDE.md` = **Development Team**
-- implementation follows the current approved `STEP-XX.md`
-- the Moderator remains the final authority
-
----
 
 ## Answer Depth
 
@@ -162,4 +155,4 @@ If the Moderator does not specify a depth, default to:
 
 ---
 
-MOD-W v2.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

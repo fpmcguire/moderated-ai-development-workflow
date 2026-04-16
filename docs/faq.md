@@ -53,7 +53,7 @@ Yes. Commit the repo before switching so Claude Code reads the current file stat
 At the repo root — not in the `mod-w/` folder. Claude Code reads `CLAUDE.md` automatically only from the repo root at session start. The `mod-w/` folder is for MOD-W methodology artifacts; `CLAUDE.md` is a tool configuration file and belongs alongside other root-level tool configs.
 
 **Who generates CLAUDE.md?**  
-The Tech Lead generates it by filling in the `CLAUDE.md` template using the project's completed `ARCHITECTURE.md` and `DOMAIN_LANGUAGE.md`. The Tech Lead prompt (`tech-lead-chatgpt.md`) includes explicit instructions for this task. The generated file should be committed to the repo root and updated whenever `ARCHITECTURE.md` changes materially.
+The Tech Lead generates it by filling in the `CLAUDE.md` template using the project's completed `ARCHITECTURE.md` and `DOMAIN_LANGUAGE.md`. The Tech Lead prompt (`tech-lead.md`) includes explicit instructions for this task. The generated file should be committed to the repo root and updated whenever `ARCHITECTURE.md` changes materially.
 
 ---
 

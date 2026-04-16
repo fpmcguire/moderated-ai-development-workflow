@@ -22,49 +22,50 @@ Each agent has:
 
 ### Product Owner
 
-**Role:** Product definition and scope
-**Models:** ChatGPT + Perplexity
+**Role:** Product definition and acceptance validation
+**Interface (Definition):** Claude chatbot + Perplexity + Gemini — no project infrastructure yet
+**Interface (Validation):** Claude Code SubAgent
 **Responsibility:**
 
-- Define PRODUCT.md
-- Maintain R-IDs
-- Validate external facts
+- Author and maintain PRODUCT.md (via chatbot at project start)
+- Validate completed Steps against acceptance checks (via SubAgent, after Tech Lead approval)
+- Sign off before Moderator final gate
 
 ---
 
 ### Tech Lead
 
-**Role:** Architecture and planning
-**Model:** Codex
+**Role:** Architecture, planning, and technical review
+**Interface:** Codex (full session, reads AGENTS.md)
 **Responsibility:**
 
-- Maintain ARCHITECTURE.md (D-IDs)
-- Generate ROADMAP.md
-- Define STEP-XX.md
+- Author and maintain ARCHITECTURE.md, ROADMAP.md, STEP-XX.md
+- Generate project-specific CLAUDE.md and AGENTS.md
+- Review completed Steps and write REVIEW.md
 
 ---
 
 ### Development Team
 
 **Role:** Implementation
-**Model:** Claude Code
+**Interface:** Claude Code SubAgent (reads CLAUDE.md)
 **Responsibility:**
 
-- Implement STEP-XX.md
-- Produce code + tests
-- Stay within scope
+- Implement STEP-XX.md following the approved plan
+- Run blocking build gate before handing off
+- Produce code + tests scoped to the active Step
 
 ---
 
-### Cross-Check Reviewer
+### QA
 
-**Role:** Independent validation
-**Model:** Gemini
+**Role:** Acceptance validation
+**Interface:** Claude Code SubAgent
 **Responsibility:**
 
-- Validate plans and implementations
-- Detect missing requirements
-- Identify risks and scope drift
+- Validate implementation against STEP-XX.md acceptance checks
+- Write QA.md with results and manual check list
+- Runs after Tech Lead approval
 
 ---
 
@@ -95,4 +96,4 @@ Each agent has:
 
 ---
 
-MOD-W v2.1.0
+MOD-W v3.0.0

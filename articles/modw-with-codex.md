@@ -17,17 +17,19 @@ This article explains:
 
 ## Where Codex fits in MOD-W
 
-In the default MOD-W setup, ChatGPT supports the **Tech Lead** role. Codex is a direct alternative for teams that want the Tech Lead agent to work closer to the repository — reading project files directly rather than relying on copy-paste context.
+In MOD-W v3, Codex is the **default** agent for the **Tech Lead** role. It reads `AGENTS.md` from the repo root, writes planning artifacts directly to the filesystem, and reviews Development Team output — no copy-paste required.
 
-| Role             | Default agent        | Codex alternative |
-| ---------------- | -------------------- | ----------------- |
-| Product Owner    | ChatGPT              | —                 |
-| **Tech Lead**    | **ChatGPT**          | **Codex**         |
-| Development Team | Claude / Claude Code | —                 |
-| QA / Tester      | Human (Moderator)    | —                 |
-| Moderator        | Human only           | —                 |
+| Role             | Default agent (v3)                                    |
+| ---------------- | ----------------------------------------------------- |
+| Product Owner    | Claude chatbot + Perplexity + Gemini (Definition phase); Claude Code SubAgent (Validation) |
+| **Tech Lead**    | **Codex** (full session, reads `AGENTS.md`)           |
+| Development Team | Claude Code SubAgent (reads `CLAUDE.md`)              |
+| QA               | Claude Code SubAgent                                  |
+| Moderator        | Human only                                            |
 
-Codex does **not** replace the Moderator, Product Owner, or Development Team. It supports the Tech Lead role only: generating roadmaps, writing step briefs, and reviewing Development Team output for architectural fit.
+Cross-validation is intentional: Codex plans and reviews; Claude Code implements. Model diversity at the Tech Lead / Dev Team boundary is MOD-W's primary quality lever.
+
+Codex does **not** replace the Moderator, Product Owner, or Development Team. It owns the Tech Lead role only: planning artifacts, step briefs, and technical review.
 
 ---
 
@@ -35,7 +37,7 @@ Codex does **not** replace the Moderator, Product Owner, or Development Team. It
 
 Codex reads `AGENTS.md` from the repo root at session start, the same way Claude Code reads `CLAUDE.md`. This file is the Tech Lead's primary configuration artifact for Codex — it defines the role, the context files to read, the expected outputs, and the conventions to follow.
 
-**Who generates it:** The Tech Lead (using ChatGPT or directly) generates `AGENTS.md` from the project's `ARCHITECTURE.md` and `DOMAIN_LANGUAGE.md` using the `templates/AGENTS.md` template.
+**Who generates it:** The Tech Lead (Codex) generates `AGENTS.md` from the project's `ARCHITECTURE.md` and `DOMAIN_LANGUAGE.md` using the `templates/AGENTS.md` template, during the Architecture Definition planning session.
 
 **Where it lives:** Repo root — `AGENTS.md`.
 
@@ -153,4 +155,4 @@ Codex (Tech Lead) and Claude Code (Development Team) are designed to work alongs
 
 ---
 
-MOD-W v2.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

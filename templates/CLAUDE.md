@@ -35,6 +35,7 @@ Use supporting artifacts as needed:
 - `PRODUCT.md` for product intent and scope
 - `ARCHITECTURE.md` for stack, boundaries, and conventions
 - `DOMAIN_LANGUAGE.md` for canonical terminology
+- `AGENTS.md` for the Tech Lead's architectural constraints and review criteria — read this to understand what the Tech Lead will check against your implementation
 - `REVIEW.md` and `QA.md` for previous findings when relevant
 
 Do not scan or rewrite the entire repository by default.
@@ -49,10 +50,19 @@ When given a Step:
 1. Restate the Step goal and scope briefly.
 2. Identify the relevant acceptance checks.
 3. Identify the likely files to change.
-4. Propose a short implementation plan.
-5. Unless explicitly told to proceed immediately, pause for Moderator approval.
-6. Implement the Step with the smallest reasonable change set.
-7. Summarize what changed and map it back to the acceptance checks.
+4. Enter Plan Mode: read relevant files and confirm scope understanding before writing any files.
+5. Propose a short implementation plan.
+6. **Implementation Options Gate** — pause here. Do not write any files yet.
+   - By default, present one recommended plan.
+   - If the Moderator requests `options`, present 2–3 implementation paths with trade-offs and a recommendation (see `prompts/prompt-guidelines.md`).
+   - If the Moderator requests `ramifications`, add technical debt risks, side effects, and likely future pain points for the recommended path.
+   - Wait for explicit Moderator approval before proceeding.
+7. Implement the Step with the smallest reasonable change set.
+8. **Build Gate** — blocking. Run:
+   - `{{BUILD_COMMAND}}`
+   - `{{TEST_COMMAND}}`
+   If either fails, fix the failures and re-run. Do not proceed until both pass cleanly.
+9. Summarize what changed and map it back to the acceptance checks.
 
 ---
 
@@ -139,12 +149,14 @@ Do not assume which Step is active.
 
 This file defines the **Development Team** role only.
 
-- `CLAUDE.md` = Development Team
-- `AGENTS.md` = Tech Lead
+- `CLAUDE.md` = Development Team (Claude Code — this file)
+- `AGENTS.md` = Tech Lead (Codex) — also serves as the cross-validation reference between these two roles
 - Moderator = human final decision-maker
+
+Cross-validation: Tech Lead (Codex) plans and reviews; Development Team (Claude Code) implements. Model diversity is intentional.
 
 Do not blur these roles.
 
 ---
 
-MOD-W v2.1.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

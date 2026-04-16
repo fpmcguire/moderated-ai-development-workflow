@@ -158,4 +158,4 @@ The change is only "finished" when it moves from a delta to the system's permane
 
 ---
 
-MOD-W v2.1.0 · Moderated AI Development Workflow
+MOD-W v3.0.0 · Moderated AI Development Workflow
