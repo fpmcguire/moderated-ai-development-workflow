@@ -6,128 +6,114 @@ Use this checklist for every Step in the MOD-W workflow.
 
 ## 1. Before Engaging AI
 
-- [ ] ROADMAP.md: next Step chosen and clearly named.
-- [ ] STEP-XX.md: goal, scope, inputs, required changes, acceptance checks, risks filled in.
-- [ ] DOMAIN_LANGUAGE.md: key terms for this Step defined or updated.
-- [ ] PRODUCT.md / ARCHITECTURE.md: still accurate for this Step.
+- [ ] `ROADMAP.md`: next Step chosen and clearly named.
+- [ ] `STEP-XX.md`: goal, scope, inputs, required changes, acceptance checks, and risks filled in.
+- [ ] `DOMAIN_LANGUAGE.md`: key terms for this Step defined or updated.
+- [ ] `PRODUCT.md` / `ARCHITECTURE.md`: still accurate for this Step.
+- [ ] `CLAUDE.md` and `AGENTS.md`: current at repo root (regenerate via Tech Lead if `ARCHITECTURE.md` has changed).
 
 ---
 
-## 2. With Product Owner (ChatGPT)
+## 2. Tech Lead Planning Session (Codex)
 
-- [ ] Present Step context and current PRODUCT.md excerpt.
-- [ ] Ask for refinement of:
-  - Problem/goal wording
-  - User workflows touched by this Step
-  - Acceptance intent for this Step
-- [ ] Apply any clarifications back into PRODUCT.md and STEP-XX.md.
+Trigger a Tech Lead Planning Session when starting a new project phase or when `ARCHITECTURE.md`, `ROADMAP.md`, or `STEP-XX.md` needs to be generated or updated.
 
----
-
-## 3. With Tech Lead (ChatGPT)
-
-- [ ] Present PRODUCT.md, ARCHITECTURE.md excerpt, DOMAIN_LANGUAGE.md rows, and STEP-XX.md.
-- [ ] Ask Tech Lead to:
-  - Confirm Step scope (small, verifiable, technically sane).
-  - Suggest likely affected files and data structures.
-  - Flag any architectural risks.
-- [ ] Update ARCHITECTURE.md and STEP-XX.md as needed.
-- [ ] If ARCHITECTURE.md changed materially, ask Tech Lead to regenerate CLAUDE.md and commit the updated file to the repo root before briefing the Development Team.
+- [ ] Open a Codex session — `AGENTS.md` loads automatically.
+- [ ] Provide `PRODUCT.md` and existing `ARCHITECTURE.md` (if present).
+- [ ] Ask Tech Lead to generate or update:
+  - `ARCHITECTURE.md`
+  - `DOMAIN_LANGUAGE.md`
+  - `ROADMAP.md`
+  - `STEP-XX.md` for the current Step
+  - `CLAUDE.md` and `AGENTS.md` (from `ARCHITECTURE.md` and the MOD-W templates)
+- [ ] Review all artifacts and iterate until Moderator-approved.
+- [ ] Confirm `CLAUDE.md` and `AGENTS.md` are committed to the repo root before briefing the Development Team.
 
 ---
 
-## 4. Briefing the Development Team (Claude)
+## 3. Brief the Development Team (Claude Code)
 
-- [ ] Choose the Development Team interface for this Step:
-
-  **Option A — Claude chatbot (claude.ai)**
-  - [ ] Prepare a **context packet**: relevant PRODUCT.md sections, ARCHITECTURE.md sections, DOMAIN_LANGUAGE.md rows, and full STEP-XX.md.
-  - [ ] Open a new claude.ai thread and paste `development-team-claude.md` as the role prompt.
-  - [ ] Attach or paste the active `STEP-XX.md` directly into the thread.
-
-  **Option B — Claude Code (CLI)**
-  - [ ] Confirm `CLAUDE.md` is current in the repo root (regenerate via Tech Lead if ARCHITECTURE.md has changed).
-  - [ ] Start a Claude Code session in the project root — role context loads automatically.
-  - [ ] State the active Step at session start, e.g.: `The current Step is apps/my-app/mod-w/STEP-02.md`
-
-  **Option C — Hybrid (chatbot for planning, Claude Code for implementation)**
-  - [ ] Use the chatbot for the planning and confirmation pass.
-  - [ ] Commit the repo before switching to Claude Code.
-  - [ ] State the active Step path when opening the Claude Code session.
-
-- [ ] Instruct Development Team to:
-  - Restate goal and scope.
-  - Propose a short plan and wait for approval.
-- [ ] Approve or adjust the plan before any code is generated.
+- [ ] Open a Claude Code session in the project root — `CLAUDE.md` loads automatically.
+- [ ] State the active Step at session start, e.g.: `The current Step is STEP-02.md`
+- [ ] Ask the Development Team to restate the goal and scope in their own words.
+- [ ] Confirm the restatement is correct before proceeding. Correct any misunderstandings now.
 
 ---
 
-## 5. Workbench Verification (Local)
+## 4. Implementation Options Gate
 
-After Development Team delivers the Step:
+- [ ] Development Team enters Plan Mode: reads relevant files, proposes implementation plan. No files written yet.
+- [ ] Review the proposed plan.
+- [ ] Optionally request:
+  - `options` — 2–3 implementation paths with trade-offs and a recommendation
+  - `ramifications` — technical debt risks, side effects, and likely pain points
+- [ ] Approve the plan explicitly before any code is written.
+- [ ] If the plan reveals scope or architectural concerns, pause and return to the Tech Lead before proceeding.
 
-- [ ] Pull changes into local repo (Workbench).
-- [ ] Run build.
-- [ ] Run tests (and linters if configured).
-- [ ] Manually exercise the Step behaviour in the UI.
-- [ ] Use Copilot only for:
-  - Small refactors
-  - Minor bug fixes
-  - Non-controversial cleanup
-- [ ] Record results in QA.md (for this Step).
-- [ ] Draft findings in REVIEW.md.
+---
+
+## 5. Implementation and Build Gate
+
+Claude Code edits files directly in the repo — no pull or paste required.
+
+- [ ] Monitor progress and respond to any clarifying questions from the Development Team.
+- [ ] After implementation, confirm the Development Team has run and passed the build gate:
+  - `{{BUILD_COMMAND}}`
+  - `{{TEST_COMMAND}}`
+- [ ] Review the diff in the Workbench (VS Code). The diff is the source of truth, not the summary.
 
 If issues are significant:
-
 - [ ] Summarize problems clearly.
-- [ ] Send feedback back to Development Team and repeat until acceptance checks are met.
+- [ ] Return feedback to the Development Team and repeat until acceptance checks are met.
 
 ---
 
-## 6. Tech Lead Review
+## 6. QA + Product Owner SubAgents
 
-- [ ] Prepare a **handoff packet** for Tech Lead:
-  - STEP-XX.md
-  - Summary of changes (files, behaviours)
-  - Key diffs or descriptions
-  - QA/verification summary
-- [ ] Ask Tech Lead for:
-  - Architectural fit review
-  - Naming and structure feedback
-  - Must-fix vs nice-to-have items
-- [ ] Record recommendations in REVIEW.md.
-- [ ] If must-fix items exist, send back to Development Team and re-verify.
+The Development Team spawns these automatically after the build gate passes.
+
+- [ ] Review `QA.md` produced by the QA SubAgent:
+  - acceptance check outcomes
+  - manual checks requiring human or browser verification
+  - known limitations
+- [ ] Review the Product Owner SubAgent sign-off.
+- [ ] Perform any manual checks flagged by the QA SubAgent (UX, visual, edge cases) in the Workbench.
+- [ ] If acceptance checks are not met, return findings to the Development Team.
 
 ---
 
-## 7. QA & Documentation
+## 7. Tech Lead Review Session (Codex)
 
-- [ ] Finalize QA.md for this Step:
-  - Tests run and results
-  - Manual checks list
-  - Bugs found and their status
-  - Regression risk and confidence level
-- [ ] Update PRODUCT.md if behaviour or UX changed.
-- [ ] Update ARCHITECTURE.md if design decisions changed.
-- [ ] Update ROADMAP.md to mark this Step complete and adjust future Steps if needed.
-- [ ] If ARCHITECTURE.md was updated, ask Tech Lead to regenerate CLAUDE.md for the next Step.
+- [ ] Open a Codex Review Session — `AGENTS.md` loads automatically.
+- [ ] Ask the Tech Lead to review the implementation against the active `STEP-XX.md`.
+- [ ] Codex reads the changed files and `QA.md` directly — no handoff packet required.
+- [ ] Review `REVIEW.md` findings:
+  - **Must-fix** items return to the Development Team.
+  - **Could-fix-later** items are logged for a future Step.
+- [ ] Repeat the Development Team → Build Gate → QA → Tech Lead loop until all must-fix items are resolved.
 
 ---
 
 ## 8. Tag and Advance
 
+- [ ] Confirm all acceptance checks pass.
+- [ ] Confirm `REVIEW.md` and `QA.md` are complete.
 - [ ] Create an **annotated Git tag** for the Step, including:
   - Step identifier (e.g., `step-01-saved-views-list`)
   - Short description
-  - References to STEP-XX.md, REVIEW.md, QA.md
-  - Notable decisions / caveats
+  - References to `STEP-XX.md`, `REVIEW.md`, `QA.md`
+  - Notable decisions or caveats
 - [ ] Push the tag to the remote repository.
-- [ ] Select the next Step from ROADMAP.md and move back to section 1.
+- [ ] Update `PRODUCT.md` if behaviour or UX changed meaningfully.
+- [ ] Update `ARCHITECTURE.md` if design decisions changed.
+- [ ] Update `ROADMAP.md` to mark the Step complete and adjust future Steps if needed.
+- [ ] If `ARCHITECTURE.md` was updated, ask the Tech Lead to regenerate `CLAUDE.md` for the next Step.
+- [ ] Select the next Step from `ROADMAP.md` and return to section 1.
 
 ---
 
-This checklist should be lightweight enough to use for every Step but strict enough to preserve Moderated AI Development Workflow's multi-layer validation and traceability.
+This checklist should be lightweight enough to use for every Step but strict enough to preserve MOD-W's multi-layer validation and traceability.
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

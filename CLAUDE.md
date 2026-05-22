@@ -1,132 +1,78 @@
-# CLAUDE.md — Development Team Role (MOD-X)
+# CLAUDE.md
 
-> This file is read automatically by Claude Code at session start.
-> It establishes the Development Team role for the MOD-X project.
-> Generated and maintained by the Tech Lead.
-> Update this file whenever the core workflow, artifact structure, or rules change.
+> Instructions for Claude Code working in the `moderated-ai-development-workflow` repository.
+> This file is repository-specific and is intended to guide direct local edits.
 
----
+## Purpose
 
-## Role
+This repository contains the MOD-W methodology itself: documentation, templates, prompts, examples, and supporting project files.
 
-You are the **Development Team** in the Moderated AI Development Workflow.
+Use this file as the working agreement for editing this repository safely and consistently.
 
-You are responsible for implementing updates to the MOD-X repository itself—including methodology docs, templates, and integration playbooks. You do not redefine the core principles of MOD-W/MOD-X without explicit instruction.
+## Working Style
 
-- Implement only the current Step as described in the active `STEP-XX.md`.
-- Respect `PRODUCT.md` (the workflow vision) and `ARCHITECTURE.md` (the repo structure).
-- Maintain strict naming consistency for artifacts (e.g., `DOMAIN_LANGUAGE_MATRIX.md`).
-- Ask clarifying questions if a workflow change is ambiguous **before** editing docs.
-- The human Moderator has final authority over all "canonical" methodology changes.
+- Edit files directly when the requested change is clear.
+- Keep changes minimal and scoped to the request.
+- Preserve terminology and internal consistency across docs, templates, prompts, and examples.
+- Do not make broad repo-wide rewrites unless explicitly asked.
+- Do not rename or move canonical files unless explicitly asked.
+- When a change has ripple effects, note the affected files.
 
----
+## Source of Truth
 
-## Project
+When relevant, use these in order:
 
-**Name:** MOD-X (Moderated AI Development Workflow)  
-**MOD-W docs:** `/docs/method/`
+1. the user’s current request
+2. canonical docs in `docs/`
+3. root guidance files such as `CLAUDE.md` and `AGENTS.md`
+4. templates in `templates/`
+5. prompts in `prompts/`
+6. examples and supporting files
 
----
+If files conflict, preserve the current canon and highlight the inconsistency.
 
-## Technology Stack
+## What to Prioritize
 
-| Layer      | Technology       | Version | Notes                                    |
-| ---------- | ---------------- | ------- | ---------------------------------------- |
-| Language   | Markdown         | GFM     | Primary format for all artifacts.        |
-| Validation | Markdownlint     | Latest  | Ensures doc consistency.                 |
-| CI/CD      | GitHub Actions   | —       | Used for link checking and linting.      |
-| Templates  | Liquid / Mustache| —       | Used in `templates/` for placeholder IDs.|
+Prioritize quality and consistency in:
 
-**Key commands:**
+- MOD-W terminology
+- role definitions
+- template correctness
+- prompt correctness
+- internal links and references
+- naming consistency for canonical artifacts
+- alignment between docs, templates, prompts, and examples
 
-```bash
-npm run lint          # Run markdown linter
-npm run test:links    # Verify all internal cross-references
-npm run build:docs    # (Optional) Generate static site from docs
-```
+## Editing Rules
 
----
+- Read only the files relevant to the task.
+- Prefer small diffs over rewrites.
+- Preserve useful existing content unless there is a clear reason to replace it.
+- Keep Markdown clear, structured, and easy to scan.
+- Keep copy/paste templates clean and practical.
+- For template files, preserve placeholders intentionally.
+- For project-specific files, remove template placeholders and make content concrete.
 
-## Patterns and Conventions
+## When to Ask Before Editing
 
-### Documentation conventions
-- Use **Tiered Artifacts**: Core (Required), Control (Review/QA), and Adapters (Tool-specific).
-- Every `.md` file must have a version footer: `MOD-W v2.x.x`.
-- Prefer relative links for internal documentation navigation.
+Ask before proceeding only when:
 
-### Repository conventions
-- `docs/method/`: Contains the "Canon" (Rules, Lifecycle, Roles).
-- `templates/`: Contains the "Empty Shells" for new projects.
-- `prompts/`: Contains operational system prompts for AI roles.
-- `adapters/`: Contains tool-specific playbooks (Claude Code, Spec Kit, etc.).
+- the request is ambiguous
+- multiple files conflict in a way that changes meaning
+- the change would alter core methodology semantics
+- the change implies a broad structural rewrite, rename, or move
 
-### Naming conventions
-- Use `SNAKE_CASE` for canonical artifact names (e.g., `ARCHITECTURE.md`).
-- Use `kebab-case` for folder names and non-canonical documents.
-- Use the term **"Moderator"** for the human-in-the-loop, never "User."
+Otherwise, make the edit directly.
 
----
+## Output Expectations
 
-## App Structure
+After making changes, summarize:
 
-```text
-/
-├── .workflow/           # Internal system rules and role prompts
-├── adapters/            # Playbooks for external tools (e.g., OpenSpec)
-├── docs/
-│   ├── method/          # Canonical methodology (The Law)
-│   └── architecture/    # Repo structural design
-├── experimental/        # Sandbox for new roles/features
-├── templates/           # Starters for new MOD-W projects
-└── CLAUDE.md            # This file
-```
+- which files were changed
+- what changed in each file
+- any follow-up inconsistencies noticed but not changed
 
----
+## Notes
 
-## Domain Language
-
-| Term               | Code identifier    | UI label           | Avoid              |
-| ------------------ | ------------------ | ------------------ | ------------------ |
-| Proposer           | `role_proposer`    | Proposer           | Agent A            |
-| Reviewer           | `role_reviewer`    | Reviewer           | Agent B            |
-| Step Brief         | `step_brief`       | Step Brief         | Task / Ticket      |
-| Workbench          | `workbench`        | Workbench          | Local Dev          |
-
----
-
-## MOD-W Document Locations
-
-| Document           | Path                                     |
-| ------------------ | ---------------------------------------- |
-| PRODUCT.md         | `/docs/method/manifesto.md`              |
-| ARCHITECTURE.md    | `/docs/architecture/repo-structure.md`   |
-| ROADMAP.md         | `/ROADMAP.md`                            |
-| DOMAIN_MATRIX      | `/docs/method/domain-language.md`        |
-| Active Step        | Provided by Moderator (usually a GitHub Issue or `STEP-XX.md`) |
-| REVIEW.md          | `/templates/REVIEW.md`                   |
-
----
-
-## Development Team Tasks (per Step)
-
-1. **Confirm Understanding**: Restate the methodology change and which docs are affected.
-2. **Plan Briefly**: Outline the specific sections or files to be updated.
-3. **Implement**: Apply changes to Markdown files, ensuring linter compliance.
-4. **Summarize**: List every doc change and its impact on the "Canon."
-5. **Respond to Review**: Address Moderator feedback regarding clarity or logic.
-
----
-
-## Answer Depth
-
-The Moderator specifies depth per request. **Default is `minimal`.**
-
-| Depth     | Meaning                                                              |
-| --------- | -------------------------------------------------------------------- |
-| `minimal` | One direct implementation or answer. **(default)** |
-| `options` | Multiple ways to structure a rule or doc with trade-offs.            |
-| `full`    | Deep dive into the SDD theory behind a change.                       |
-
----
-
-MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+This file is for working in the MOD-W repository itself.
+It is not a project template and does not need to simulate MOD-W roles unless explicitly requested.

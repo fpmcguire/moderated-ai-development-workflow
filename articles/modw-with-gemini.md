@@ -35,7 +35,7 @@ Use these as your source of truth:
 - [templates/REVIEW.md](../templates/REVIEW.md)
 - [templates/QA.md](../templates/QA.md)
 - [templates/DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md)
-- [templates/AGENTS.md](../templates/AGENTS.md)
+- [templates/AI_AGENTS.md](../templates/AI_AGENTS.md)
 
 Treat Gemini chats as working notes. Move accepted content into repo artifacts.
 
@@ -54,8 +54,8 @@ Do not mix roles in one thread. Context mixing causes scope drift and weak hando
 
 Start from:
 
-- [prompts/product-owner-chatgpt.md](../prompts/product-owner-chatgpt.md)
-- [prompts/tech-lead-chatgpt.md](../prompts/tech-lead-chatgpt.md)
+- [prompts/product-owner.md](../prompts/product-owner.md)
+- [prompts/tech-lead.md](../prompts/tech-lead.md)
 - [prompts/development-team-claude.md](../prompts/development-team-claude.md)
 - [docs/moderator-checklist.md](../docs/moderator-checklist.md)
 - [prompts/prompt-guidelines.md](../prompts/prompt-guidelines.md)
@@ -90,7 +90,7 @@ Recommended NotebookLM source set:
 - [templates/ARCHITECTURE.md](../templates/ARCHITECTURE.md)
 - [templates/ROADMAP.md](../templates/ROADMAP.md)
 - [templates/DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md)
-- [templates/AGENTS.md](../templates/AGENTS.md)
+- [templates/AI_AGENTS.md](../templates/AI_AGENTS.md)
 - relevant Step files and review artifacts for active work
 
 How to use it in MOD-W:
@@ -231,4 +231,4 @@ If evidence is weak, request a revision and keep the step open.
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

@@ -29,4 +29,4 @@
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

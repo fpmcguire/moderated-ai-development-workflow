@@ -41,7 +41,7 @@ Its job is to **verify and fine‑tune**, not to replace the Moderated AI Develo
 
 ## Typical Workbench Flow for a Step
 
-1. Pull the Development Team’s branch / patch.
+1. Review the diff — Claude Code edits files directly in the repo, no pull required.
 2. Build, run tests, and lint.
 3. Manually test the Step in the UI.
 4. Apply small fixes with Copilot if needed.
@@ -51,4 +51,4 @@ Its job is to **verify and fine‑tune**, not to replace the Moderated AI Develo
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

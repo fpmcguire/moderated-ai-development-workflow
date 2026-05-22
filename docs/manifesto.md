@@ -39,10 +39,14 @@ Work is broken into discrete, reviewable steps. Each step has a clear input, a c
 
 Every decision, every AI prompt, every moderation judgement is recorded. This creates a living record that the team can learn from, audit, and improve.
 
+### The workflow must evolve with the tooling
+
+AI tooling is advancing faster than any methodology can anticipate. A workflow that was correct last year may be inadequate today — not because it was wrong, but because the tools have changed what is possible and what is risky. MOD-W is not a finished specification being refined toward perfection. It is a continuous, versioned response to the evolving reality of AI-assisted development. Each version is the best available workflow at that moment. New versions are expected, intentional, and necessary.
+
 ---
 
 _Moderated AI Development Workflow is inspired by the [Agile Manifesto](https://agilemanifesto.org/) and adapted for the age of AI-assisted development._
 
 ---
 
-MOD-W v2.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
