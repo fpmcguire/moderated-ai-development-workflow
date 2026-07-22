@@ -13,7 +13,7 @@ Each role works against a small set of shared files that keep intent, architectu
 | ARCHITECTURE.md                | Tech Lead       | How we're building it                        |
 | DOMAIN_LANGUAGE.md             | Tech Lead       | Shared domain and agent language             |
 | ROADMAP.md                     | Tech Lead       | Ordered list of Steps                        |
-| STEP.md                        | Tech Lead       | Brief for a single Step                      |
+| STEP-XX.md                     | Tech Lead       | Brief for a single Step                      |
 | REVIEW.md                      | Moderator       | Review history and decisions per Step        |
 | QA.md                          | Moderator / QA  | Test and verification record per Step        |
 | AI_AGENTS.md                   | Tech Lead       | Instructions and conventions for AI agents   |
@@ -92,7 +92,7 @@ ROADMAP.md is the bridge between product intent and implementation work.
 
 ---
 
-## STEP.md
+## STEP-XX.md
 
 **Owner:** Tech Lead (per Step)  
 **Audience:** Development Team, Moderator, Tech Lead
@@ -105,7 +105,7 @@ Defines a single Step:
 - Acceptance checks
 - Risks and notes for reviewers
 
-STEP.md is the main brief for the Development Team agent. It is provided to the Development Team at session start — attached or pasted in the Claude chatbot, or stated as a file path in Claude Code.
+STEP-XX.md is the main brief for the Development Team agent. It is provided to the Development Team at session start by naming the active Step file in the assigned Development Team interface.
 
 ---
 
@@ -188,11 +188,23 @@ For each new project or example:
 1. Copy templates from `/templates` into the project root.
 2. Fill out PRODUCT.md and ARCHITECTURE.md first.
 3. Create DOMAIN_LANGUAGE.md as soon as core terms appear.
-4. Maintain ROADMAP.md and STEP.md as you plan work.
+4. Maintain ROADMAP.md and STEP-XX.md as you plan work.
 5. Update REVIEW.md and QA.md for every Step.
 6. Keep AI_AGENTS.md aligned with your actual tools and commands.
 7. Generate CLAUDE.md from the template using the Tech Lead once ARCHITECTURE.md is stable. Place it at the repo root.
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+### Design + Prototyper artifacts (v4)
+
+- **`DESIGN-SPEC.md`** (in `mod-w/`) — visual identity, component library, screen layouts, interaction patterns, and domain language proposals. Authored by Designer + Prototyper; authoritative on Product Owner + Moderator approval.
+- **`ARCHITECTURE-NOTES.md`** (in `mod-w/`) — advisory observations from the Prototype Ceremony for the Tech Lead's consideration during Architecture Definition. **Not authoritative.** Retained for the life of the project as historical context.
+- **`prototype/`** (at repo root) — clickable prototype produced during the Prototype Ceremony. **Research artifact, non-authoritative.** Carries a `prototype/README.md` stating the disclaimer. Frozen after Architecture Handoff.
+
+### Reference Implementation (v4, concept — not a file)
+
+A **Reference Implementation** is a candidate implementation produced outside the Development Team role — typically inside `prototype/`. It does **not** auto-promote to production. The Tech Lead disposes of it in `STEP-XX.md §"Reference Implementation"` as `Adopt as-is`, `Adopt with modifications`, or `Reject`.
+
+---
+
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

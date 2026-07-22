@@ -40,4 +40,4 @@ Cross-check / Reviewer
 
 ---
 
-MOD-W v3.0.0
+MOD-W v4.0.0

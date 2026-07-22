@@ -56,11 +56,13 @@ The Tech Lead operates in two session types triggered by the Moderator.
 
 Triggered before implementation begins on a new Step or project phase.
 
-1. Read `PRODUCT.md` and existing `ARCHITECTURE.md` (if present).
+1. Read `PRODUCT.md` and, **if the Prototype Ceremony ran** (v4), also read `mod-w/DESIGN-SPEC.md`, `prototype/`, and `mod-w/ARCHITECTURE-NOTES.md`. All four are inputs to the Architecture Handoff (`docs/architecture-handoff.md`). Read existing `ARCHITECTURE.md` if present.
 2. Write or update `ARCHITECTURE.md`.
 3. Write or update `ROADMAP.md`.
 4. Write `STEP-XX.md` for the current step.
 5. Generate or update `CLAUDE.md` and `AGENTS.md`.
+6. **Architecture Handoff (v4, if Prototype Ceremony ran).** When authoring `ARCHITECTURE.md` from prototype inputs, you have explicit authority to override structures implied by the prototype. Record any material divergence in `ARCHITECTURE.md §"Decisions That Diverge From Prototype"` with rationale. `ARCHITECTURE-NOTES.md` is advisory input, not constraint.
+7. **Domain Language ratification (v4).** When the prototype proposed terms in `DESIGN-SPEC.md §"Domain Language Proposals"`, ratify, modify, or reject each in `DOMAIN_LANGUAGE.md` with a one-line rationale per term.
 
 ### Review Session
 
@@ -196,4 +198,4 @@ Default: `minimal` for review tasks, `options` for planning and architecture tas
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

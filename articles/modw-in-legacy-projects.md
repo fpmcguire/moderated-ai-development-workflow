@@ -52,7 +52,7 @@ For legacy, you can start with a very small set of MOD-W docs:
   - modules involved,
   - major dependencies,
   - “do not touch” zones.
-- `STEP.md` – for the **one** piece of work you want to run through MOD-W.
+- `STEP-XX.md` – for the **one** piece of work you want to run through MOD-W.
 - `REVIEW.md` and `QA.md` – to record what was checked and why it was accepted.
 
 You don’t need to document the entire legacy system up front.  
@@ -88,7 +88,7 @@ Your goal is to prove that **MOD-W can improve clarity and safety** on a small c
 For that first legacy Step:
 
 1. **Shape the Step**
-   - Fill in `STEP.md`:
+   - Fill in `STEP-XX.md`:
      - current behavior (as observed),
      - desired change,
      - affected files or modules,
@@ -198,4 +198,4 @@ You just need to make sure every AI‑assisted change makes it a little safer an
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

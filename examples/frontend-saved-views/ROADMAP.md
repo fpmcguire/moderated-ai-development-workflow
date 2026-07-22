@@ -153,4 +153,4 @@ Allow users to rename or delete existing Saved Views for the current dashboard.
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

@@ -11,7 +11,7 @@ An AI model (such as ChatGPT or Claude) assigned a specific role in the Moderate
 A ceremony in which the Tech Lead submits prompts to an AI agent to generate step artifacts. See [ceremonies.md](ceremonies.md).
 
 **Artifact**  
-Any document, file, or record produced during a Moderated AI Development Workflow step or project. Artifacts include PRODUCT.md, ARCHITECTURE.md, STEP.md, REVIEW.md, and QA.md. See [artifacts.md](artifacts.md).
+Any document, file, or record produced during a Moderated AI Development Workflow step or project. Artifacts include PRODUCT.md, ARCHITECTURE.md, STEP-XX.md, REVIEW.md, and QA.md. See [artifacts.md](artifacts.md).
 
 **Ceremony**  
 A structured, time-boxed event in the Moderated AI Development Workflow process. Ceremonies include Kickoff, Step Planning, AI Work Session, Step Review, QA Verification, and Retrospective. See [ceremonies.md](ceremonies.md).
@@ -32,7 +32,7 @@ The human responsible for reviewing AI-generated artifacts against quality gate 
 The instruction given to an AI agent to generate a specific artifact. Prompts are written, stored, and reviewed as first-class engineering artifacts. See [principles.md](principles.md).
 
 **Quality gate**  
-An explicit checklist of criteria that AI-generated artifacts must satisfy before acceptance. Gates are defined in STEP.md and evaluated in REVIEW.md. See [quality-gates.md](quality-gates.md).
+An explicit checklist of criteria that AI-generated artifacts must satisfy before acceptance. Gates are defined in STEP-XX.md and evaluated in REVIEW.md. See [quality-gates.md](quality-gates.md).
 
 **ROADMAP.md**  
 A project-level artifact listing all planned steps, their order, and their current status. See [templates/ROADMAP.md](../templates/ROADMAP.md).
@@ -40,8 +40,8 @@ A project-level artifact listing all planned steps, their order, and their curre
 **Step**  
 The fundamental unit of work in MOD-W. A step is a bounded, reviewable slice of AI-assisted development with a defined scope, quality gate, and lifecycle. See [step-lifecycle.md](step-lifecycle.md).
 
-**STEP.md**  
-An artifact that defines a single step: its scope, inputs, expected outputs, acceptance criteria, assigned AI agent, and quality gate level. See [templates/STEP.md](../templates/STEP.md).
+**STEP-XX.md**
+An artifact that defines a single step: its scope, inputs, expected outputs, acceptance criteria, assigned AI agent, and quality gate level. See [templates/STEP-XX.md](../templates/STEP-XX.md).
 
 **Tech Lead**  
 The human responsible for technical architecture, prompt authoring, and moderation of AI output. See [roles.md](roles.md).
@@ -51,4 +51,4 @@ The Workbench is the human-operated development environment used by the Moderato
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

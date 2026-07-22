@@ -6,7 +6,7 @@ Ceremonies are structured events that create rhythm, transparency, and shared un
 
 ## 1. Project Kickoff
 
-The kickoff is split into two sequential, Moderator-gated phases. Neither phase ends until the Moderator explicitly approves its output. The second phase does not begin until the first is approved.
+The kickoff has up to three sequential, Moderator-gated phases. When the optional Prototype Ceremony runs (v4), it slots between Product Definition and Architecture Definition. No phase ends until the Moderator explicitly approves its output; the next phase does not begin until the previous is approved.
 
 ---
 
@@ -33,10 +33,25 @@ Note: no `CLAUDE.md` or `AGENTS.md` exists yet at this stage. All tools are used
 
 ---
 
-### 1b. Architecture Definition
+### 1b. Prototype Ceremony (v4, optional)
+
+**When:** After `PRODUCT.md` is approved; when the Moderator decides the product warrants it
+**Who:** Moderator, with Claude Design as the Designer + Prototyper
+
+Produces `DESIGN-SPEC.md`, a working `prototype/` folder, and advisory `ARCHITECTURE-NOTES.md`. Run when the product has novel interaction models, real-time data, or unusual visual systems; skip for conventional UI.
+
+**Gate:** Moderator explicitly approves the ceremony output (cross-validation pause required). Architecture Definition does not begin until this gate is passed.
+
+**Output:** Approved `DESIGN-SPEC.md`, `prototype/` folder, `ARCHITECTURE-NOTES.md`.
+
+See `docs/prototype-ceremony.md` for the full lifecycle.
+
+---
+
+### 1c. Architecture Definition
 
 **When:** After `PRODUCT.md` is approved; revisited when product scope changes materially  
-**Who:** Tech Lead session, Moderator  
+**Who:** Tech Lead (Codex) session, Moderator
 
 **Purpose:** Produce a Moderator-approved `ARCHITECTURE.md` and `DOMAIN_LANGUAGE.md` before the roadmap and steps are defined.
 
@@ -52,6 +67,8 @@ Note: no `CLAUDE.md` or `AGENTS.md` exists yet at this stage. All tools are used
 
 **Output:** Approved `ARCHITECTURE.md`, `DOMAIN_LANGUAGE.md`, `ROADMAP.md`, `CLAUDE.md`, `AGENTS.md`.
 
+> **v4 note:** If the Prototype Ceremony ran, this ceremony is the Architecture Handoff — Codex consumes all four kickoff inputs (`PRODUCT.md`, `DESIGN-SPEC.md`, `prototype/`, `ARCHITECTURE-NOTES.md`) and independently authors `ARCHITECTURE.md` with explicit authority to override prototype-implied structures. See `docs/architecture-handoff.md`.
+
 ---
 
 ## 2. Step Planning
@@ -64,12 +81,12 @@ Note: no `CLAUDE.md` or `AGENTS.md` exists yet at this stage. All tools are used
 
 **Activities:**
 
-- Author or refine the [STEP.md](../templates/STEP.md) for the upcoming step
+- Author or refine the [STEP-XX.md](../templates/STEP-XX.md) for the upcoming step
 - Confirm acceptance criteria with the Product Owner
 - Select the appropriate AI agent and prompt template
 - Identify any risks or dependencies
 
-**Output:** Approved STEP.md for the next step
+**Output:** Approved STEP-XX.md for the next step
 
 ---
 
@@ -104,7 +121,7 @@ Note: no `CLAUDE.md` or `AGENTS.md` exists yet at this stage. All tools are used
 
 **Activities:**
 
-- Review AI output against STEP.md acceptance criteria
+- Review AI output against STEP-XX.md acceptance criteria
 - Complete the [REVIEW.md](../templates/REVIEW.md) artifact
 - Record moderation decisions and any concerns
 - Accept, request revisions, or reject the output
@@ -149,4 +166,4 @@ Note: no `CLAUDE.md` or `AGENTS.md` exists yet at this stage. All tools are used
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

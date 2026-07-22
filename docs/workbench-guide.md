@@ -24,7 +24,7 @@ Its job is to **verify and fine‑tune**, not to replace the Moderated AI Develo
 
 - Skipping Moderated AI Development Workflow Steps (e.g., implementing large features entirely by hand).
 - Making broad architectural changes without going through the Tech Lead.
-- Quietly expanding Step scope without updating STEP.md and ROADMAP.md.
+- Quietly expanding Step scope without updating STEP-XX.md and ROADMAP.md.
 - Letting Copilot generate large, unreviewed code dumps.
 
 ---
@@ -51,4 +51,4 @@ Its job is to **verify and fine‑tune**, not to replace the Moderated AI Develo
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

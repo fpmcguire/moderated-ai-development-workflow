@@ -10,8 +10,9 @@ This matrix shows the default tool assignment for each MOD-W role. These are the
 | ---- | ----- | --------- | ------ | ----------------- |
 | Product Owner | Definition (project start) | Claude chatbot + Perplexity + Gemini | None — no project infrastructure yet | `PRODUCT.md` |
 | Product Owner | Validation (per-step) | Claude Code SubAgent | `CLAUDE.md` (auto-loaded) | Acceptance sign-off |
+| Designer + Prototyper | Prototype Ceremony (optional, v4) | Claude Design | `prompts/designer.md` pasted at session start | `DESIGN-SPEC.md`, `prototype/`, `ARCHITECTURE-NOTES.md` |
 | Tech Lead | Planning + Review | Codex (full session) | `AGENTS.md` (auto-loaded) | `ARCHITECTURE.md`, `ROADMAP.md`, `STEP-XX.md`, `REVIEW.md` |
-| Development Team | Implementation | Claude Code SubAgent | `CLAUDE.md` (auto-loaded) | Code, tests, docs |
+| Development Team | Implementation | Claude Code SubAgent by default; Claude Design when explicitly assigned for visual / chart / interaction-heavy Steps | `CLAUDE.md` (auto-loaded where supported) | Code, tests, docs |
 | QA | Acceptance validation | Claude Code SubAgent | `CLAUDE.md` (auto-loaded) | `QA.md` |
 | Moderator | All gates | Human | — | Approvals, git tags |
 
@@ -23,6 +24,8 @@ The tool split is intentional:
 
 | Boundary | Tools | What it catches |
 | -------- | ----- | --------------- |
+| Product intent vs. visual design | Product Owner + Moderator ↔ Claude Design | Ensures prototype output serves product intent before architecture begins |
+| Prototype vs. architecture | Claude Design → Codex | Prevents prototype-implied structure from becoming architecture without independent Tech Lead judgment |
 | Plan vs. implement | Codex (Tech Lead) ↔ Claude Code (Dev Team) | Model-level blind spots — Codex plans, Claude Code implements, Codex reviews |
 | Implementation vs. acceptance | Dev Team ↔ QA SubAgent | Context-isolated re-read of the same implementation against acceptance checks |
 | Acceptance vs. product intent | QA ↔ Product Owner SubAgent | Validates that passing checks actually satisfy user-facing intent |
@@ -55,6 +58,8 @@ Codex runs two session types for the Tech Lead role:
 
 In the Review session, Tech Lead reads only — no edits to implementation files.
 
+If the Prototype Ceremony ran, the Planning session also reads `DESIGN-SPEC.md`, `prototype/`, and `ARCHITECTURE-NOTES.md` as Architecture Handoff inputs. Codex may override prototype-implied structures and records material divergences in `ARCHITECTURE.md`.
+
 ---
 
 ## Development Team Build Gate
@@ -70,4 +75,4 @@ These commands are populated by the Tech Lead when generating the project-specif
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

@@ -31,7 +31,7 @@ Use these as your source of truth:
 - [templates/PRODUCT.md](../templates/PRODUCT.md)
 - [templates/ARCHITECTURE.md](../templates/ARCHITECTURE.md)
 - [templates/ROADMAP.md](../templates/ROADMAP.md)
-- [templates/STEP.md](../templates/STEP.md)
+- [templates/STEP-XX.md](../templates/STEP-XX.md)
 - [templates/REVIEW.md](../templates/REVIEW.md)
 - [templates/QA.md](../templates/QA.md)
 - [templates/DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md)
@@ -158,7 +158,7 @@ Goal: execute one Step at a time with full traceability.
 
 Per step:
 
-1. Copy [templates/STEP.md](../templates/STEP.md) into a concrete STEP-XX file.
+1. Copy [templates/STEP-XX.md](../templates/STEP-XX.md) into a concrete STEP-XX file.
 2. Ask Gemini for implementation proposals tied to that step only.
 3. Apply changes in the Workbench.
 4. Run build, tests, lint, and manual checks.
@@ -231,4 +231,4 @@ If evidence is weak, request a revision and keep the step open.
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

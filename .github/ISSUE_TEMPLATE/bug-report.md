@@ -12,7 +12,7 @@ assignees: ""
 
 ## Location
 
-<!-- File path(s) where the issue occurs, e.g. docs/roles.md, templates/STEP.md -->
+<!-- File path(s) where the issue occurs, e.g. docs/roles.md, templates/STEP-XX.md -->
 
 ## Current Content
 

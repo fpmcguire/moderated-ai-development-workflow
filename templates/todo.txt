@@ -1,0 +1,21 @@
+Mon 25.05.2026
+
+MOD-W v4.0.0 additional updates:
+- Mailing list
+- Modern prompts (more literal: drop role, reference specific files, etc.)
+- Experimental
+- TIPS.md (dated)
+    -- core loop/artifacts/prompts:
+        1) Product Owner / Moderator
+            <- PRODUCT
+        2) Tech Lead / Moderator
+            -> PRODUCT
+            ( -> ARCHITECTURE-NOTES from prototype )
+            <- ARCHITECTURE
+            <- ROADMAP
+            <- STEP-XX
+        3) Development Team /Moderator
+            -> ARCHITECTURE
+            -> STEP-XX
+            <- STEP-XX
+    -- modern prompts (more literal: drop role, reference specific files, etc.)

@@ -7,21 +7,24 @@ This lifecycle assumes your default roles:
 
 - Moderator (human)
 - Product Owner (Claude Code SubAgent)
-- Tech Lead (Claude Code full session)
-- Development Team (Claude Code full session)
+- Designer + Prototyper (Claude Design, optional during Project Kickoff)
+- Tech Lead (Codex full session)
+- Development Team (Claude Code by default; Claude Design only when assigned for visual / chart / interaction-heavy Steps)
 - QA (Claude Code SubAgent)
 
 ---
 
 ## 1. Define the Step
 
-**Who:** Tech Lead (Claude Code session), Moderator  
-**Artifacts:** ARCHITECTURE.md, ROADMAP.md, STEP-XX.md, CLAUDE.md, AGENTS.md
+**Who:** Tech Lead (Codex session), Moderator
+**Artifacts:** PRODUCT.md, DESIGN-SPEC.md (if present), ARCHITECTURE-NOTES.md (if present), ARCHITECTURE.md, ROADMAP.md, STEP-XX.md, CLAUDE.md, AGENTS.md
 
 - Moderator triggers a Tech Lead Planning Session.
 - Tech Lead reads `PRODUCT.md` and existing `ARCHITECTURE.md`.
+- If the Prototype Ceremony ran, Tech Lead also reads `DESIGN-SPEC.md`, `prototype/`, and `ARCHITECTURE-NOTES.md` as Architecture Handoff inputs.
 - Tech Lead writes or updates `ARCHITECTURE.md`, `ROADMAP.md`, and `STEP-XX.md`.
 - Tech Lead generates or updates project-specific `CLAUDE.md` and `AGENTS.md`.
+- If prototype inputs influenced the Step, Tech Lead records the Reference Implementation disposition in `STEP-XX.md`.
 - Moderator reviews and approves all artifacts before implementation begins.
 - The Step is small enough to implement and verify without exhausting agent context.
 
@@ -31,13 +34,14 @@ Output: Approved `STEP-XX.md` and updated planning artifacts.
 
 ## 2. Brief the Development Team
 
-**Who:** Moderator → Development Team (Claude Code session)  
+**Who:** Moderator → Development Team (Claude Code session by default; Claude Design only when assigned)
 **Artifacts:** CLAUDE.md, STEP-XX.md
 
 - Confirm `CLAUDE.md` and `AGENTS.md` are current in the repo root (Tech Lead maintains these).
-- Start a Claude Code session in the project root — role context loads automatically.
+- Start the assigned Development Team interface from `STEP-XX.md §"Assigned Dev Team Interface"`.
 - State the active Step at session start, e.g.:
   `The current Step is STEP-02.md`
+- If Claude Design is assigned as Development Team, confirm it did not author the Step brief.
 - Ask the Development Team to confirm understanding and raise any clarifying questions before proceeding.
 
 Output: Shared understanding of the Step; any refinements folded back into `STEP-XX.md`.
@@ -46,7 +50,7 @@ Output: Shared understanding of the Step; any refinements folded back into `STEP
 
 ## 3. Implementation Options Gate
 
-**Who:** Development Team (Claude Code session) → Moderator  
+**Who:** Development Team (assigned interface) → Moderator
 **Artifacts:** STEP-XX.md, ARCHITECTURE.md, AGENTS.md
 
 - Development Team enters Plan Mode: reads relevant files, confirms scope. No files written yet.
@@ -64,7 +68,7 @@ Output: Moderator-approved implementation plan.
 
 ## 4. Implement the Step
 
-**Who:** Development Team (Claude Code SubAgent)  
+**Who:** Development Team (assigned interface)
 **Artifacts:** Code, tests, docs
 
 - Development Team implements only the current Step following the approved plan:
@@ -162,7 +166,7 @@ Output: Updated documentation reflecting the completed Step.
 
 A Step is considered **complete** only when:
 
-- `STEP.md` is satisfied
+- `STEP-XX.md` is satisfied
 - Code builds cleanly in the Workbench
 - Relevant tests pass or explicitly documented exceptions exist
 - Behaviour matches acceptance checks
@@ -174,4 +178,4 @@ This lifecycle keeps Moderated AI Development Workflow firmly human‑moderated 
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

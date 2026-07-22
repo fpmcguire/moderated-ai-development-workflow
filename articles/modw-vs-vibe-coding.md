@@ -93,7 +93,7 @@ Instead of burying decisions inside chat logs, Moderated AI Development Workflow
 - `PRODUCT.md` – what we are building and why
 - `ARCHITECTURE.md` – how we are structuring it
 - `ROADMAP.md` – ordered list of Steps
-- `STEP.md` – brief for a single Step
+- `STEP-XX.md` – brief for a single Step
 - `REVIEW.md` – review decisions per Step
 - `QA.md` – verification evidence per Step
 - `DOMAIN_LANGUAGE.md` – shared vocabulary
@@ -106,7 +106,7 @@ Moderated AI Development Workflow insists that **intent and design are captured 
 
 Each Step in Moderated AI Development Workflow has an explicit **quality gate**:
 
-- defined in `STEP.md`
+- defined in `STEP-XX.md`
 - evaluated in `REVIEW.md` and `QA.md`
 - enforced by the Moderator in the Workbench
 
@@ -168,4 +168,4 @@ Use Moderated AI Development Workflow when you care about what happens next week
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

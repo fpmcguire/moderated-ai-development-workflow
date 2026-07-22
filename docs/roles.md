@@ -34,6 +34,41 @@ The Product Owner:
 
 In one common setup, the Product Owner role is supported by a Claude Code SubAgent for product shaping, user stories, and acceptance validation.
 
+### Designer + Prototyper
+
+**Owns:** Visual identity, design specification, working prototype, and advisory architecture observations.
+**AI agent (default):** Claude Design.
+**Optional role:** This role is **optional per project**. Run the Prototype Ceremony only when the visual / interaction surface justifies it — see `docs/prototype-ceremony.md`.
+
+#### Authoritative outputs
+
+- `DESIGN-SPEC.md` — visual identity, components, screens, interactions, data-testid conventions
+
+#### Non-authoritative outputs
+
+- `prototype/` folder at repo root — clickable demonstration of the design under realistic conditions
+- `ARCHITECTURE-NOTES.md` — advisory input to the Tech Lead's Architecture Definition session
+
+#### Authority
+
+The Designer + Prototyper **proposes** — never declares. Specifically:
+
+- Visual decisions in `DESIGN-SPEC.md` become authoritative on Product Owner + Moderator approval.
+- Domain term proposals in `DESIGN-SPEC.md §"Domain Language Proposals"` are non-authoritative until the Tech Lead ratifies them in `DOMAIN_LANGUAGE.md`.
+- `ARCHITECTURE-NOTES.md` is advisory; the Tech Lead has explicit authority to override any observation when writing `ARCHITECTURE.md`.
+
+#### Constraints
+
+The Designer + Prototyper **may not**:
+
+- Author `ARCHITECTURE.md`, `ROADMAP.md`, any `STEP-XX.md`, `REVIEW.md`, `QA.md`, `CLAUDE.md`, or `AGENTS.md`
+- Write or modify production code outside the `prototype/` folder
+- Declare canonical types, file paths, service boundaries, framework choices, or domain terms
+
+The role prompt is at `prompts/designer.md`.
+
+---
+
 ### Tech Lead
 
 The Tech Lead is responsible for _how_ the product is built.
@@ -51,21 +86,6 @@ The Tech Lead:
 - Generates the project-specific `CLAUDE.md` from `ARCHITECTURE.md` and the `CLAUDE.md` template
 
 In one common setup, the Tech Lead role is supported by a Codex full session for architecture thinking, roadmap shaping, step authoring, and technical review.
-
-### Designer
-
-The Designer is responsible for the visual and interaction design of the product.
-
-The Designer:
-
-- Receives `PRODUCT.md`, `ROADMAP.md`, the DOMAIN_LANGUAGE.md, and visual assets (reference images, brand tokens, style descriptions) from the Moderator
-- Produces and maintains the `DESIGN-SPEC.md` artifact: colour palette, typography, spacing, component library, screen layouts, interaction patterns, and a Component–Roadmap Map
-- Maps every UI component and design decision to the Roadmap Step in which it is first introduced
-- Reviews and revises `DESIGN-SPEC.md` based on Product Owner and Moderator feedback until the spec is approved
-- Hands the approved `DESIGN-SPEC.md` to the Development Team as a guide for UI implementation
-- Does **not** write code or make product scope decisions
-
-In one common setup, the Designer role is supported by Claude for spec generation, visual system definition, and component mapping.
 
 ### Development Team
 
@@ -110,7 +130,7 @@ The Workbench:
 
 ## Default Tool Implementations
 
-All roles use **Claude Code** as the default interface. Full sessions handle complex, multi-step work. SubAgents handle bounded validation tasks.
+Most roles use **Claude Code** as the default interface. The **Designer + Prototyper** role uses **Claude Design** by default. Full sessions handle complex, multi-step work. SubAgents handle bounded validation tasks.
 
 ### Product Owner role — two modes (default)
 
@@ -142,18 +162,17 @@ Cross-validation: Codex plans and reviews; Claude Code implements. Model diversi
 
 See: [prompts/tech-lead.md](../prompts/tech-lead.md)
 
-### Designer role — Claude (optional)
+### Designer + Prototyper role — Claude Design (default)
 
-Claude may be used to support the Designer role by:
+Claude Design is used for the Designer + Prototyper role by:
 
-- Analysing `PRODUCT.md`, `ROADMAP.md`, and visual assets to derive a coherent design direction
-- Producing `DESIGN-SPEC.md` with colour palette, typography, component library, screen layouts, and interaction patterns
-- Mapping UI components to Roadmap Steps so the Development Team knows what to build and when
-- Revising the spec based on Product Owner and Moderator feedback
+- Receiving `PRODUCT.md`, brand assets, and the three Prototype Ceremony templates from the Moderator
+- Producing `DESIGN-SPEC.md`, a clickable `prototype/` folder, and `ARCHITECTURE-NOTES.md` during the Prototype Ceremony
+- Optionally implementing visual / chart / interaction-heavy Steps when the Moderator assigns Claude Design as Dev Team in `STEP-XX.md §"Assigned Dev Team Interface"`
 
 All output is moderated before acceptance.
 
-See: [prompts/additional-roles/designer.md](../prompts/additional-roles/designer.md)
+See: [prompts/designer.md](../prompts/designer.md)
 
 ### Development Team role — Claude Code SubAgent (default)
 
@@ -187,7 +206,7 @@ See: [prompts/qa.md](../prompts/qa.md)
 | ----------------------- | ------------------------------ | ------------------------------------------------------------- | ----------------------------------------- |
 | Moderator               | Human                          | repo state, approvals, git tags                               | Accepts/rejects AI output and step status |
 | Product Owner           | Human                          | PRODUCT.md, acceptance intent                                 | Accepts/rejects step scope and intent     |
-| Tech Lead               | Human                          | ARCHITECTURE.md, ROADMAP.md, STEP.md, CLAUDE.md               | Reviews technical quality and fit         |
+| Tech Lead               | Human                          | ARCHITECTURE.md, ROADMAP.md, STEP-XX.md, CLAUDE.md            | Reviews technical quality and fit         |
 | QA / Tester             | Human                          | QA.md (final sign-off)                                        | Validates end‑to‑end behaviour            |
 | Workbench               | Human env.                     | Local repo, build/test tooling                                | Executes builds/tests, manual checks      |
 | Product Owner Agent (Definition)  | Claude chatbot + Perplexity + Gemini | PRODUCT.md                                                    | None — all output is moderated            |
@@ -196,10 +215,10 @@ See: [prompts/qa.md](../prompts/qa.md)
 | Development Team Agent            | AI (Claude Code SubAgent)            | Code, tests, docs for each step                               | None — all output is moderated            |
 | QA Agent                          | AI (Claude Code SubAgent)            | QA.md                                                         | None — all output is moderated            |
 | ----------------------- | ------------------------------ | ------------------------------------------------------------- | ----------------------------------------- |
-| Extended (optional):    |                                |                                                               |                                           |
-| Designer                | Human                          | DESIGN-SPEC.md                                                | Reviews visual quality and fit            |
-| Designer Agent          | AI (Claude)                    | DESIGN-SPEC.md drafts, component mapping                      | None — all output is moderated            |
+| Optional (v4):          |                                |                                                               |                                           |
+| Designer + Prototyper   | Human (optional role)          | DESIGN-SPEC.md (auth.), prototype/ (research), ARCHITECTURE-NOTES.md (advisory) | Reviews visual quality and fit |
+| Designer + Prototyper Agent | AI (Claude Design)         | DESIGN-SPEC.md, prototype/, ARCHITECTURE-NOTES.md             | None — all output is moderated            |
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

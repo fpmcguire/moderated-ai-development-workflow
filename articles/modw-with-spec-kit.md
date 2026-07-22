@@ -266,4 +266,4 @@ You give Spec Kit the job of **structuring** your specs and tasks, and you give 
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

@@ -1,7 +1,12 @@
 # Development Team – Claude Code Prompt
 
-> This prompt is the basis for the `CLAUDE.md` file placed at the repo root.  
-> It configures the **Development Team** Claude Code session: one approved Step at a time, under human moderation.
+> This prompt is the basis for the `CLAUDE.md` file placed at the repo root.
+> It configures the **Development Team** session: one approved Step at a time, under human moderation.
+>
+> **Default interface:** Claude Code (CLI).
+> **Alternate interface (v4):** Claude Design — used when the Moderator assigns a visual / chart / interaction-heavy Step to Claude Design in `STEP-XX.md §"Assigned Dev Team Interface"`. The role rules are identical; only the interface differs.
+>
+> **Hard rule (v4):** when Claude Design plays Dev Team, it MUST NOT have authored the Step's `STEP-XX.md`. Codex writes the spec; Claude Design implements against it. Plan vs. implement model contrast is preserved.
 
 ---
 
@@ -155,4 +160,4 @@ If the Moderator does not specify a depth, default to:
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

@@ -1,6 +1,6 @@
 # Quality Gates
 
-Quality gates are explicit, non-negotiable checkpoints that AI-generated artifacts must pass before they are accepted. Gates are defined per step in [STEP.md](../templates/STEP.md) and evaluated in [REVIEW.md](../templates/REVIEW.md).
+Quality gates are explicit, non-negotiable checkpoints that AI-generated artifacts must pass before they are accepted. Gates are defined per step in [STEP-XX.md](../templates/STEP-XX.md) and evaluated in [REVIEW.md](../templates/REVIEW.md).
 
 ---
 
@@ -12,7 +12,7 @@ Moderated AI Development Workflow defines three levels of quality gate, applied 
 
 Every step must pass these criteria regardless of type:
 
-- [ ] Output matches the scope defined in STEP.md
+- [ ] Output matches the scope defined in STEP-XX.md
 - [ ] Output uses domain language terms correctly (per [DOMAIN_LANGUAGE.md](../templates/DOMAIN_LANGUAGE.md))
 - [ ] No hallucinated facts, APIs, libraries, or references
 - [ ] No placeholders, TODOs, or stub implementations left unresolved
@@ -32,7 +32,7 @@ In addition to Level 1:
 
 In addition to Levels 1 and 2:
 
-- [ ] All acceptance criteria from STEP.md are met
+- [ ] All acceptance criteria from STEP-XX.md are met
 - [ ] Unit tests are present and pass
 - [ ] Integration with existing code does not break existing tests
 - [ ] Documentation is updated if public interfaces changed
@@ -41,7 +41,7 @@ In addition to Levels 1 and 2:
 
 ## Applying Gates
 
-1. The Tech Lead specifies the gate level in STEP.md.
+1. The Tech Lead specifies the gate level in STEP-XX.md.
 2. The Moderator evaluates each criterion in REVIEW.md.
 3. Any failed criterion is documented with a reason.
 4. A step may only be accepted if **all** criteria are met.
@@ -53,11 +53,11 @@ In addition to Levels 1 and 2:
 Quality gates **may not be waived**. If a gate criterion cannot be met, the team must:
 
 1. Return the step to In Progress and retry with a refined prompt, **or**
-2. Revise the acceptance criteria in STEP.md (requires Product Owner approval), **or**
+2. Revise the acceptance criteria in STEP-XX.md (requires Product Owner approval), **or**
 3. Split the step into smaller steps that can each fully meet their gate criteria.
 
 Bypassing a gate — even under time pressure — introduces unverified AI output into the product and violates the [Moderated AI Development Workflow Principles](principles.md).
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

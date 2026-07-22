@@ -11,10 +11,40 @@ Each version of MOD-W addressed a specific problem that the previous version cou
 - **v1** — introduced cross-validation, HITL gates, and role separation to address AI hallucinations and unmoderated output.
 - **v2** — expanded roles and artifacts (spec-driven development) to address loss of AI context across sessions and handoffs.
 - **v3** — refined the workflow around direct repository access (Codex + Claude Code) to eliminate the time-consuming copy-paste bottleneck.
+- **v4** — introduced Claude Design as the Designer + Prototyper role, the optional Prototype Ceremony, the mandatory Architecture Handoff gate, and the Reference Implementation dispositional concept.
 
 ## [Unreleased]
 
 _No unreleased changes yet._
+
+## [4.0.0] – 2026-05-25
+
+### Added
+
+- **Designer + Prototyper role** — Claude Design as the default interface; optional per project; produces `DESIGN-SPEC.md` (authoritative), `prototype/` (research artifact), and `ARCHITECTURE-NOTES.md` (advisory).
+- **Prototype Ceremony** — optional kickoff ceremony slotting between Product Definition and Architecture Definition; 9-step Moderator-gated loop with a mandatory cross-validation pause before exit.
+- **Architecture Handoff** — mandatory gate when the Prototype Ceremony ran; Codex independently authors `ARCHITECTURE.md` from all four kickoff inputs and has explicit authority to override prototype-implied structures.
+- **Reference Implementation** — dispositional concept (not a file); Tech Lead classifies candidate prototype code in `STEP-XX.md` as `Adopt as-is`, `Adopt with modifications`, or `Reject`.
+- `prompts/designer.md` — Designer + Prototyper role prompt; promoted to top-level path.
+- `docs/prototype-ceremony.md` — complete Prototype Ceremony lifecycle: when to run, inputs, outputs, 9-step gated loop, exit criteria, and anti-patterns.
+- `docs/architecture-handoff.md` — Architecture Handoff ceremony doc; non-negotiable gate, Codex authority scope, 8-step lifecycle, material divergence definition.
+- `templates/ARCHITECTURE-NOTES.md` — advisory architecture observations template for Prototype Ceremony output.
+- `templates/prototype-README.md` — non-authoritative disclaimer template for the `prototype/` folder.
+- `templates/MOD-W.md` — project-level workflow quick-reference: roles table, cross-validation diagram, phase overview, operating rules.
+- `articles/modw-with-claude-design.md` — integration guide for Claude Design in MOD-W: where it fits, responsibility split, ceremony lifecycle, drift prevention rules.
+- Claude Design as optional Dev Team interface for visual, chart, or interaction-heavy Steps (assigned explicitly in `STEP-XX.md §"Assigned Dev Team Interface"`).
+
+### Changed
+
+- `templates/DESIGN-SPEC.md` — v4 rewrite: 10 structured sections including Visual Identity (5 subsections), Accessibility, Component Library with `data-testid` convention, Domain Language Proposals table, Scope Rules.
+- `templates/STEP-XX.md` — added `Assigned Dev Team Interface` section (Claude Code default or Claude Design) and `Reference Implementation` section with `Location`, `Disposition`, and `Required Changes` fields.
+- `prompts/tech-lead.md` — Planning Session step 1 expanded to include Prototype Ceremony inputs (`DESIGN-SPEC.md`, `prototype/`, `ARCHITECTURE-NOTES.md`); added step 6 (Architecture Handoff) and step 7 (Domain Language ratification from `DESIGN-SPEC.md §"Domain Language Proposals"`).
+- `prompts/development-team-claude.md` — opening note expanded with alternate Claude Design interface (v4) and hard authorship-separation rule: Claude Design implementing a Step must not have authored that Step's `STEP-XX.md`.
+- `docs/roles.md` — added `### Designer + Prototyper` role section with authoritative/non-authoritative outputs, authority, and constraints; updated Default Tool Implementations; updated Role Summary Table.
+- `docs/ceremonies.md` — kickoff restructured as three sequential Moderator-gated phases: 1a Product Definition, 1b Prototype Ceremony (optional, v4), 1c Architecture Definition (with Architecture Handoff `v4 note` when Prototype Ceremony ran).
+- `docs/artifacts.md` — added Designer + Prototyper artifacts section (`DESIGN-SPEC.md`, `ARCHITECTURE-NOTES.md`, `prototype/`) and Reference Implementation concept.
+- `README.md` — added "Using MOD-W with Claude Design" section; updated kickoff block to three phases; version footer bumped.
+- All file footers standardized to `MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow`.
 
 ## [3.0.0] – 2026-05-22
 
@@ -86,4 +116,4 @@ _No unreleased changes yet._
 
 ---
 
-MOD-W v3.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow
+MOD-W v4.0.0 · Moderated AI Development Workflow · https://github.com/fpmcguire/moderated-ai-development-workflow

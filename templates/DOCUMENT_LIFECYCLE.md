@@ -2,7 +2,7 @@
 
 **Project:** {{PROJECT_NAME}}
 **Owner:** Moderator
-**Version:** MOD-W v3.0.0
+**Version:** MOD-W v4.0.0
 
 ---
 
@@ -312,4 +312,4 @@ The Moderator:
 
 ---
 
-MOD-W v3.0.0 · Document Lifecycle
+MOD-W v4.0.0 · Document Lifecycle

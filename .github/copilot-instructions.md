@@ -13,7 +13,7 @@ This repository contains the **Moderated AI Development Workflow** methodology f
 
 - Use sentence case for headings (e.g. `## Step lifecycle` not `## Step Lifecycle`) unless it is a proper noun or acronym.
 - Keep language concise and practitioner-focused — the audience is software development teams adopting AI tooling.
-- Templates use ALL_CAPS filenames (e.g. `STEP.md`, `REVIEW.md`).
+- Templates use clear artifact filenames (e.g. `STEP-XX.md`, `REVIEW.md`).
 - Prompts are organised by AI model target (ChatGPT vs Claude).
 
 ## When Editing Templates
